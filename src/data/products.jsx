@@ -26,4 +26,5 @@ export const products = [
     price: "₹199",
     image: "/images/katana.png",
   },
+  
 ];
