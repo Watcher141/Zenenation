@@ -32,3 +32,55 @@
 .nav-links a:hover {
   color: #7ca8ff;
 }
+
+/* ------------- MOBILE RESPONSIVENESS ------------- */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #444;
+  transition: 0.3s;
+}
+
+/* Hamburger animation */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Hide menu on phones */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 40px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    transition: 0.35s ease;
+  }
+
+  .nav-links.active {
+    right: 8%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

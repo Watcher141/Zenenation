@@ -105,28 +105,28 @@ const Home = () => {
                         onClick={() => window.location.href = "/category/keychain"}
                         data-aos="fade-up"
                     >
-                        <img src="/images/keychains.png" alt="Keychains" />
+                        <img src="/images/katana.png" alt="Keychains" />
                         <h3>Keychains</h3>
                     </div>
 
                     <div
                         className="category-card"
-                        onClick={() => window.location.href = "/category/katana"}
+                        onClick={() => window.location.href = "/category/mascot"}
                         data-aos="fade-up"
                         data-aos-delay="150"
                     >
-                        <img src="/images/katana.png" alt="Mini Katana" />
-                        <h3>Mini Katana</h3>
+                        <img src="/images/katana.png" alt="Mascots" />
+                        <h3>Figures & Mascot</h3>
                     </div>
 
                     <div
                         className="category-card"
-                        onClick={() => window.location.href = "/category/karambit"}
+                        onClick={() => window.location.href = "/category/armory"}
                         data-aos="fade-up"
                         data-aos-delay="300"
                     >
-                        <img src="/images/karambit.png" alt="Karambits" />
-                        <h3>Karambits</h3>
+                        <img src="/images/katana.png" alt="Armory" />
+                        <h3>Mini Armory</h3>
                     </div>
                 </div>
             </section>

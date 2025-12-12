@@ -1,7 +1,7 @@
 export const categories = [
   { id: "keychain", name: "Keychains" },
-  { id: "katana", name: "Katanas" },
-  { id: "karambit", name: "Karambits" },
+  { id: "mascot", name: "Mascots" },
+  { id: "armory", name: "Armory" },
 ];
 
 export const products = [
@@ -14,14 +14,14 @@ export const products = [
   },
   {
     id: "p2",
-    category: "katana",
-    name: "Mini Katana Sword",
+    category: "mascot",
+    name: "Figurines",
     price: "₹179",
     image: "/images/katana.png",
   },
   {
     id: "p3",
-    category: "karambit",
+    category: "armory",
     name: "Mini Karambit Knife",
     price: "₹199",
     image: "/images/katana.png",

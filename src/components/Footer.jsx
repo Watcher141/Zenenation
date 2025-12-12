@@ -13,9 +13,9 @@ const Footer = () => {
 
                 <div className="footer-links">
                     <a href="/">Home</a>
-                    <a href="/category/keychains">Keychains</a>
-                    <a href="/category/katana">Mini Katana</a>
-                    <a href="/category/karambit">Karambits</a>
+                    <a href="/category/keychain">Keychains</a>
+                    <a href="/category/mascot">Figures & Mascot</a>
+                    <a href="/category/armory">Mini Armory</a>
                 </div>
 
                 <p className="footer-copy">© {new Date().getFullYear()} animeaura. All rights reserved.</p>

@@ -4,8 +4,8 @@ import "./CategoryPage.css";
 
 const readableNames = {
     keychains: "Keychains",
-    katana: "Mini Katana",
-    karambit: "Karambits"
+    mascot: "Mascots",
+    armory: "Armory"
 };
 
 const CategoryPage = () => {
