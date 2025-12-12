@@ -1,0 +1,54 @@
+/* ================================
+   FOOTER STYLES
+================================ */
+.soft-footer {
+  background: #f0f2f7;
+  padding: 50px 8%;
+  text-align: center;
+  border-top: 1px solid #e3e6ed;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  max-width: 700px;
+  margin: auto;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7ca8ff;
+  margin-bottom: 12px;
+}
+
+.footer-desc {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 25px;
+}
+
+.footer-links a {
+  font-size: 16px;
+  color: #444;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #7ca8ff;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
