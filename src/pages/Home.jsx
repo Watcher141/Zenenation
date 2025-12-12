@@ -2,6 +2,11 @@ import "./Home.css";
 import { products } from "../data/products";
 
 const Home = () => {
+
+    // 🔥 Automatically choose New Arrivals & Featured
+    const newArrivals = products.filter(p => p.isNew);
+    const featuredItems = products.filter(p => p.isFeatured);
+
     return (
         <div className="soft-container">
 
@@ -33,7 +38,7 @@ const Home = () => {
                     </a>
                 </div>
 
-                {/* RIGHT IMAGE */}
+                {/* RIGHT HERO IMAGE */}
                 <div
                     className="soft-right"
                     data-aos="fade-left"
@@ -45,7 +50,6 @@ const Home = () => {
                         className="soft-hero-product"
                     />
                 </div>
-
             </section>
 
             {/* NEW ARRIVALS SECTION */}
@@ -53,22 +57,25 @@ const Home = () => {
                 <h2 className="section-title">New Arrivals</h2>
 
                 <div className="arrival-grid">
-                    {products.slice(0, 4).map((item, index) => (
-                        <div
-                            className="arrival-card"
-                            key={item.id}
-                            onClick={() => window.location.href = `/product/${item.id}`}
-                            data-aos="zoom-in"
-                            data-aos-delay={index * 150}
-                        >
-                            <img src={item.image} alt={item.name} />
-                            <h3>{item.name}</h3>
-                            <p>{item.price}</p>
-                        </div>
-                    ))}
+                    {newArrivals.length > 0 ? (
+                        newArrivals.map((item, index) => (
+                            <div
+                                className="arrival-card"
+                                key={item.id}
+                                onClick={() => (window.location.href = `/product/${item.id}`)}
+                                data-aos="zoom-in"
+                                data-aos-delay={index * 150}
+                            >
+                                <img src={item.images[0]} alt={item.name} />
+                                <h3>{item.name}</h3>
+                                <p>{item.price}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="empty-text">No new arrivals yet.</p>
+                    )}
                 </div>
             </section>
-
 
             {/* FEATURED PRODUCTS */}
             <section className="soft-products" id="products">
@@ -77,21 +84,25 @@ const Home = () => {
                 </h2>
 
                 <div className="soft-product-grid">
-                    {products.slice(0, 6).map((item, index) => (
-                        <div
-                            className="soft-card"
-                            key={item.id}
-                            onClick={() => window.location.href = `/product/${item.id}`}
-                            data-aos="fade-up"
-                            data-aos-duration="700"
-                            data-aos-delay={index * 120}
-                            data-aos-easing="ease-out-cubic"
-                        >
-                            <img src={item.image} alt={item.name} />
-                            <h3>{item.name}</h3>
-                            <p>{item.price}</p>
-                        </div>
-                    ))}
+                    {featuredItems.length > 0 ? (
+                        featuredItems.map((item, index) => (
+                            <div
+                                className="soft-card"
+                                key={item.id}
+                                onClick={() => (window.location.href = `/product/${item.id}`)}
+                                data-aos="fade-up"
+                                data-aos-duration="700"
+                                data-aos-delay={index * 120}
+                                data-aos-easing="ease-out-cubic"
+                            >
+                                <img src={item.images[0]} alt={item.name} />
+                                <h3>{item.name}</h3>
+                                <p>{item.price}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="empty-text">No featured items yet.</p>
+                    )}
                 </div>
             </section>
 
@@ -100,18 +111,21 @@ const Home = () => {
                 <h2 className="section-title">Shop by Category</h2>
 
                 <div className="category-grid">
+
+                    {/* KEYCHAINS */}
                     <div
                         className="category-card"
-                        onClick={() => window.location.href = "/category/keychain"}
+                        onClick={() => (window.location.href = "/category/keychain")}
                         data-aos="fade-up"
                     >
                         <img src="/images/katana.png" alt="Keychains" />
                         <h3>Keychains</h3>
                     </div>
 
+                    {/* MASCOTS */}
                     <div
                         className="category-card"
-                        onClick={() => window.location.href = "/category/mascot"}
+                        onClick={() => (window.location.href = "/category/mascot")}
                         data-aos="fade-up"
                         data-aos-delay="150"
                     >
@@ -119,9 +133,10 @@ const Home = () => {
                         <h3>Figures & Mascot</h3>
                     </div>
 
+                    {/* ARMORY */}
                     <div
                         className="category-card"
-                        onClick={() => window.location.href = "/category/armory"}
+                        onClick={() => (window.location.href = "/category/armory")}
                         data-aos="fade-up"
                         data-aos-delay="300"
                     >
@@ -130,6 +145,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
         </div>
     );
 };

@@ -1,96 +1,123 @@
-/* ====================================================
-   PRODUCT DETAILS PAGE
-==================================================== */
-.pd-container {
-  padding: 60px 8%;
-  display: flex;
-  justify-content: center;
+.pd-wrapper {
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
 }
 
-.pd-card {
+.pd-container {
   display: flex;
   gap: 40px;
-  max-width: 1200px;
-  background: #fff;
-  padding: 40px;
-  border-radius: 22px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-}
-
-.pd-image-box {
-  flex: 1;
-  display: flex;
+  margin-bottom: 60px;
   justify-content: center;
 }
 
-.pd-image {
+.pd-gallery {
+  width: 45%;
+}
+
+.pd-main-img {
   width: 100%;
-  max-width: 420px;
+  height: 420px;
   object-fit: contain;
-  filter: drop-shadow(0 5px 20px rgba(0,0,0,0.15));
+  border-radius: 12px;
+  background: #f5f5f5;
+  padding: 20px;
 }
 
-/* INFO SECTION */
-.pd-info {
-  flex: 1;
+.pd-thumbs {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.pd-thumb-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.pd-thumb-img:hover,
+.active-thumb {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.pd-info {
+  width: 45%;
 }
 
 .pd-title {
-  font-size: 40px;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .pd-price {
-  font-size: 24px;
-  font-weight: 600;
-  color: #6a6a6a;
+  font-size: 1.4rem;
+  color: #444;
   margin-bottom: 20px;
 }
 
 .pd-desc {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 35px;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.5rem;
 }
 
-/* INSTAGRAM BUTTON */
 .pd-instagram-btn {
-  background: linear-gradient(90deg, #ff7bd5, #ff4fa7);
-  border: none;
-  padding: 14px 35px;
+  background: #e1306c;
   color: white;
+  padding: 14px 30px;
+  border: none;
   border-radius: 50px;
-  font-size: 18px;
   cursor: pointer;
-  width: fit-content;
-  transition: 0.3s ease;
-  box-shadow: 0 5px 20px rgba(255,80,160,0.35);
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
 .pd-instagram-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255,80,160,0.45);
+  background: #c72a60;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN
-========================================== */
-@media (max-width: 900px) {
-  .pd-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-  }
+/* RELATED */
+.pd-related h2 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
 
-  .pd-info {
-    align-items: center;
-  }
+.pd-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
 
-  .pd-image {
-    max-width: 300px;
-  }
+.pd-related-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.pd-related-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.pd-related-card:hover {
+  transform: scale(1.05);
+}
+
+.pd-not-found {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5rem;
 }
