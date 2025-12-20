@@ -66,7 +66,13 @@ const Home = () => {
                                 data-aos="zoom-in"
                                 data-aos-delay={index * 150}
                             >
-                                <img src={item.images[0]} alt={item.name} />
+                                <img
+                                    src={item.images?.[0] || "/images/placeholder.png"}
+                                    alt={item.name}
+                                    onError={(e) => {
+                                        e.target.src = "/images/placeholder.png";
+                                    }}
+                                />
                                 <h3>{item.name}</h3>
                                 <p>{item.price}</p>
                             </div>
@@ -95,7 +101,13 @@ const Home = () => {
                                 data-aos-delay={index * 120}
                                 data-aos-easing="ease-out-cubic"
                             >
-                                <img src={item.images[0]} alt={item.name} />
+                                <img
+                                    src={item.images?.[0] || "/images/placeholder.png"}
+                                    alt={item.name}
+                                    onError={(e) => {
+                                        e.target.src = "/images/placeholder.png";
+                                    }}
+                                />
                                 <h3>{item.name}</h3>
                                 <p>{item.price}</p>
                             </div>
@@ -118,7 +130,7 @@ const Home = () => {
                         onClick={() => (window.location.href = "/category/keychain")}
                         data-aos="fade-up"
                     >
-                        <img src="/images/katana.png" alt="Keychains" />
+                        <img src="/images/DemonSlayer.jpeg" alt="Keychains" />
                         <h3>Keychains</h3>
                     </div>
 
@@ -129,7 +141,7 @@ const Home = () => {
                         data-aos="fade-up"
                         data-aos-delay="150"
                     >
-                        <img src="/images/katana.png" alt="Mascots" />
+                        <img src="/images/Labubu2.png" alt="Mascots" />
                         <h3>Figures & Mascot</h3>
                     </div>
 

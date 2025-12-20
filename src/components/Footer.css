@@ -1,54 +1,272 @@
-/* ================================
-FOOTER STYLES
-================================ */
-.soft-footer {
-  background: #f0f2f7;
-  padding: 50px 8%;
-  text-align: center;
-  border-top: 1px solid #e3e6ed;
-  margin-top: 60px;
+/* Footer Container */
+.footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  padding: 80px 20px 30px;
+  position: relative;
+  overflow: hidden;
 }
 
-.footer-inner {
-  max-width: 700px;
-  margin: auto;
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+/* Brand Section */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .footer-logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #7ca8ff;
-  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.logo-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.dot.blue {
+  background: #4a90e2;
+}
+
+.dot.red {
+  background: #e24a4a;
+}
+
+.footer-logo:hover .dot {
+  transform: scale(1.2);
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4a90e2, #e24a4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer-desc {
-  color: #555;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
-  margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 14px;
+  max-width: 300px;
 }
 
+/* Social Icons */
+.socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social.fb:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+}
+
+.social.x:hover {
+  background: #000;
+  border-color: #000;
+}
+
+.social.in:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+}
+
+/* Links Section */
 .footer-links {
   display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-bottom: 25px;
 }
 
-.footer-links a {
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.links-title {
   font-size: 16px;
-  color: #444;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: #fff;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.links-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #4a90e2, #e24a4a);
+  border-radius: 2px;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links-list li {
+  transition: all 0.3s ease;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.footer-links a:hover {
-  color: #7ca8ff;
-}
-
-.footer-copy {
   font-size: 14px;
-  color: #888;
-  margin-top: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
+.link:hover {
+  color: #4a90e2;
+  padding-left: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px 20px;
+  }
+
+  .footer-grid {
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .links-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px 20px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .socials {
+    gap: 12px;
+  }
+
+  .social {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .footer-desc {
+    font-size: 13px;
+  }
+
+  .links-title {
+    font-size: 15px;
+  }
+
+  .link {
+    font-size: 13px;
+  }
+}

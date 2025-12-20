@@ -1,40 +1,53 @@
 .pd-wrapper {
-  padding: 40px;
+  padding: 50px 6%;
   font-family: "Poppins", sans-serif;
+  background: #f9fafb;
 }
 
+/* MAIN CARD */
 .pd-container {
   display: flex;
-  gap: 40px;
-  margin-bottom: 60px;
-  justify-content: center;
+  gap: 50px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  margin-bottom: 80px;
 }
 
+/* IMAGE SIDE */
 .pd-gallery {
-  width: 45%;
+  width: 50%;
 }
 
 .pd-main-img {
   width: 100%;
-  height: 420px;
+  height: 380px;
   object-fit: contain;
-  border-radius: 12px;
-  background: #f5f5f5;
-  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f2f2f2, #ffffff);
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.pd-main-img:hover {
+  transform: scale(1.03);
 }
 
 .pd-thumbs {
   display: flex;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .pd-thumb-img {
-  width: 75px;
-  height: 75px;
-  border-radius: 10px;
-  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: contain;
   cursor: pointer;
+  background: #f2f2f2;
+  padding: 6px;
   opacity: 0.6;
   transition: 0.3s;
 }
@@ -42,64 +55,85 @@
 .pd-thumb-img:hover,
 .active-thumb {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
+/* INFO SIDE */
 .pd-info {
-  width: 45%;
+  width: 50%;
 }
 
 .pd-title {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .pd-price {
-  font-size: 1.4rem;
-  color: #444;
+  font-size: 1.6rem;
+  color: #111;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
 .pd-desc {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 25px;
-  line-height: 1.5rem;
+  margin-bottom: 30px;
+  line-height: 1.7rem;
 }
 
+/* HIGHLIGHTS */
+.pd-features {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.pd-feature {
+  background: #f1f5f9;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* CTA */
 .pd-instagram-btn {
-  background: #e1306c;
+  background: linear-gradient(135deg, #e1306c, #c13584);
   color: white;
-  padding: 14px 30px;
+  padding: 16px 40px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: 600;
   transition: 0.3s;
 }
 
 .pd-instagram-btn:hover {
-  background: #c72a60;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(225, 48, 108, 0.4);
 }
 
-/* RELATED */
+/* RECOMMENDED */
 .pd-related h2 {
-  font-size: 1.7rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
 }
 
 .pd-related-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
 }
 
 .pd-related-card {
   background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: 0.3s;
   cursor: pointer;
   text-align: center;
@@ -107,17 +141,239 @@
 
 .pd-related-card img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.pd-related-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.pd-related-card p {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .pd-related-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px);
 }
 
+/* NOT FOUND */
 .pd-not-found {
   text-align: center;
-  margin-top: 50px;
-  font-size: 1.5rem;
+  margin-top: 60px;
+  font-size: 1.6rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pd-container {
+    flex-direction: column;
+  }
+
+  .pd-gallery,
+  .pd-info {
+    width: 100%;
+  }
+
+  .pd-main-img {
+    height: 300px;
+  }
+}
+.pd-related-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pd-related-img-wrap {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.pd-related-info h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.pd-related-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.pd-related-badge {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #111;
+  color: #fff;
+}
+
+/* VARIANTS */
+.pd-variants {
+  margin: 25px 0 30px;
+}
+
+.pd-variant-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.pd-variant-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pd-variant-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid #e5e7eb;
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #111;
+}
+
+.pd-variant-btn:hover {
+  border-color: #111;
+  transform: translateY(-1px);
+}
+
+.pd-variant-btn.active-variant {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* MOBILE VARIANT STACK */
+@media (max-width: 600px) {
+  .pd-variant-options {
+    gap: 10px;
+  }
+
+  .pd-variant-btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+/* IMAGE VARIANTS */
+.pd-variant-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+}
+
+.pd-variant-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f3f4f6;
+  padding: 4px;
+}
+
+.pd-variant-btn span {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+/* =========================
+   BASE + VARIANT SHOWCASE
+========================= */
+
+/* Thumbnails container */
+.pd-thumbs {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+/* Base + Variant thumbnails */
+.pd-thumb-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  object-fit: contain;
+  cursor: pointer;
+  background: #f3f4f6;
+  padding: 6px;
+  opacity: 0.6;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+}
+
+/* Hover */
+.pd-thumb-img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Active (base OR variant) */
+.pd-thumb-img.active-thumb {
+  opacity: 1;
+  border-color: #111;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  transform: scale(1.08);
+}
+
+/* =========================
+   VARIANT BUTTON POLISH
+========================= */
+
+.pd-variant-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  border: 2px solid #e5e7eb;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #111;
+}
+
+.pd-variant-btn:hover {
+  border-color: #111;
+  transform: translateY(-1px);
+}
+
+/* Active variant button */
+.pd-variant-btn.active-variant {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Variant image */
+.pd-variant-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f3f4f6;
+  padding: 4px;
+}
+
+/* =========================
+   PRICE TRANSITION (OPTIONAL BUT NICE)
+========================= */
+
+.pd-price {
+  transition: all 0.25s ease;
 }

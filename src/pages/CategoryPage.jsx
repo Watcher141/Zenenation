@@ -1,17 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../data/products";
 import "./CategoryPage.css";
 
 const readableNames = {
-    keychains: "Keychains",
+    keychain: "Keychains",
     mascot: "Mascots",
     armory: "Armory"
 };
 
 const CategoryPage = () => {
     const { category } = useParams();
+    const navigate = useNavigate();
 
-    // Filter products by category
     const categoryProducts = products.filter(
         (item) => item.category === category
     );
@@ -33,11 +33,15 @@ const CategoryPage = () => {
                             key={product.id}
                             data-aos="fade-up"
                             data-aos-delay={index * 120}
-                            onClick={() =>
-                                (window.location.href = `/product/${product.id}`)
-                            }
+                            onClick={() => navigate(`/product/${product.id}`)}
                         >
-                            <img src={product.image} alt={product.name} />
+                            <img
+                                src={product.images[0]}
+                                alt={product.name}
+                                onError={(e) => {
+                                    e.target.src = "/images/placeholder.png";
+                                }}
+                            />
                             <h3>{product.name}</h3>
                             <p>{product.price}</p>
                         </div>
