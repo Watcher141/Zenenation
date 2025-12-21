@@ -11,9 +11,9 @@ const Footer = () => {
   const footerLinks = {
     company: [
       { name: "About Us", href: "/about" }, // <-- Link to About page
-      { name: "Terms of Use", href: "#" },
-      { name: "Privacy Policy", href: "#" },
-      { name: "Contact Us", href: "#" },
+      { name: "Terms of Use", href: "/terms" },
+      { name: "Privacy Policy", href: "/privacy-policy" },
+      //{ name: "Contact Us", href: "#" },
     ],
   };
 
@@ -42,7 +42,7 @@ const Footer = () => {
             </motion.p>
 
             <motion.div variants={fadeIn("up", 0.7)} className="socials">
-              <motion.a whileHover={{ scale: 1.1 }} href="https://www.facebook.com/share/1BnNR7pwsM/" className="social fb">
+              <motion.a whileHover={{ scale: 1.1 }} href="https://www.facebook.com/share/1Bs83wC4TV/" className="social fb">
                 <FaFacebookF />
               </motion.a>
               <motion.a whileHover={{ scale: 1.1 }} href="https://www.instagram.com/its_zenenation?igsh=MWhocm14bHpwdmRucw==" className="social i">

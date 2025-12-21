@@ -1,26 +1,48 @@
-const PrivacyPolicy = () => (
-  <div className="legal-page">
-    <h1>Privacy Policy</h1>
+import React from "react";
+import "./PrivacyPolicy.css";
+import { motion } from "framer-motion";
 
-    <p>
-      Zenenation respects your privacy. We do not collect personal data
-      directly on this website.
-    </p>
+const PrivacyPolicy = () => {
+  return (
+    <div className="policy-wrapper">
+      <motion.div 
+        className="policy-container"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <header className="policy-header">
+          <h1>Privacy Policy</h1>
+          <p>Last Updated: October 2023</p>
+        </header>
 
-    <p>
-      Orders are handled via Instagram Direct Messages. Any information
-      shared there is subject to Instagram’s privacy policy.
-    </p>
+        <section className="policy-section">
+          <h2>1. Information We Collect</h2>
+          <p>At ZeneNation, we collect information to provide better services to our users. This includes:</p>
+          <ul>
+            <li><strong>Personal Information:</strong> Name, email address, and shipping details when you make a purchase.</li>
+            <li><strong>Usage Data:</strong> Information on how you interact with our website.</li>
+          </ul>
+        </section>
 
-    <p>
-      We may use analytics tools to understand site traffic and improve
-      user experience.
-    </p>
+        <section className="policy-section">
+          <h2>2. How We Use Information</h2>
+          <p>We use the information we collect to process your orders, maintain your account, and send you updates about our latest anime collections.</p>
+        </section>
 
-    <p>
-      By using this website, you agree to this policy.
-    </p>
-  </div>
-);
+        <section className="policy-section">
+          <h2>3. Data Security</h2>
+          <div className="security-note">
+            <p>We implement a variety of security measures to maintain the safety of your personal information. Your data is stored behind secured networks.</p>
+          </div>
+        </section>
+
+        <footer className="policy-footer">
+          <p>If you have questions regarding this policy, contact us at <strong>support@zenenation.com</strong></p>
+        </footer>
+      </motion.div>
+    </div>
+  );
+};
 
 export default PrivacyPolicy;

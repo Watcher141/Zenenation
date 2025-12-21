@@ -5,13 +5,13 @@ import "../components/About.css";
 const teamMembers = [
   {
     name: "Tamal Mukherjee",
-    role: "Finance & Inventory Management",
+    role: "Finance & Inventory",
     photo: "/images/team/tamal.jpg",
     desc: "Manages financial planning, budgeting, and inventory flow to ensure smooth operations and product availability across ZeneNation."
   },
   {
     name: "Rony Maity",
-    role: "Packaging",
+    role: "Packaging Expert",
     photo: "/images/team/rony.jpg",
     desc: "Responsible for secure, aesthetic, and damage-free packaging so every anime collectible reaches customers in perfect condition."
   },
@@ -23,77 +23,115 @@ const teamMembers = [
   },
   {
     name: "Monojit Das",
-    role: "Web Developer",
+    role: "Lead Web Developer",
     photo: "/images/team/monojit.jpg",
     desc: "Works on frontend and backend development to ensure a fast, responsive, and user-friendly anime collectibles platform."
   },
   {
     name: "Priyansu Dhar",
-    role: "Web Developer",
+    role: "UI/UX Developer",
     photo: "/images/team/priyansu.jpg",
     desc: "Focuses on UI/UX, performance optimization, and modern web technologies to deliver a smooth shopping experience."
   }
 ];
 
 const About = () => {
+  // Animation Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+  };
+
   return (
-    <div className="about-container">
+    <div className="about-page">
+      <header className="about-header">
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          About ZeneNation
+        </motion.h1>
+      </header>
 
-      {/* Our Goal Section */}
-      <motion.section
-        className="about-goal"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="goal-text">
-          <h2>Our Goal</h2>
-          <p>
-            ZeneNation is an anime collectibles platform built for true fans.
-            Our goal is to bring authentic, high-quality anime merchandise
-            with a smooth and enjoyable shopping experience.
-          </p>
-          <ul>
-            <li>✔ Deliver genuine anime collectibles</li>
-            <li>✔ Ensure safe packaging and fast delivery</li>
-            <li>✔ Build a trusted anime community</li>
-            <li>✔ Combine design, technology, and fandom</li>
-          </ul>
-        </div>
-      </motion.section>
+      <main className="about-content">
+        {/* Goal Section */}
+        <motion.section 
+          className="section-container"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="section-title-box">
+            <div className="accent-line"></div>
+            <h2>Our Vision</h2>
+          </div>
+          
+          <div className="goal-card">
+            <p className="goal-intro">
+              ZeneNation is more than just a store; it's a hub for the anime community. 
+              We bridge the gap between high-quality Japanese collectibles and fans worldwide 
+              through technology and passion.
+            </p>
+            <ul className="goal-list">
+              <li><span className="check">✔</span> 100% Genuine Merchandise</li>
+              <li><span className="check">✔</span> Community-Driven Approach</li>
+              <li><span className="check">✔</span> Secure & Aesthetic Packaging</li>
+              <li><span className="check">✔</span> Tech-First Shopping Experience</li>
+            </ul>
+          </div>
+        </motion.section>
 
-      {/* Our Team Section */}
-      <motion.section
-        className="about-team"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2>Our Team</h2>
+        {/* Team Section */}
+        <section className="section-container">
+          <div className="section-title-box">
+            <div className="accent-line"></div>
+            <h2>The Squad</h2>
+          </div>
 
-        <div className="team-grid">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              className="team-card detailed"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img
-                src={member.photo}
-                alt={member.name}
-                className="team-photo"
-                onError={(e) => {
-                  e.target.src = "/images/placeholder.png";
-                }}
-              />
-              <h3>{member.name}</h3>
-              <span className="role">{member.role}</span>
-              <p className="desc">{member.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
+          <motion.div 
+            className="team-list"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            {teamMembers.map((member, index) => (
+              <motion.div 
+                key={index}
+                className="member-card-horizontal"
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="member-photo-container">
+                  <img 
+                    src={member.photo} 
+                    alt={member.name} 
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = "https://ui-avatars.com/api/?name=" + member.name + "&background=00b4d8&color=fff";
+                    }}
+                  />
+                </div>
+                <div className="member-info">
+                  <span className="member-role">{member.role}</span>
+                  <h3>{member.name}</h3>
+                  <p className="member-desc">{member.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
+      </main>
     </div>
   );
 };

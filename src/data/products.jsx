@@ -64,7 +64,7 @@ export const products = [
     id: "p2",
     category: "keychain",
     name: "Demon Slayer Keychain",
-    // price: "₹99",
+    //price: "₹99",
     images: [
       "/images/DemonSlayer.jpeg"
     ],
@@ -356,7 +356,7 @@ export const products = [
       {
         variantId: "p7-v1",
         label: "Golden Blade",
-        price: "₹99",
+        price: "₹199",
         image: "/images/butterfly2.jpg",
         description:
           "Gold Blade is a premium butterfly-style metal knife featuring exquisite engraved detailing and a polished, upscale finish. Designed as a statement collectible, it is perfect for display in refined collections."
@@ -364,7 +364,7 @@ export const products = [
       {
         variantId: "p7-v2",
         label: "Cyber Mecha Green",
-        price: "₹99",
+        price: "₹199",
         image: "/images/butterfly3.jpg",
         description:
           "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."

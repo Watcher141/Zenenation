@@ -1,102 +1,181 @@
-.about-container {
-background: linear-gradient(180deg, #0f172a, #1e293b);
-color: #e5e7eb;
-min-height: 100vh;
-padding: 80px 20px;
-font-family: "Poppins", sans-serif;
+:root {
+  --bg-main: #f0f7ff;          /* Very light sky blue background */
+  --card-white: #ffffff;       /* Pure white for cards */
+  --primary-blue: #0056b3;     /* Deep royal blue for headers */
+  --accent-cyan: #00b4d8;      /* Bright cyan for icons and accents */
+  --text-dark: #1a202c;        /* Near black for readability */
+  --text-muted: #4a5568;       /* Gray-blue for descriptions */
+  --shadow: 0 10px 30px rgba(0, 86, 179, 0.08);
 }
 
-
-.about-hero {
-text-align: center;
-max-width: 800px;
-margin: auto;
-margin-bottom: 80px;
+.about-page {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  padding: 60px 20px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
 }
 
-
-.about-hero h1 {
-font-size: 2.8rem;
-color: #38bdf8;
-margin-bottom: 16px;
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-
-.about-hero p {
-font-size: 1.1rem;
-color: #cbd5f5;
-line-height: 1.8;
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
 }
 
-
-.about-mission {
-max-width: 900px;
-margin: auto;
-margin-bottom: 80px;
-text-align: center;
+/* Decorative underline for the main title */
+.about-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20%;
+  width: 60%;
+  height: 4px;
+  background: var(--accent-cyan);
+  border-radius: 2px;
 }
 
-.about-mission h2 {
-font-size: 2.2rem;
-margin-bottom: 14px;
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-
-.about-mission p {
-color: #d1d5db;
-font-size: 1.05rem;
+/* Section Containers */
+.section-container {
+  margin-bottom: 80px;
 }
 
-
-.about-team {
-max-width: 1100px;
-margin: auto;
+.section-title-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
-
-.about-team h2 {
-text-align: center;
-font-size: 2.3rem;
-margin-bottom: 40px;
+.accent-line {
+  width: 8px;
+  height: 35px;
+  background: linear-gradient(to bottom, var(--primary-blue), var(--accent-cyan));
+  border-radius: 4px;
 }
 
-
-.team-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 24px;
+.section-title-box h2 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin: 0;
 }
 
-
-.team-card {
-background: rgba(255, 255, 255, 0.05);
-border-radius: 16px;
-padding: 30px 20px;
-text-align: center;
-backdrop-filter: blur(10px);
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-cursor: pointer;
+/* Goal Card Styling */
+.goal-card {
+  background: var(--card-white);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 180, 216, 0.1);
 }
 
-.team-card h3 {
-font-size: 1.2rem;
-margin-bottom: 6px;
+.goal-intro {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 25px;
 }
 
-
-.team-card span {
-font-size: 0.95rem;
-color: #94a3b8;
+.goal-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
+.goal-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
 
+.check {
+  color: var(--accent-cyan);
+  font-size: 1.2rem;
+}
+
+/* Team Section List */
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.member-card-horizontal {
+  display: flex;
+  align-items: center;
+  background: var(--card-white);
+  padding: 25px;
+  border-radius: 20px;
+  gap: 30px;
+  border: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: var(--shadow);
+}
+
+.member-card-horizontal:hover {
+  transform: scale(1.02);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 15px 35px rgba(0, 180, 216, 0.15);
+}
+
+.member-photo-container img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-main);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.member-info h3 {
+  margin: 0 0 5px 0;
+  color: var(--primary-blue);
+  font-size: 1.4rem;
+}
+
+.member-role {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--white);
+  background: var(--accent-cyan);
+  padding: 2px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.member-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-.about-hero h1 {
-font-size: 2.2rem;
-}
-
-
-.about-team h2 {
-font-size: 2rem;
-}
+  .member-card-horizontal {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 25px;
+  }
+  
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
 }
