@@ -112,18 +112,23 @@
 }
 
 .social.fb:hover {
-  background: #1877f2;
-  border-color: #1877f2;
+  background: whitesmoke;
+  border-color: whitesmoke;
 }
 
-.social.x:hover {
-  background: #000;
-  border-color: #000;
+.social.i:hover {
+  background: whitesmoke;
+  border-color: whitesmoke;
 }
 
-.social.in:hover {
-  background: #0077b5;
-  border-color: #0077b5;
+.social.bw:hover {
+  background: whitesmoke;
+  border-color: whitesmoke;
+}
+
+.social.d:hover {
+  background: whitesmoke;
+  border-color: whitesmoke;
 }
 
 /* Links Section */

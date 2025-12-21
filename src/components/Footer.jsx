@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom"; // <-- Import Link
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF} from "react-icons/fa";
+import { FaInstagram, FaDiscord } from "react-icons/fa";
+import { BsWhatsapp } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import "./Footer.css";
@@ -41,14 +42,17 @@ const Footer = () => {
             </motion.p>
 
             <motion.div variants={fadeIn("up", 0.7)} className="socials">
-              <motion.a whileHover={{ scale: 1.1 }} href="#" className="social fb">
+              <motion.a whileHover={{ scale: 1.1 }} href="https://www.facebook.com/share/1BnNR7pwsM/" className="social fb">
                 <FaFacebookF />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.1 }} href="#" className="social x">
-                <FaXTwitter />
+              <motion.a whileHover={{ scale: 1.1 }} href="https://www.instagram.com/its_zenenation?igsh=MWhocm14bHpwdmRucw==" className="social i">
+                <FaInstagram />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.1 }} href="#" className="social in">
-                <FaLinkedinIn />
+              <motion.a whileHover={{ scale: 1.1 }} href="#" className="social bw">
+                <BsWhatsapp />
+              </motion.a>
+              <motion.a whileHover={{ scale: 1.1 }} href="https://discord.gg/rRxpSTND6" className="social d">
+                <FaDiscord />
               </motion.a>
             </motion.div>
           </motion.div>
