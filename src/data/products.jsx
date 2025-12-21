@@ -144,7 +144,7 @@ export const products = [
     variants: [
       {
         variantId: "p3-v1",
-        label: "Classic Red",
+        label: "Iron Man",
         price: "₹99",
         image: "/images/Ironman.png",
         description:
@@ -160,7 +160,7 @@ export const products = [
       },
       {
         variantId: "p3-v3",
-        label: "Hand Blaster",
+        label: "CR7",
         price: "₹99",
         image: "/images/CR7.png",
         description:
@@ -211,99 +211,99 @@ export const products = [
     variants: [
       {
         variantId: "p1-v1",
-        label: "Classic Red Suit",
+        label: "Lavender Cat",
         price: "₹99",
         image: "/images/fc1.png",
         description:
-          "Classic red Spider-Man keychain with vibrant colors and iconic suit design."
+          "A vibrant lavender hoodie-themed face-changing keychain featuring a playful mood swing mechanism."
       },
       {
         variantId: "p1-v2",
-        label: "Miles Suit",
+        label: "Doraemon",
         price: "₹99",
         image: "/images/fc2.png",
         description:
-          "Miles Morales suit Spider-Man keychain with a sleek, darker look for collectors."
+          "Doraemon-inspired face-changing keychain wearing a blue hoodie that cycles through different iconic expressions."
       },
       {
         variantId: "p1-v3",
-        label: "Chill Spidy",
+        label: "Capybara",
         price: "₹99",
         image: "/images/fc3.png",
         description:
-          "Chill Spider-Man keychain with a sleek,look for collectors."
+          "This orange capybara face-changing keychain features a hooded design that swaps between different adorable expressions."
       },
       {
         variantId: "p1-v4",
-        label: "Cool Spidy",
+        label: "Spider-Man",
         price: "₹99",
         image: "/images/fc4.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This Spider-Man inspired red face-changing keychain features a hooded superhero design that rotates through various iconic web-slinger expressions."
       },
       {
         variantId: "p1-v5",
-        label: "Cool Spidy",
+        label: "Gojo Satoru",
         price: "₹99",
         image: "/images/fc5.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This anime-inspired Gojo Satoru face-changing keychain features a dark blue hoodie design that rotates through different iconic expressions."
       },
       {
         variantId: "p1-v6",
-        label: "Cool Spidy",
+        label: "Lotso Bear",
         price: "₹99",
         image: "/images/fc6.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This Lotso-inspired pink bear face-changing keychain features a cozy hoodie design that cycles through various grumpy and sweet expressions."
       },
       {
         variantId: "p1-v7",
-        label: "Cool Spidy",
+        label: "Shin-chan",
         price: "₹99",
         image: "/images/fc7.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This Shin-chan inspired yellow face-changing keychain features a hooded design that cycles through various funny expressions."
       },
       {
         variantId: "p1-v8",
-        label: "Cool Spidy",
+        label: "Hello Kitty",
         price: "₹99",
         image: "/images/fc8.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This My Melody-inspired pink face-changing keychain features a cute hooded design that cycles through various sweet and winking expressions."
       },
       {
         variantId: "p1-v9",
-        label: "Cool Spidy",
+        label: "Green Liz",
         price: "₹99",
         image: "/images/fc9.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This lime green hoodie-themed face-changing keychain features a playful winking character that swaps between different expressions."
       },
       {
         variantId: "p1-v10",
-        label: "Cool Spidy",
+        label: "Squid Game",
         price: "₹99",
         image: "/images/fc10.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This Squid Game-inspired red face-changing keychain features a hooded guard design that cycles through iconic mask symbols."
       },
       {
         variantId: "p1-v11",
-        label: "Cool Spidy",
+        label: "Tanjiro Kamado",
         price: "₹99",
         image: "/images/fc11.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This Demon Slayer-inspired teal face-changing keychain features Tanjiro in a hooded design that cycles through various determined and fierce expressions."
       },
       {
         variantId: "p1-v12",
-        label: "Cool Spidy",
+        label: "Captain America",
         price: "₹99",
         image: "/images/fc12.png",
         description:
-          "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
+          "This Captain America-inspired blue face-changing keychain features a hooded superhero design that cycles through various determined and heroic expressions."
       }
     ]
   },
