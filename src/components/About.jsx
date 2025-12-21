@@ -11,9 +11,9 @@ const teamMembers = [
   },
   {
     name: "Rony Maity",
-    role: "Packaging Expert",
+    role: "Operations & Optimization Manager",
     photo: "/images/team/rony.jpg",
-    desc: "Responsible for secure, aesthetic, and damage-free packaging so every anime collectible reaches customers in perfect condition."
+    desc: "Manages day-to-day operations and workflow optimization & focuses on improving efficiency, coordinating logistics, and ensuring processes run smoothly from order handling to delivery."
   },
   {
     name: "Anish Kumar Das",
