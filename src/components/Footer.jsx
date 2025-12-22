@@ -45,7 +45,7 @@ const Footer = () => {
               <motion.a whileHover={{ scale: 1.1 }} href="https://www.facebook.com/share/1Bs83wC4TV/" className="social fb">
                 <FaFacebookF />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.1 }} href="https://www.instagram.com/its_zenenation?igsh=MWhocm14bHpwdmRucw==" className="social i">
+              <motion.a whileHover={{ scale: 1.1 }} href="https://www.instagram.com/its_zenenation/?utm_source=qr&igsh=MTlzZDg1aGc0b2gyYQ%3D%3D#" className="social i">
                 <FaInstagram />
               </motion.a>
               <motion.a whileHover={{ scale: 1.1 }} href="#" className="social bw">
