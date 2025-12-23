@@ -11,7 +11,7 @@ export const products = [
     id: "p1",
     category: "keychain",
     name: "Spider Man Keychain",
-    basePrice: "₹259",
+    price: "₹99",
     images: [
       "/images/SpidereMan1.jpg"
     ],
@@ -64,7 +64,7 @@ export const products = [
     id: "p2",
     category: "keychain",
     name: "Demon Slayer Keychain",
-    //price: "₹99",
+    price: "₹99",
     images: [
       "/images/DemonSlayer.jpeg"
     ],
@@ -130,7 +130,7 @@ export const products = [
     id: "p3",
     category: "keychain",
     name: "Metal Keychain",
-    basePrice: "₹99",
+    price: "₹99",
     images: [
       "/images/metalkeychaain.png"
     ],
@@ -197,9 +197,9 @@ export const products = [
     id: "p4",
     category: "keychain",
     name: "Face Changing Keychain",
-    basePrice: "₹99",
+    price: "₹99",
     images: [
-      "/images/fc1.png"
+      "/images/fcall.png"
     ],
     description:
       "Cute face-changing cartoon keychain with vibrant colors and smooth finishing.",
@@ -329,13 +329,41 @@ export const products = [
     name: "Mini Katana",
     price: "₹139",
     images: [
-      "/images/placeholder.png"
+      "/images/KatanaAll2.jpg"
     ],
     description:
       "Mini katana sword keychain inspired by Japanese anime swords with detailed blade and sheath.",
-    isNew: false,
+    isNew: true,
     isFeatured: false,
-    popularityScore: 72
+    popularityScore: 72,
+    hasVariants: true,
+    variants: [
+      {
+        variantId: "p6-v1",
+        label: "Shusui",
+        price: "₹139",
+        image: "/images/katana.jpg",
+        description:
+          "Zoro's Shusui inspired Mini katana keychain featuring a sleek stainless steel blade, detailed handle wrap, and decorative sheath—perfect as a collectible or stylish everyday accessory."
+      },
+      {
+        variantId: "p6-v2",
+        label: "Yubashiri ",
+        price: "₹139",
+        image: "/images/Katana3.jpg",
+        description:
+          "Zoro's Yubashiri inspired Premium mini katana keychain with a polished steel blade, elegant black-and-gold detailing, and durable sheath—an eye-catching collectible and everyday carry accessory."
+      },
+      {
+        variantId: "p6-v3",
+        label: "Wado Ichimonji ",
+        price: "₹139",
+        image: "/images/Katana2.jpg",
+        description:
+          "Zoro's Wado Ichimonji inspired Elegant white mini katana keychain with a polished steel blade, gold-accented fittings, and matching sheath—perfect for collectors and stylish everyday carry."
+      }
+
+    ]
   },
 
   {
@@ -378,7 +406,7 @@ export const products = [
     name: "Labubu Doll",
     price: "₹219",
     images: [
-      "/images/Labubu1.png"
+      "/images/Labubu3.jpg"
     ],
     description:
       "Adorable Labubu plush doll with soft body, long ears, and premium craftsmanship.",
@@ -390,8 +418,8 @@ export const products = [
       {
         variantId: "p8-v1",
         label: "Mistry Labubu",
-        price: "₹99",
-        image: "/images/Labubu2.png",
+        price: "₹219",
+        image: "/images/labubu.jpg",
         description:
           "Adorable Labubu collectable doll with soft body, long ears, and premium craftsmanship."
       }
@@ -402,7 +430,7 @@ export const products = [
     id: "p9",
     category: "poster",
     name: "Custom Poster",
-    price: "₹69",
+    price: "₹99",
     images: [
       "/images/placeholder.png"
     ],
@@ -417,37 +445,69 @@ export const products = [
     id: "p10",
     category: "mug",
     name: "Custom Mug",
-    price: "₹249",
+    price: "₹289",
     images: [
-      "/images/placeholder.png"
+      "/images/Custom_Mug.png"
     ],
     description:
       "Premium customized mug printed with your chosen image or design.",
     isNew: true,
     isFeatured: false,
-    popularityScore: 80
+    popularityScore: 80,
+    hasVariants: true,
+    variants: [
+      {
+        variantId: "p10-v1",
+        label: "Customization Steps",
+        price: "₹289",
+        image: "/images/Customization_steps.png",
+        description:
+          "Follow the Steps for Customization."
+      },
+      
+      {
+        variantId: "p10-v2",
+        label: "After Customization",
+        price: "₹289",
+        image: "/images/Custom_Mug2.png",
+        description:
+          "After Costomization The Mug will look like this."
+      }
+    ]
+
   },
 
   {
     id: "p11",
     category: "mug",
     name: "Magic Mug",
-    price: "₹559",
+    price: "₹489",
     images: [
-      "/images/placeholder.png"
+      "/images/Magic_mug.png"
     ],
     description:
       "Heat-sensitive magic mug that reveals your design when hot liquid is poured.",
     isNew: false,
     isFeatured: true,
-    popularityScore: 88
+    popularityScore: 88,
+    hasVariants: true,
+    variants: [
+      {
+        variantId: "p11-v1",
+        label: "Customization Steps",
+        price: "₹489",
+        image: "/images/Customization_steps.png",
+        description:
+          "Follow the Steps for Customization."
+      }
+    ]
   },
 
   {
     id: "p12",
     category: "Posters",
     name: "Our special collection",
-    //price: "₹119",
+    price: "₹119",
     images: [
       "/images/placeholder.png"
     ],
