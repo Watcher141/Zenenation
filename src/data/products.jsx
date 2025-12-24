@@ -314,10 +314,10 @@ export const products = [
     name: "Pocket Watch Keychain",
     price: "₹299",
     images: [
-      "/images/fcall.png"
+      "/images/ALL_PW.jpg"
     ],
     description:
-      "Cute face-changing cartoon keychain with vibrant colors and smooth finishing.",
+      "Level up your aesthetic with our exclusive Anime & Fantasy pocket watch collection, featuring iconic designs.",
     isNew: true,
     isFeatured: true,
     popularityScore: 78,
@@ -328,17 +328,17 @@ export const products = [
         variantId: "p5-v1",
         label: "Akatsuki Pocket Watch Keychain",
         price: "₹299",
-        image: "/images/fc1.png",
+        image: "/images/AK_PW.jpg",
         description:
-          "A vibrant lavender hoodie-themed face-changing keychain featuring a playful mood swing mechanism."
+          "Elevate your anime collection with this premium silver pocket watch keychain featuring the iconic Akatsuki Red Cloud design and precision quartz movement."
       },
       {
         variantId: "p5-v2",
-        label: "Harry Potter Snitch Pocket Watch Keychain",
+        label: "Harry Potter Snitch Pocket Watch Locket",
         price: "₹299",
-        image: "/images/fc2.png",
+        image: "/images/HP_PW.jpg",
         description:
-          "Doraemon-inspired face-changing keychain wearing a blue hoodie that cycles through different iconic expressions."
+          "Capture the magic with this vintage-style Golden Snitch pocket watch necklace, featuring detailed wings and the iconic 'I open at the close' engraving."
       }
     ]
   },
@@ -364,7 +364,7 @@ export const products = [
     name: "Mini Katana",
     price: "₹139",
     images: [
-      "/images/KatanaAll2.jpg"
+      "/images/KatanaAll3.png"
     ],
     description:
       "Mini katana sword keychain inspired by Japanese anime swords with detailed blade and sheath.",
@@ -399,19 +399,19 @@ export const products = [
       },
       {
         variantId: "p6-v4",
-        label: "Wado Ichimonji ",
+        label: "Haramaki Blade",
         price: "₹139",
-        image: "/images/Katana2.jpg",
+        image: "/images/Katana4.jpg",
         description:
-          "Zoro's Wado Ichimonji inspired Elegant white mini katana keychain with a polished steel blade, gold-accented fittings, and matching sheath—perfect for collectors and stylish everyday carry."
+          "Zoro's Haramaki blade inspired mini-katana, Sharpen your style with this emerald green miniature katana keychain, featuring a realistic metal blade, gold accents, and a sleek matching scabbard."
       },
       {
         variantId: "p6-v5",
-        label: "Wado Ichimonji ",
+        label: "Nichirin Blade",
         price: "₹119",
-        image: "/images/Katana2.jpg",
+        image: "/images/Katana5.jpg",
         description:
-          "Zoro's Wado Ichimonji inspired Elegant white mini katana keychain with a polished steel blade, gold-accented fittings, and matching sheath—perfect for collectors and stylish everyday carry."
+          "Zenetsu's Nichirin blade inspired Elegant white mini katana keychain with a polished Steel blade, gold-accented fittings, and matching plastic sheath—perfect for collectors and stylish everyday carry."
       }
 
     ]
@@ -423,7 +423,7 @@ export const products = [
     name: "Luxury Metal Butterfly Knife",
     price: "₹199",
     images: [
-      "/images/butterfly1.jpg"
+      "/images/butterflyall.png"
     ],
     description:
       "Luxury butterfly-style metal knife with engraved detailing and premium finish. Ideal as a display collectible.",
@@ -434,7 +434,7 @@ export const products = [
     variants: [
       {
         variantId: "p7-v1",
-        label: "Golden Blade",
+        label: "Rose Gold",
         price: "₹199",
         image: "/images/butterfly2.jpg",
         description:
@@ -450,27 +450,27 @@ export const products = [
       },
       {
         variantId: "p7-v3",
-        label: "Cyber Mecha Green",
+        label: "Galactic Blue",
         price: "₹199",
-        image: "/images/butterfly3.jpg",
+        image: "/images/butterfly4.jpg",
         description:
-          "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
+          "Galactic Blue is a Premium Valorant-inspired alloy butterfly knife trainer featuring a vibrant, multi-color skin finish—perfect for safe trick practice, cosplay, and gaming setups."
       },
       {
         variantId: "p7-v4",
-        label: "Cyber Mecha Green",
+        label: "Royal Gold",
         price: "₹199",
-        image: "/images/butterfly3.jpg",
+        image: "/images/butterfly5.jpg",
         description:
-          "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
+          "Master the flick with this premium Valorant-inspired Royal Gold Butterfly Knife Trainer, the ultimate addition to your gaming arsenal."
       },
       {
         variantId: "p7-v5",
-        label: "Cyber Mecha Green",
+        label: "Radical Blue",
         price: "₹199",
-        image: "/images/butterfly3.jpg",
+        image: "/images/butterfly6.png",
         description:
-          "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
+          "Level up your skills with the Battle Machine Trainer, a safe, unsharpened balisong featuring a radical blue and toxic-green cyber-splatter design."
       }
     ]
   },
@@ -481,10 +481,10 @@ export const products = [
     name: "Primeum Metal Karambit Knife",
     price: "₹289",
     images: [
-      "/images/butterfly1.jpg"
+      "/images/Karambit1.png"
     ],
     description:
-      "Luxury butterfly-style metal knife with engraved detailing and premium finish. Ideal as a display collectible.",
+      "Modern & Primeum karambit-style knife with a curved blade and ergonomic ring handle, designed for collectors, gamers, and eye-catching display or cosplay use.",
     isNew: true,
     isFeatured: true,
     popularityScore: 92,
@@ -492,11 +492,11 @@ export const products = [
     variants: [
       {
         variantId: "p14-v1",
-        label: "Golden Blade",
-        price: "₹199",
-        image: "/images/butterfly2.jpg",
+        label: "Velocity Karambit",
+        price: "₹289",
+        image: "/images/Karambit2.png",
         description:
-          "Gold Blade is a premium butterfly-style metal knife featuring exquisite engraved detailing and a polished, upscale finish. Designed as a statement collectible, it is perfect for display in refined collections."
+          "Sleek Valorant-inspired karambit featuring a curved precision blade and futuristic grip design, perfect for collectors, gamers, and premium display or cosplay use."
       }
     ]
   },
