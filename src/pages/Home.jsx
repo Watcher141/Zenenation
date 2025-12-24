@@ -141,7 +141,7 @@ const Home = () => {
                         data-aos="fade-up"
                         data-aos-delay="150"
                     >
-                        <img src="/images/Labubu2.png" alt="Mascots" />
+                        <img src="/images/Labubu3.jpg" alt="Mascots" />
                         <h3>Figures & Mascot</h3>
                     </div>
 

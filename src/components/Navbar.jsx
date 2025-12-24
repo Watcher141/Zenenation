@@ -44,6 +44,9 @@ const Navbar = () => {
         <li>
           <Link to="/category/poster" onClick={closeMenu}>Posters</Link>
         </li>
+        <li>
+          <Link to="/category/pocketwatch" onClick={closeMenu}>Pocket Watch</Link>
+        </li>
       </ul>
     </nav>
   );

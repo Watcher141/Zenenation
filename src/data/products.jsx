@@ -308,6 +308,41 @@ export const products = [
     ]
   },
 
+  {
+    id: "p5",
+    category: "pocketwatch",
+    name: "Pocket Watch Keychain",
+    price: "₹299",
+    images: [
+      "/images/fcall.png"
+    ],
+    description:
+      "Cute face-changing cartoon keychain with vibrant colors and smooth finishing.",
+    isNew: true,
+    isFeatured: true,
+    popularityScore: 78,
+
+    hasVariants: true,
+    variants: [
+      {
+        variantId: "p5-v1",
+        label: "Akatsuki Pocket Watch Keychain",
+        price: "₹299",
+        image: "/images/fc1.png",
+        description:
+          "A vibrant lavender hoodie-themed face-changing keychain featuring a playful mood swing mechanism."
+      },
+      {
+        variantId: "p5-v2",
+        label: "Harry Potter Snitch Pocket Watch Keychain",
+        price: "₹299",
+        image: "/images/fc2.png",
+        description:
+          "Doraemon-inspired face-changing keychain wearing a blue hoodie that cycles through different iconic expressions."
+      }
+    ]
+  },
+
   // {
   //   id: "p5",
   //   category: "mascot",
@@ -334,7 +369,7 @@ export const products = [
     description:
       "Mini katana sword keychain inspired by Japanese anime swords with detailed blade and sheath.",
     isNew: true,
-    isFeatured: false,
+    isFeatured: true,
     popularityScore: 72,
     hasVariants: true,
     variants: [
@@ -361,6 +396,22 @@ export const products = [
         image: "/images/Katana2.jpg",
         description:
           "Zoro's Wado Ichimonji inspired Elegant white mini katana keychain with a polished steel blade, gold-accented fittings, and matching sheath—perfect for collectors and stylish everyday carry."
+      },
+      {
+        variantId: "p6-v4",
+        label: "Wado Ichimonji ",
+        price: "₹139",
+        image: "/images/Katana2.jpg",
+        description:
+          "Zoro's Wado Ichimonji inspired Elegant white mini katana keychain with a polished steel blade, gold-accented fittings, and matching sheath—perfect for collectors and stylish everyday carry."
+      },
+      {
+        variantId: "p6-v5",
+        label: "Wado Ichimonji ",
+        price: "₹119",
+        image: "/images/Katana2.jpg",
+        description:
+          "Zoro's Wado Ichimonji inspired Elegant white mini katana keychain with a polished steel blade, gold-accented fittings, and matching sheath—perfect for collectors and stylish everyday carry."
       }
 
     ]
@@ -376,7 +427,7 @@ export const products = [
     ],
     description:
       "Luxury butterfly-style metal knife with engraved detailing and premium finish. Ideal as a display collectible.",
-    isNew: false,
+    isNew: true,
     isFeatured: true,
     popularityScore: 92,
     hasVariants: true,
@@ -396,6 +447,56 @@ export const products = [
         image: "/images/butterfly3.jpg",
         description:
           "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
+      },
+      {
+        variantId: "p7-v3",
+        label: "Cyber Mecha Green",
+        price: "₹199",
+        image: "/images/butterfly3.jpg",
+        description:
+          "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
+      },
+      {
+        variantId: "p7-v4",
+        label: "Cyber Mecha Green",
+        price: "₹199",
+        image: "/images/butterfly3.jpg",
+        description:
+          "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
+      },
+      {
+        variantId: "p7-v5",
+        label: "Cyber Mecha Green",
+        price: "₹199",
+        image: "/images/butterfly3.jpg",
+        description:
+          "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
+      }
+    ]
+  },
+
+  {
+    id: "p14",
+    category: "armory",
+    name: "Primeum Metal Karambit Knife",
+    price: "₹289",
+    images: [
+      "/images/butterfly1.jpg"
+    ],
+    description:
+      "Luxury butterfly-style metal knife with engraved detailing and premium finish. Ideal as a display collectible.",
+    isNew: true,
+    isFeatured: true,
+    popularityScore: 92,
+    hasVariants: true,
+    variants: [
+      {
+        variantId: "p14-v1",
+        label: "Golden Blade",
+        price: "₹199",
+        image: "/images/butterfly2.jpg",
+        description:
+          "Gold Blade is a premium butterfly-style metal knife featuring exquisite engraved detailing and a polished, upscale finish. Designed as a statement collectible, it is perfect for display in refined collections."
       }
     ]
   },
@@ -436,7 +537,7 @@ export const products = [
     ],
     description:
       "Create your own premium customized poster by sending us your desired photo.",
-    isNew: true,
+    isNew: false,
     isFeatured: false,
     popularityScore: 75
   },
