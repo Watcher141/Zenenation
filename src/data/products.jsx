@@ -11,7 +11,7 @@ export const products = [
     id: "p1",
     category: "keychain",
     name: "Spider Man Keychain",
-    price: "₹99",
+    price: "₹69",
     images: [
       "/images/SpidereMan1.jpg"
     ],
@@ -26,7 +26,7 @@ export const products = [
       {
         variantId: "p1-v1",
         label: "Classic Red Suit",
-        price: "₹99",
+        price: "₹69",
         image: "/images/spidyvar1.png",
         description:
           "Classic red Spider-Man keychain with vibrant colors and iconic suit design."
@@ -34,7 +34,7 @@ export const products = [
       {
         variantId: "p1-v2",
         label: "Miles Suit",
-        price: "₹99",
+        price: "₹69",
         image: "/images/spidyvar2.png",
         description:
           "Miles Morales suit Spider-Man keychain with a sleek, darker look for collectors."
@@ -42,7 +42,7 @@ export const products = [
       {
         variantId: "p1-v3",
         label: "Chill Spidy",
-        price: "₹99",
+        price: "₹69",
         image: "/images/spidyvar3.png",
         description:
           "Chill Spider-Man keychain with a sleek,look for collectors."
@@ -50,7 +50,7 @@ export const products = [
       {
         variantId: "p1-v4",
         label: "Cool Spidy",
-        price: "₹99",
+        price: "₹69",
         image: "/images/spidyvar4.png",
         description:
           "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
@@ -64,7 +64,7 @@ export const products = [
     id: "p2",
     category: "keychain",
     name: "Demon Slayer Keychain",
-    price: "₹99",
+    price: "₹69",
     images: [
       "/images/DemonSlayer.jpeg"
     ],
@@ -78,7 +78,7 @@ export const products = [
       {
         variantId: "p2-v1",
         label: "Tanjiro Kamado",
-        price: "₹99",
+        price: "₹69",
         image: "/images/Tanjiro.png",
         description:
           "A cute Demon Slayer–inspired chibi Tanjiro keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -86,7 +86,7 @@ export const products = [
       {
         variantId: "p2-v2",
         label: "Gyu Tomioka",
-        price: "₹99",
+        price: "₹69",
         image: "/images/Gyu.png",
         description:
           "A cute Demon Slayer–inspired chibi Gyu keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -94,7 +94,7 @@ export const products = [
       {
         variantId: "p2-v3",
         label: "Zenitsu Agatsuma",
-        price: "₹99",
+        price: "₹69",
         image: "/images/Zenitsu.png",
         description:
           "A cute Demon Slayer–inspired chibi Zenitsu keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -102,7 +102,7 @@ export const products = [
       {
         variantId: "p2-v4",
         label: "Inosuke Hashibira",
-        price: "₹99",
+        price: "₹69",
         image: "/images/Inosuke.png",
         description:
           "A cute Demon Slayer–inspired chibi Inosuke keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -110,7 +110,7 @@ export const products = [
       {
         variantId: "p2-v5",
         label: "Nezuko Kamado",
-        price: "₹99",
+        price: "₹69",
         image: "/images/Nezuko.png",
         description:
           "A cute Demon Slayer–inspired chibi Nezuko keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -118,7 +118,7 @@ export const products = [
       {
         variantId: "p2-v6",
         label: "Shinobu Kocho",
-        price: "₹99",
+        price: "₹69",
         image: "/images/Shinobu.png",
         description:
           "A cute Demon Slayer–inspired chibi Shinobu keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -130,7 +130,7 @@ export const products = [
     id: "p3",
     category: "keychain",
     name: "Metal Keychain",
-    price: "₹99",
+    price: "₹79",
     images: [
       "/images/metalkeychaain.png"
     ],
@@ -145,7 +145,7 @@ export const products = [
       {
         variantId: "p3-v1",
         label: "Iron Man",
-        price: "₹99",
+        price: "₹79",
         image: "/images/Ironman.png",
         description:
           "Classic red Iron Man keychain with vibrant colors and iconic suit design."
@@ -153,7 +153,7 @@ export const products = [
       {
         variantId: "p3-v2",
         label: "Hand Blaster",
-        price: "₹99",
+        price: "₹79",
         image: "/images/IronmanHand.png",
         description:
           "A bold Avengers-inspired metal keychain featuring the iconic powered hand design. Perfect for adding superhero energy to your keys, bag, or everyday carry"
@@ -161,7 +161,7 @@ export const products = [
       {
         variantId: "p3-v3",
         label: "CR7",
-        price: "₹99",
+        price: "₹79",
         image: "/images/CR7.png",
         description:
           "A cool football jersey–style keychain with a bold number 7 design. Perfect for CR7 fans to show off their love for the game on keys, bags, or backpacks"
@@ -169,7 +169,7 @@ export const products = [
       {
         variantId: "p3-v4",
         label: "Joker",
-        price: "₹99",
+        price: "₹79",
         image: "/images/joker.png",
         description:
           "A bold Joker-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -177,7 +177,7 @@ export const products = [
       {
         variantId: "p3-v5",
         label: "Deadpool",
-        price: "₹99",
+        price: "₹79",
         image: "/images/Deadpool.png",
         description:
           "A bold Deadpool-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -185,7 +185,7 @@ export const products = [
       {
         variantId: "p3-v6",
         label: "Black Panther",
-        price: "₹99",
+        price: "₹79",
         image: "/images/Blackpanter.png",
         description:
           "A bold Black Panther-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -197,7 +197,7 @@ export const products = [
     id: "p4",
     category: "keychain",
     name: "Face Changing Keychain",
-    price: "₹99",
+    price: "₹79",
     images: [
       "/images/fcall.png"
     ],
@@ -212,7 +212,7 @@ export const products = [
       {
         variantId: "p4-v1",
         label: "Lavender Cat",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_LC.jpg",
         description:
           "A vibrant lavender hoodie-themed face-changing keychain featuring a playful mood swing mechanism."
@@ -220,7 +220,7 @@ export const products = [
       {
         variantId: "p4-v2",
         label: "Doraemon",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_DM.jpg",
         description:
           "Doraemon-inspired face-changing keychain wearing a blue hoodie that cycles through different iconic expressions."
@@ -228,7 +228,7 @@ export const products = [
       {
         variantId: "p4-v3",
         label: "Capybara",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_CB.jpg",
         description:
           "This orange capybara face-changing keychain features a hooded design that swaps between different adorable expressions."
@@ -236,7 +236,7 @@ export const products = [
       {
         variantId: "p4-v4",
         label: "Spider-Man",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_SM.jpg",
         description:
           "This Spider-Man inspired red face-changing keychain features a hooded superhero design that rotates through various iconic web-slinger expressions."
@@ -244,7 +244,7 @@ export const products = [
       {
         variantId: "p4-v5",
         label: "Gojo Satoru",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_GS.jpg",
         description:
           "This anime-inspired Gojo Satoru face-changing keychain features a dark blue hoodie design that rotates through different iconic expressions."
@@ -252,7 +252,7 @@ export const products = [
       {
         variantId: "p4-v6",
         label: "Lotso Bear",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_LB.jpg",
         description:
           "This Lotso-inspired pink bear face-changing keychain features a cozy hoodie design that cycles through various grumpy and sweet expressions."
@@ -260,7 +260,7 @@ export const products = [
       {
         variantId: "p4-v7",
         label: "Shin-chan",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_SC.jpg",
         description:
           "This Shin-chan inspired yellow face-changing keychain features a hooded design that cycles through various funny expressions."
@@ -268,7 +268,7 @@ export const products = [
       {
         variantId: "p4-v8",
         label: "Hello Kitty",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_HK.jpg",
         description:
           "This My Melody-inspired pink face-changing keychain features a cute hooded design that cycles through various sweet and winking expressions."
@@ -276,7 +276,7 @@ export const products = [
       {
         variantId: "p4-v9",
         label: "Green Liz",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_GL.jpg",
         description:
           "This lime green hoodie-themed face-changing keychain features a playful winking character that swaps between different expressions."
@@ -284,7 +284,7 @@ export const products = [
       {
         variantId: "p4-v10",
         label: "Squid Game",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_SG.jpg",
         description:
           "This Squid Game-inspired red face-changing keychain features a hooded guard design that cycles through iconic mask symbols."
@@ -292,7 +292,7 @@ export const products = [
       {
         variantId: "p4-v11",
         label: "Tanjiro Kamado",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_TK.jpg",
         description:
           "This Demon Slayer-inspired teal face-changing keychain features Tanjiro in a hooded design that cycles through various determined and fierce expressions."
@@ -300,7 +300,7 @@ export const products = [
       {
         variantId: "p4-v12",
         label: "Captain America",
-        price: "₹99",
+        price: "₹79",
         image: "/images/FC_CA.jpg",
         description:
           "This Captain America-inspired blue face-changing keychain features a hooded superhero design that cycles through various determined and heroic expressions."
@@ -312,7 +312,7 @@ export const products = [
     id: "p5",
     category: "pocketwatch",
     name: "Pocket Watch Keychain",
-    price: "₹299",
+    price: "₹269",
     images: [
       "/images/ALL_PW.jpg"
     ],
@@ -327,7 +327,7 @@ export const products = [
       {
         variantId: "p5-v1",
         label: "Akatsuki Pocket Watch Keychain",
-        price: "₹299",
+        price: "₹269",
         image: "/images/AK_PW.jpg",
         description:
           "Elevate your anime collection with this premium silver pocket watch keychain featuring the iconic Akatsuki Red Cloud design and precision quartz movement."
@@ -335,7 +335,7 @@ export const products = [
       {
         variantId: "p5-v2",
         label: "Harry Potter Snitch Pocket Watch Locket",
-        price: "₹299",
+        price: "₹269",
         image: "/images/HP_PW.jpg",
         description:
           "Capture the magic with this vintage-style Golden Snitch pocket watch necklace, featuring detailed wings and the iconic 'I open at the close' engraving."

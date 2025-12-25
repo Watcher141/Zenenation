@@ -1,9 +1,9 @@
 import React from "react";
-import slack from "/images/slack.png";
-import amazon from "/images/amazon.png";
-import woocommerce from "/images/woocommerce.png";
-import meundies from "/images/meundies.png";
-import sitepoint from "/images/sitepoint.png";
+import slack from "/images/b2_rbg.png";
+import amazon from "/images/b3_rbg.png";
+import woocommerce from "/images/banner1-removebg-preview.png";
+import meundies from "/images/b4_rbg.png";
+import sitepoint from "/images/b5_rbg.png";
 import "./CompanyLogo.css";
 
 const CompanyLogo = () => {
@@ -12,8 +12,8 @@ const CompanyLogo = () => {
   return (
     <section className="logo-section">
       <div className="logo-label">
-        Proud partner at <br />
-        <strong>Hubspot & Segment</strong>
+        Irresistible Offers & Benefits<br />
+        <strong>Don't Miss the Opportunity !!</strong>
       </div>
 
       <div className="logo-marquee">

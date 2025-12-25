@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom"; // <-- Import Link
-import { FaFacebookF} from "react-icons/fa";
-import { FaInstagram, FaDiscord } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaDiscord } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -10,10 +9,9 @@ import "./Footer.css";
 const Footer = () => {
   const footerLinks = {
     company: [
-      { name: "About Us", href: "/about" }, // <-- Link to About page
+      { name: "About Us", href: "/about" },
       { name: "Terms of Use", href: "/terms" },
       { name: "Privacy Policy", href: "/privacy-policy" },
-      //{ name: "Contact Us", href: "#" },
     ],
   };
 
@@ -26,6 +24,7 @@ const Footer = () => {
     >
       <div className="footer-container">
         <motion.div variants={fadeIn("up", 0.3)} className="footer-grid">
+
           {/* Brand */}
           <motion.div variants={fadeIn("right", 0.4)} className="footer-brand">
             <motion.div variants={fadeIn("down", 0.5)} className="footer-logo">
@@ -41,17 +40,46 @@ const Footer = () => {
               would have been rewritten a thousand times.
             </motion.p>
 
+            {/* Social Icons */}
             <motion.div variants={fadeIn("up", 0.7)} className="socials">
-              <motion.a whileHover={{ scale: 1.1 }} href="https://www.facebook.com/share/1Bs83wC4TV/" className="social fb">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                href="https://www.facebook.com/share/1Bs83wC4TV/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social fb"
+              >
                 <FaFacebookF />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.1 }} href="https://www.instagram.com/its_zenenation/?utm_source=qr&igsh=MTlzZDg1aGc0b2gyYQ%3D%3D#" className="social i">
+
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                href="https://www.instagram.com/its_zenenation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social i"
+              >
                 <FaInstagram />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.1 }} href="#" className="social bw">
+
+              {/* ✅ WhatsApp DM Redirect */}
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                href="https://wa.me/918697302404?text=Hello%20ZeneNation!%20I%20am%20interested%20in%20your%20anime%20collectibles."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social bw"
+              >
                 <BsWhatsapp />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.1 }} href="https://discord.gg/rRxpSTND6" className="social d">
+
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                href="https://discord.gg/rRxpSTND6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social d"
+              >
                 <FaDiscord />
               </motion.a>
             </motion.div>
@@ -68,17 +96,13 @@ const Footer = () => {
 
                   <ul className="links-list">
                     {links.map((link, idx) => (
-                      <motion.li key={idx} variants={fadeIn("up", 0.1 * (idx + 1))}>
-                        {/* Use Link for internal routing */}
-                        {link.href.startsWith("/") ? (
-                          <Link to={link.href} className="link">
-                            {link.name}
-                          </Link>
-                        ) : (
-                          <a href={link.href} className="link">
-                            {link.name}
-                          </a>
-                        )}
+                      <motion.li
+                        key={idx}
+                        variants={fadeIn("up", 0.1 * (idx + 1))}
+                      >
+                        <Link to={link.href} className="link">
+                          {link.name}
+                        </Link>
                       </motion.li>
                     ))}
                   </ul>
@@ -99,4 +123,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 

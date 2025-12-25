@@ -36,7 +36,7 @@
 
 /* LOGO SIZE FIX (MOST IMPORTANT PART) */
 .logo-track img {
-  height: 36px;               /* 👈 controls logo size */
+  height: 52px;               /* 👈 controls logo size */
   width: auto;
   margin: 0 48px;
   object-fit: contain;
