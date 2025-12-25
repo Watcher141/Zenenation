@@ -275,3 +275,33 @@
     font-size: 13px;
   }
 }
+
+/* Help & Support Box */
+.support-box p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.support-box svg {
+  font-size: 16px;
+  color: #4a90e2;
+}
+
+.support-box a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.support-box a:hover {
+  color: #4a90e2;
+}
+
+/* Adjust grid for support section */
+.links-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
