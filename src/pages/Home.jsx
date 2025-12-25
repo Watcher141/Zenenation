@@ -1,5 +1,7 @@
 import "./Home.css";
 import { products } from "../data/products";
+import CompanyLogo from '../components/CompanyLogo';
+
 
 const Home = () => {
 
@@ -50,7 +52,16 @@ const Home = () => {
                         className="soft-hero-product"
                     />
                 </div>
+
+                
             </section>
+            
+            <section>
+                <div> 
+                <CompanyLogo/>
+                </div>
+            </section>
+            
 
             {/* NEW ARRIVALS SECTION */}
             <section className="new-arrivals">
