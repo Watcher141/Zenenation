@@ -34,34 +34,51 @@ const ProductDetail = () => {
   }
 
   /* ===============================
-     COMMON MESSAGE BUILDER
+     WHATSAPP MESSAGE BUILDER
   =============================== */
 
-  const getMessage = () => {
-    const finalPrice = selectedVariant
+  const getWhatsAppMessage = () => {
+    const price = selectedVariant
       ? selectedVariant.price
-      : product.price;
+      : product.basePrice;
+
+    const variantName = selectedVariant
+      ? selectedVariant.label
+      : "Base Product";
+
+    const variantId = selectedVariant
+      ? selectedVariant.variantId
+      : "N/A";
+
+    const image =
+      selectedVariant?.image || product.images?.[0] || "";
 
     return `Hello ZeneNation 👋
 
-I want to buy this product.
+🛍 *I want to buy this product*
 
-🛍 Product Name: ${product.name}
+📦 Product Name: ${product.name}
 🆔 Product ID: ${product.id}
-💰 Price: ${finalPrice}
 
-Please confirm availability.
-`;
+🎨 Variant: ${variantName}
+🆔 Variant ID: ${variantId}
+
+💰 Price: ${price}
+
+🖼 Product Image:
+${image}
+
+Please confirm availability.`;
   };
 
   /* ===============================
-     WHATSAPP BUSINESS
+     WHATSAPP REDIRECT
   =============================== */
 
-  const whatsappNumber = "918697302404"; // 🔴 replace with real number (country code, no +)
+  const whatsappNumber = "918697302404"; // country code, no +
 
   const openWhatsApp = () => {
-    const message = encodeURIComponent(getMessage());
+    const message = encodeURIComponent(getWhatsAppMessage());
     window.open(
       `https://wa.me/${whatsappNumber}?text=${message}`,
       "_blank"
@@ -69,31 +86,16 @@ Please confirm availability.
   };
 
   /* ===============================
-     INSTAGRAM
+     INSTAGRAM REDIRECT
   =============================== */
 
   const instagramUsername = "its_zenenation";
 
   const openInstagram = () => {
-    const message = getMessage();
-    const encodedMsg = encodeURIComponent(message);
-
-    const isMobile =
-      /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    if (isMobile) {
-      // 📱 Mobile → DM composer
-      window.location.href =
-        `https://www.instagram.com/direct/new/?text=${encodedMsg}`;
-    } else {
-      // 🖥 Desktop → Profile + copy
-      navigator.clipboard.writeText(message);
-      window.open(
-        `https://www.instagram.com/${instagramUsername}/`,
-        "_blank"
-      );
-      alert("Message copied! Paste it in Instagram DM.");
-    }
+    window.open(
+      `https://www.instagram.com/${instagramUsername}/`,
+      "_blank"
+    );
   };
 
   /* ===============================
@@ -113,7 +115,9 @@ Please confirm availability.
             src={activeImg || "/images/placeholder.png"}
             className="pd-main-img"
             alt={product.name}
-            onError={(e) => (e.target.src = "/images/placeholder.png")}
+            onError={(e) =>
+              (e.target.src = "/images/placeholder.png")
+            }
           />
 
           <div className="pd-thumbs">
@@ -133,7 +137,9 @@ Please confirm availability.
                   src={variant.image}
                   alt={variant.label}
                   className={`pd-thumb-img ${
-                    activeImg === variant.image ? "active-thumb" : ""
+                    activeImg === variant.image
+                      ? "active-thumb"
+                      : ""
                   }`}
                   onClick={() => selectVariant(variant)}
                 />
@@ -146,7 +152,9 @@ Please confirm availability.
           <h1 className="pd-title">{product.name}</h1>
 
           <p className="pd-price">
-            {selectedVariant ? selectedVariant.price : product.basePrice}
+            {selectedVariant
+              ? selectedVariant.price
+              : product.basePrice}
           </p>
 
           <p className="pd-desc">
@@ -163,7 +171,8 @@ Please confirm availability.
                   <button
                     key={variant.variantId}
                     className={`pd-variant-btn ${
-                      selectedVariant?.variantId === variant.variantId
+                      selectedVariant?.variantId ===
+                      variant.variantId
                         ? "active-variant"
                         : ""
                     }`}
@@ -224,6 +233,7 @@ Please confirm availability.
 };
 
 export default ProductDetail;
+
 
 
 
