@@ -40,7 +40,7 @@ const ProductDetail = () => {
   const getMessage = () => {
     const finalPrice = selectedVariant
       ? selectedVariant.price
-      : product.basePrice;
+      : product.price;
 
     return `Hello ZeneNation 👋
 
@@ -213,7 +213,7 @@ Please confirm availability.
               <div className="pd-related-card">
                 <img src={item.images?.[0]} alt={item.name} />
                 <h3>{item.name}</h3>
-                <p>{item.basePrice}</p>
+                <p>{item.price}</p>
               </div>
             </Link>
           ))}
