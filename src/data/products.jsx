@@ -476,7 +476,7 @@ export const products = [
   },
 
   {
-    id: "p14",
+    id: "p8",
     category: "armory",
     name: "Primeum Metal Karambit Knife",
     price: "₹289",
@@ -491,7 +491,7 @@ export const products = [
     hasVariants: true,
     variants: [
       {
-        variantId: "p14-v1",
+        variantId: "p8-v1",
         label: "Velocity Karambit",
         price: "₹289",
         image: "/images/Karambit2.png",
@@ -502,7 +502,7 @@ export const products = [
   },
 
   {
-    id: "p8",
+    id: "p9",
     category: "mascot",
     name: "Labubu Doll",
     price: "₹219",
@@ -517,7 +517,7 @@ export const products = [
     hasVariants: true,
     variants: [
       {
-        variantId: "p8-v1",
+        variantId: "p9-v1",
         label: "Mistry Labubu",
         price: "₹219",
         image: "/images/labubu.jpg",
@@ -528,7 +528,7 @@ export const products = [
   },
 
   {
-    id: "p9",
+    id: "p10",
     category: "poster",
     name: "Custom Poster",
     price: "₹99",
@@ -543,7 +543,7 @@ export const products = [
   },
 
   {
-    id: "p10",
+    id: "p11",
     category: "mug",
     name: "Custom Mug",
     price: "₹289",
@@ -558,7 +558,7 @@ export const products = [
     hasVariants: true,
     variants: [
       {
-        variantId: "p10-v1",
+        variantId: "p11-v1",
         label: "Customization Steps",
         price: "₹289",
         image: "/images/Customization_steps.png",
@@ -567,7 +567,7 @@ export const products = [
       },
       
       {
-        variantId: "p10-v2",
+        variantId: "p11-v2",
         label: "After Customization",
         price: "₹289",
         image: "/images/Custom_Mug2.png",
@@ -579,7 +579,7 @@ export const products = [
   },
 
   {
-    id: "p11",
+    id: "p12",
     category: "mug",
     name: "Magic Mug",
     price: "₹489",
@@ -594,7 +594,7 @@ export const products = [
     hasVariants: true,
     variants: [
       {
-        variantId: "p11-v1",
+        variantId: "p12-v1",
         label: "Customization Steps",
         price: "₹489",
         image: "/images/Customization_steps.png",
@@ -605,7 +605,7 @@ export const products = [
   },
 
   {
-    id: "p12",
+    id: "p13",
     category: "Posters",
     name: "Our special collection",
     price: "₹119",
@@ -620,7 +620,7 @@ export const products = [
   },
 
   {
-    id: "p13",
+    id: "p14",
     category: "Mug",
     name: "Custom Mugs",
     price: "₹119",
