@@ -11,7 +11,7 @@ const ProductDetail = () => {
   const [selectedVariant, setSelectedVariant] = useState(null);
 
   /* ===============================
-     🔹 BASE & VARIANT SELECTION
+     BASE / VARIANT HANDLING
   =============================== */
 
   const selectBase = () => {
@@ -34,17 +34,15 @@ const ProductDetail = () => {
   }
 
   /* ===============================
-     📩 INSTAGRAM REDIRECT
+     COMMON MESSAGE BUILDER
   =============================== */
 
-  const instagramUsername = "its_zenenation";
-
-  const openInstagram = () => {
+  const getMessage = () => {
     const finalPrice = selectedVariant
       ? selectedVariant.price
       : product.basePrice;
 
-    const message = `Hello ZeneNation 👋
+    return `Hello ZeneNation 👋
 
 I want to buy this product.
 
@@ -52,53 +50,62 @@ I want to buy this product.
 🆔 Product ID: ${product.id}
 💰 Price: ${finalPrice}
 
-Please let me know the availability.
+Please confirm availability.
 `;
+  };
 
+  /* ===============================
+     WHATSAPP BUSINESS
+  =============================== */
+
+  const whatsappNumber = "918697302404"; // 🔴 replace with real number (country code, no +)
+
+  const openWhatsApp = () => {
+    const message = encodeURIComponent(getMessage());
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${message}`,
+      "_blank"
+    );
+  };
+
+  /* ===============================
+     INSTAGRAM
+  =============================== */
+
+  const instagramUsername = "its_zenenation";
+
+  const openInstagram = () => {
+    const message = getMessage();
     const encodedMsg = encodeURIComponent(message);
 
     const isMobile =
-      /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(
-        navigator.userAgent
-      );
+      /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
     if (isMobile) {
-      // 📱 Mobile → DM composer with pre-filled message
-      window.open(
-        `https://www.instagram.com/direct/new/?text=${encodedMsg}`,
-        "_blank"
-      );
+      // 📱 Mobile → DM composer
+      window.location.href =
+        `https://www.instagram.com/direct/new/?text=${encodedMsg}`;
     } else {
-      // 🖥 Desktop → Open profile
+      // 🖥 Desktop → Profile + copy
+      navigator.clipboard.writeText(message);
       window.open(
         `https://www.instagram.com/${instagramUsername}/`,
         "_blank"
       );
-
-      // Copy message for easy paste
-      navigator.clipboard.writeText(message);
       alert("Message copied! Paste it in Instagram DM.");
     }
   };
 
   /* ===============================
-     ⭐ RECOMMENDED PRODUCTS
+     RECOMMENDED PRODUCTS
   =============================== */
 
   const recommended = products
     .filter((p) => p.id !== product.id)
-    .map((p) => ({
-      ...p,
-      score:
-        (p.category === product.category ? 50 : 0) +
-        (p.popularityScore || 0),
-    }))
-    .sort((a, b) => b.score - a.score)
     .slice(0, 3);
 
   return (
     <div className="pd-wrapper">
-      {/* MAIN PRODUCT */}
       <div className="pd-container">
         {/* IMAGE GALLERY */}
         <div className="pd-gallery">
@@ -110,7 +117,6 @@ Please let me know the availability.
           />
 
           <div className="pd-thumbs">
-            {/* Base Image */}
             <img
               src={product.images?.[0]}
               alt="Base"
@@ -120,7 +126,6 @@ Please let me know the availability.
               onClick={selectBase}
             />
 
-            {/* Variant Images */}
             {product.hasVariants &&
               product.variants.map((variant) => (
                 <img
@@ -150,11 +155,9 @@ Please let me know the availability.
               : product.description}
           </p>
 
-          {/* VARIANTS */}
           {product.hasVariants && (
             <div className="pd-variants">
               <p className="pd-variant-title">Choose Variant</p>
-
               <div className="pd-variant-options">
                 {product.variants.map((variant) => (
                   <button
@@ -178,17 +181,28 @@ Please let me know the availability.
             </div>
           )}
 
-          {/* CTA */}
-          <button className="pd-instagram-btn" onClick={openInstagram}>
-            Message on Instagram
-          </button>
+          {/* CTA BUTTONS */}
+          <div className="pd-cta-group">
+            <button
+              className="pd-whatsapp-btn"
+              onClick={openWhatsApp}
+            >
+              Message on WhatsApp
+            </button>
+
+            <button
+              className="pd-instagram-btn"
+              onClick={openInstagram}
+            >
+              Message on Instagram
+            </button>
+          </div>
         </div>
       </div>
 
       {/* RECOMMENDED */}
       <div className="pd-related">
         <h2>Recommended for You</h2>
-
         <div className="pd-related-grid">
           {recommended.map((item) => (
             <Link
@@ -199,7 +213,7 @@ Please let me know the availability.
               <div className="pd-related-card">
                 <img src={item.images?.[0]} alt={item.name} />
                 <h3>{item.name}</h3>
-                <p>{item.price}</p>
+                <p>{item.basePrice}</p>
               </div>
             </Link>
           ))}
@@ -210,4 +224,6 @@ Please let me know the availability.
 };
 
 export default ProductDetail;
+
+
 

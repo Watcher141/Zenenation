@@ -213,7 +213,7 @@ export const products = [
         variantId: "p1-v1",
         label: "Lavender Cat",
         price: "₹99",
-        image: "/images/fc1.png",
+        image: "/images/FC_LC.jpg",
         description:
           "A vibrant lavender hoodie-themed face-changing keychain featuring a playful mood swing mechanism."
       },
@@ -229,7 +229,7 @@ export const products = [
         variantId: "p1-v3",
         label: "Capybara",
         price: "₹99",
-        image: "/images/fc3.png",
+        image: "/images/FC_CB.jpg",
         description:
           "This orange capybara face-changing keychain features a hooded design that swaps between different adorable expressions."
       },
@@ -237,7 +237,7 @@ export const products = [
         variantId: "p1-v4",
         label: "Spider-Man",
         price: "₹99",
-        image: "/images/fc4.png",
+        image: "/images/FC_SM.jpg",
         description:
           "This Spider-Man inspired red face-changing keychain features a hooded superhero design that rotates through various iconic web-slinger expressions."
       },
@@ -261,7 +261,7 @@ export const products = [
         variantId: "p1-v7",
         label: "Shin-chan",
         price: "₹99",
-        image: "/images/fc7.png",
+        image: "/images/FC_SC.jpg",
         description:
           "This Shin-chan inspired yellow face-changing keychain features a hooded design that cycles through various funny expressions."
       },
@@ -285,7 +285,7 @@ export const products = [
         variantId: "p1-v10",
         label: "Squid Game",
         price: "₹99",
-        image: "/images/fc10.png",
+        image: "/images/FC_SG.jpg",
         description:
           "This Squid Game-inspired red face-changing keychain features a hooded guard design that cycles through iconic mask symbols."
       },
@@ -293,7 +293,7 @@ export const products = [
         variantId: "p1-v11",
         label: "Tanjiro Kamado",
         price: "₹99",
-        image: "/images/fc11.png",
+        image: "/images/FC_TK.jpg",
         description:
           "This Demon Slayer-inspired teal face-changing keychain features Tanjiro in a hooded design that cycles through various determined and fierce expressions."
       },
