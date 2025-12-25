@@ -210,7 +210,7 @@ export const products = [
     hasVariants: true,
     variants: [
       {
-        variantId: "p1-v1",
+        variantId: "p4-v1",
         label: "Lavender Cat",
         price: "₹99",
         image: "/images/FC_LC.jpg",
@@ -218,15 +218,15 @@ export const products = [
           "A vibrant lavender hoodie-themed face-changing keychain featuring a playful mood swing mechanism."
       },
       {
-        variantId: "p1-v2",
+        variantId: "p4-v2",
         label: "Doraemon",
         price: "₹99",
-        image: "/images/fc2.png",
+        image: "/images/FC_DM.jpg",
         description:
           "Doraemon-inspired face-changing keychain wearing a blue hoodie that cycles through different iconic expressions."
       },
       {
-        variantId: "p1-v3",
+        variantId: "p4-v3",
         label: "Capybara",
         price: "₹99",
         image: "/images/FC_CB.jpg",
@@ -234,7 +234,7 @@ export const products = [
           "This orange capybara face-changing keychain features a hooded design that swaps between different adorable expressions."
       },
       {
-        variantId: "p1-v4",
+        variantId: "p4-v4",
         label: "Spider-Man",
         price: "₹99",
         image: "/images/FC_SM.jpg",
@@ -242,23 +242,23 @@ export const products = [
           "This Spider-Man inspired red face-changing keychain features a hooded superhero design that rotates through various iconic web-slinger expressions."
       },
       {
-        variantId: "p1-v5",
+        variantId: "p4-v5",
         label: "Gojo Satoru",
         price: "₹99",
-        image: "/images/fc5.png",
+        image: "/images/FC_GS.jpg",
         description:
           "This anime-inspired Gojo Satoru face-changing keychain features a dark blue hoodie design that rotates through different iconic expressions."
       },
       {
-        variantId: "p1-v6",
+        variantId: "p4-v6",
         label: "Lotso Bear",
         price: "₹99",
-        image: "/images/fc6.png",
+        image: "/images/FC_LB.jpg",
         description:
           "This Lotso-inspired pink bear face-changing keychain features a cozy hoodie design that cycles through various grumpy and sweet expressions."
       },
       {
-        variantId: "p1-v7",
+        variantId: "p4-v7",
         label: "Shin-chan",
         price: "₹99",
         image: "/images/FC_SC.jpg",
@@ -266,23 +266,23 @@ export const products = [
           "This Shin-chan inspired yellow face-changing keychain features a hooded design that cycles through various funny expressions."
       },
       {
-        variantId: "p1-v8",
+        variantId: "p4-v8",
         label: "Hello Kitty",
         price: "₹99",
-        image: "/images/fc8.png",
+        image: "/images/FC_HK.jpg",
         description:
           "This My Melody-inspired pink face-changing keychain features a cute hooded design that cycles through various sweet and winking expressions."
       },
       {
-        variantId: "p1-v9",
+        variantId: "p4-v9",
         label: "Green Liz",
         price: "₹99",
-        image: "/images/fc9.png",
+        image: "/images/FC_GL.jpg",
         description:
           "This lime green hoodie-themed face-changing keychain features a playful winking character that swaps between different expressions."
       },
       {
-        variantId: "p1-v10",
+        variantId: "p4-v10",
         label: "Squid Game",
         price: "₹99",
         image: "/images/FC_SG.jpg",
@@ -290,7 +290,7 @@ export const products = [
           "This Squid Game-inspired red face-changing keychain features a hooded guard design that cycles through iconic mask symbols."
       },
       {
-        variantId: "p1-v11",
+        variantId: "p4-v11",
         label: "Tanjiro Kamado",
         price: "₹99",
         image: "/images/FC_TK.jpg",
@@ -298,10 +298,10 @@ export const products = [
           "This Demon Slayer-inspired teal face-changing keychain features Tanjiro in a hooded design that cycles through various determined and fierce expressions."
       },
       {
-        variantId: "p1-v12",
+        variantId: "p4-v12",
         label: "Captain America",
         price: "₹99",
-        image: "/images/fc12.png",
+        image: "/images/FC_CA.jpg",
         description:
           "This Captain America-inspired blue face-changing keychain features a hooded superhero design that cycles through various determined and heroic expressions."
       }
