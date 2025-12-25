@@ -10,13 +10,15 @@ const ProductDetail = () => {
   const [activeImg, setActiveImg] = useState("");
   const [selectedVariant, setSelectedVariant] = useState(null);
 
-  // 🔹 Select BASE product
+  /* ===============================
+     🔹 BASE & VARIANT SELECTION
+  =============================== */
+
   const selectBase = () => {
     setSelectedVariant(null);
     setActiveImg(product.images?.[0] || "");
   };
 
-  // 🔹 Select VARIANT
   const selectVariant = (variant) => {
     setSelectedVariant(variant);
     setActiveImg(variant.image);
@@ -32,29 +34,25 @@ const ProductDetail = () => {
   }
 
   /* ===============================
-     📸 IMAGE TO SEND IN INSTAGRAM
-  =============================== */
-
-  const imageToSend = selectedVariant
-    ? selectedVariant.image
-    : product.images?.[0];
-
-  /* ===============================
-     📩 INSTAGRAM REDIRECT (SMART)
+     📩 INSTAGRAM REDIRECT
   =============================== */
 
   const instagramUsername = "its_zenenation";
 
   const openInstagram = () => {
-    const message = `Hello! I'm interested in buying:
+    const finalPrice = selectedVariant
+      ? selectedVariant.price
+      : product.basePrice;
 
-Product: ${product.name}
-${selectedVariant ? `Variant: ${selectedVariant.label}` : "Variant: Base"}
+    const message = `Hello ZeneNation 👋
 
-Price: ${selectedVariant ? selectedVariant.price : product.basePrice}
+I want to buy this product.
 
-Product Image:
-${imageToSend}
+🛍 Product Name: ${product.name}
+🆔 Product ID: ${product.id}
+💰 Price: ${finalPrice}
+
+Please let me know the availability.
 `;
 
     const encodedMsg = encodeURIComponent(message);
@@ -65,20 +63,21 @@ ${imageToSend}
       );
 
     if (isMobile) {
-      // 📱 Mobile → Open DM with pre-filled message + image link
+      // 📱 Mobile → DM composer with pre-filled message
       window.open(
         `https://www.instagram.com/direct/new/?text=${encodedMsg}`,
         "_blank"
       );
     } else {
-      // 🖥 Desktop → Open profile (most reliable)
+      // 🖥 Desktop → Open profile
       window.open(
         `https://www.instagram.com/${instagramUsername}/`,
         "_blank"
       );
 
-      // Optional: copy message to clipboard for desktop users
-      navigator.clipboard?.writeText(message);
+      // Copy message for easy paste
+      navigator.clipboard.writeText(message);
+      alert("Message copied! Paste it in Instagram DM.");
     }
   };
 
@@ -99,10 +98,8 @@ ${imageToSend}
 
   return (
     <div className="pd-wrapper">
-
       {/* MAIN PRODUCT */}
       <div className="pd-container">
-
         {/* IMAGE GALLERY */}
         <div className="pd-gallery">
           <img
@@ -112,26 +109,27 @@ ${imageToSend}
             onError={(e) => (e.target.src = "/images/placeholder.png")}
           />
 
-          {/* BASE + VARIANT THUMBS */}
           <div className="pd-thumbs">
-            {/* Base image */}
+            {/* Base Image */}
             <img
               src={product.images?.[0]}
               alt="Base"
-              className={`pd-thumb-img ${!selectedVariant ? "active-thumb" : ""
-                }`}
+              className={`pd-thumb-img ${
+                !selectedVariant ? "active-thumb" : ""
+              }`}
               onClick={selectBase}
             />
 
-            {/* Variant images */}
+            {/* Variant Images */}
             {product.hasVariants &&
               product.variants.map((variant) => (
                 <img
                   key={variant.variantId}
                   src={variant.image}
                   alt={variant.label}
-                  className={`pd-thumb-img ${activeImg === variant.image ? "active-thumb" : ""
-                    }`}
+                  className={`pd-thumb-img ${
+                    activeImg === variant.image ? "active-thumb" : ""
+                  }`}
                   onClick={() => selectVariant(variant)}
                 />
               ))}
@@ -161,10 +159,11 @@ ${imageToSend}
                 {product.variants.map((variant) => (
                   <button
                     key={variant.variantId}
-                    className={`pd-variant-btn ${selectedVariant?.variantId === variant.variantId
+                    className={`pd-variant-btn ${
+                      selectedVariant?.variantId === variant.variantId
                         ? "active-variant"
                         : ""
-                      }`}
+                    }`}
                     onClick={() => selectVariant(variant)}
                   >
                     <img
@@ -180,10 +179,7 @@ ${imageToSend}
           )}
 
           {/* CTA */}
-          <button
-            className="pd-instagram-btn"
-            onClick={openInstagram}
-          >
+          <button className="pd-instagram-btn" onClick={openInstagram}>
             Message on Instagram
           </button>
         </div>
@@ -203,15 +199,15 @@ ${imageToSend}
               <div className="pd-related-card">
                 <img src={item.images?.[0]} alt={item.name} />
                 <h3>{item.name}</h3>
-                <p>{item.price || item.basePrice}</p>
+                <p>{item.price}</p>
               </div>
             </Link>
           ))}
         </div>
       </div>
-
     </div>
   );
 };
 
 export default ProductDetail;
+
