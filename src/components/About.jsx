@@ -23,15 +23,15 @@ const teamMembers = [
   },
   {
     name: "Monojit Das",
-    role: "Web Developer",
+    role: "Backend Developer",
     photo: "/images/team/monojit.jpg",
-    desc: "Works on frontend development to ensure a fast and user-friendly anime collectibles platform."
+    desc: "Works on Backend development to maintain the server-side logic, databases, and APIs that power applications and ensure secure, efficient data handling."
   },
   {
     name: "Priyansu Dhar",
-    role: "UI/UX Developer",
+    role: "Frontend & UI/UX Developer",
     photo: "/images/team/priyansu.jpg",
-    desc: "Focuses on UI/UX, performance optimization, website responsivenesss, Features addition and modern web technologies to deliver a smooth shopping experience."
+    desc: "Focuses on Frontend & UI/UX, performance optimization, website responsivenesss, Features addition and modern web technologies to deliver a smooth shopping experience."
   }
 ];
 
