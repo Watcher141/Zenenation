@@ -11,9 +11,9 @@ const teamMembers = [
   },
   {
     name: "Rony Maity",
-    role: "Operations & Optimization Manager",
+    role: "Marketing & Optimization Manager",
     photo: "/images/team/rony.jpg",
-    desc: "Manages day-to-day operations and workflow optimization & focuses on improving efficiency, coordinating logistics, and ensuring processes run smoothly from order handling to delivery."
+    desc: "Plans and executes marketing strategies while continuously analyzing and optimizing campaigns to maximize reach, engagement, and conversions also manages day-to-day operations and workflow optimization & focuses on improving efficiency."
   },
   {
     name: "Anish Kumar Das",
