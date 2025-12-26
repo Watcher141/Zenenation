@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
         </section>
 
         <footer className="policy-footer">
-          <p>If you have questions regarding this policy, contact us at <strong>zenenationshop@gmail.com</strong></p>
+          <p>If you have questions regarding this policy, contact us at <strong>zenenationstore@gmail.com</strong></p>
         </footer>
       </motion.div>
     </div>

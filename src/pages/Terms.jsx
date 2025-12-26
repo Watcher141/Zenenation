@@ -50,7 +50,7 @@ const Terms = () => {
         </div>
 
         <div className="terms-footer">
-          <button className="contact-btn">I Have Questions</button>
+          <button href="https://wa.me/918697302404?text=Hello%20ZeneNation!%20I%20have%20some%20in%20questions%20about%20your%20Terms%20&%20Conditions." target="_blank" rel="noopener noreferrer" className="contact-btn">I Have Questions</button>
         </div>
       </motion.div>
     </div>
