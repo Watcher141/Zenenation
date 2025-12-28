@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
       >
         <header className="policy-header">
           <h1>Privacy Policy</h1>
-          <p>Last Updated: October 2023</p>
+          <p>Last Updated: December 2025</p>
         </header>
 
         <section className="policy-section">
