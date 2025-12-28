@@ -89,7 +89,7 @@ Please confirm availability.`;
      INSTAGRAM REDIRECT
   =============================== */
 
-  const instagramUsername = "its_zenenation";
+  const instagramUsername = "zenenation.in";
 
   const openInstagram = () => {
     window.open(

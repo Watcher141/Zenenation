@@ -52,7 +52,7 @@ const Footer = () => {
 
               <div className="socials">
                 <a href="https://www.facebook.com/share/1Bs83wC4TV/" target="_blank" className="social fb"><FaFacebookF /></a>
-                <a href="https://www.instagram.com/its_zenenation/" target="_blank" className="social i"><FaInstagram /></a>
+                <a href="https://www.instagram.com/zenenation.in/" target="_blank" className="social i"><FaInstagram /></a>
                 {/* ✅ WhatsApp DM Redirect */} <a whileHover={{ scale: 1.1 }} href="https://wa.me/918697302404?text=Hello%20ZeneNation!%20I%20am%20interested%20in%20your%20anime%20collectibles." target="_blank" rel="noopener noreferrer" className="social bw" > <BsWhatsapp /> </a>
                 <a href="https://discord.gg/rRxpSTND6" target="_blank" className="social d"><FaDiscord /></a>
               </div>
