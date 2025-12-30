@@ -70,8 +70,8 @@ export const products = [
     ],
     description:
       "Stylish Demon Slayer anime keychain featuring detailed mini characters with a durable strap and metal ring.",
-    isNew: true,
-    isFeatured: false,
+    isNew: false,
+    isFeatured: true,
     popularityScore: 70,
     hasVariants: true,
     variants: [
@@ -136,7 +136,7 @@ export const products = [
     ],
     description:
       "Premium Iron Man Arc Reactor spinner keychain crafted from high-quality metal with a polished finish.",
-    isNew: false,
+    isNew: true,
     isFeatured: true,
     popularityScore: 85,
 
@@ -203,7 +203,7 @@ export const products = [
     ],
     description:
       "Cute face-changing cartoon keychain with vibrant colors and smooth finishing.",
-    isNew: true,
+    isNew: false,
     isFeatured: true,
     popularityScore: 78,
 
@@ -511,8 +511,8 @@ export const products = [
     ],
     description:
       "Adorable Labubu plush doll with soft body, long ears, and premium craftsmanship.",
-    isNew: true,
-    isFeatured: false,
+    isNew: false,
+    isFeatured: true,
     popularityScore: 68,
     hasVariants: true,
     variants: [
@@ -553,7 +553,7 @@ export const products = [
     description:
       "Premium customized mug printed with your chosen image or design.",
     isNew: true,
-    isFeatured: false,
+    isFeatured: true,
     popularityScore: 80,
     hasVariants: true,
     variants: [
@@ -588,7 +588,7 @@ export const products = [
     ],
     description:
       "Heat-sensitive magic mug that reveals your design when hot liquid is poured.",
-    isNew: false,
+    isNew: true,
     isFeatured: true,
     popularityScore: 88,
     hasVariants: true,
