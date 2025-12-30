@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import DeliveryPolicy from "./pages/DeliveryPolicy";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/delivery-policy" element={<DeliveryPolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/category/:category" element={<CategoryPage />} />
