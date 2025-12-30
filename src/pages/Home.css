@@ -2,132 +2,184 @@
    GLOBAL WRAPPER — CLEAN & FLAT
 ============================================ */
 .soft-container {
-  background: #f5f6fa;   /* flat pastel bg */
+  background: #f5f6fa;
   color: #333;
   min-height: 100vh;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-
 
 /* ============================================
-   HERO SECTION — ONLY ONE CARD
+   HERO SLIDER (AUTO ROTATING BANNER)
 ============================================ */
-.soft-hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 80px 8% 80px 10%;
-  margin: 0;
-  max-width: 100%;
-
-  background: #ffffff;         /* smooth white card */
-  border-radius: 0;
-  box-shadow: none;
-
-  transition: 0.25s ease;
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  background: #000;
 }
 
-.soft-hero:hover {
-  transform: none;
-  box-shadow: none;
+/* SLIDES */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 1s ease, transform 1.5s ease;
 }
 
-
-/* ============================================
-   LEFT TEXT
-============================================ */
-.soft-left {
-  width: 50%;
-  padding-right: 60px;
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.soft-title {
-  font-size: 64px;
+/* DARK OVERLAY */
+.hero-slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* HERO CONTENT (CENTER BOTTOM) */
+.hero-content {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  max-width: 720px;
+  width: 90%;
+}
+
+.hero-content h1 {
+  font-size: 54px;
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  color: #1a1a1a;
+  line-height: 1.2;
 }
 
-.soft-title span {
+.hero-content h1 span {
   display: block;
   background: linear-gradient(90deg, #a98cff, #8fb4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.soft-desc {
-  font-size: 17px;
-  width: 85%;
-  color: #6b6b6b;
-  margin-bottom: 40px;
+.hero-content p {
+  margin-top: 14px;
+  font-size: 18px;
+  color: #e6e6e6;
   line-height: 1.6;
 }
 
-
-/* ============================================
-   CTA BUTTON
-============================================ */
-.soft-btn {
-  padding: 16px 42px;
+/* HERO BUTTON */
+.hero-btn {
+  margin-top: 32px;
+  padding: 16px 46px;
+  border-radius: 50px;
+  border: none;
   background: linear-gradient(135deg, #8db4ff, #a8c5ff);
   color: white;
-
-  border: none;
-  border-radius: 50px;
-
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-
-  box-shadow: 0 4px 15px rgba(141,180,255,0.3);
   transition: 0.3s ease;
 }
 
-.soft-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(141,180,255,0.4);
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(141, 180, 255, 0.45);
 }
 
-
-/* ============================================
-   RIGHT IMAGE
-============================================ */
-.soft-right {
-  width: 50%;
+/* SLIDER DOTS */
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 10px;
+  z-index: 2;
 }
 
-.soft-hero-product {
-  width: 450px;
-  max-width: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.1));
-  transition: 0.3s ease;
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.soft-hero-product:hover {
-  transform: scale(1.03) rotate(-1deg);
+.dot.active {
+  background: #ffffff;
+  transform: scale(1.3);
 }
-
 
 /* ============================================
-   FEATURED PRODUCTS
+   SECTION TITLES
 ============================================ */
 .section-title {
   text-align: center;
   margin-top: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 32px;
-  color: #6b6b6b;
+  color: #555;
 }
 
+/* ============================================
+   NEW ARRIVALS
+============================================ */
+.new-arrivals {
+  padding: 40px 8%;
+}
+
+.arrival-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.arrival-card {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.arrival-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.arrival-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.arrival-card h3 {
+  font-size: 18px;
+}
+
+.arrival-card p {
+  color: #777;
+}
+
+/* ============================================
+   FEATURED PRODUCTS
+============================================ */
 .soft-products {
   padding: 40px 6%;
 }
@@ -138,22 +190,19 @@
   gap: 25px;
 }
 
-
-/* ============================================
-   PRODUCT CARDS
-============================================ */
 .soft-card {
   background: white;
   border-radius: 14px;
   padding: 15px;
   text-align: center;
   transition: 0.25s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
 
 .soft-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .soft-card img {
@@ -165,20 +214,17 @@
 
 .soft-card h3 {
   font-size: 18px;
-  margin-top: 5px;
 }
 
 .soft-card p {
   color: #888;
 }
 
-
-/* ================================
+/* ============================================
    CATEGORY SECTION
-================================ */
+============================================ */
 .category-section {
   padding: 50px 8%;
-  margin-top: 40px;
 }
 
 .category-grid {
@@ -194,12 +240,12 @@
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .category-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .category-card img {
@@ -210,94 +256,40 @@
 }
 
 .category-card h3 {
-  margin-top: 10px;
   font-size: 20px;
   color: #333;
 }
-/* ================================
-   NEW ARRIVALS SECTION
-================================ */
-.new-arrivals {
-  padding: 40px 8%;
-  margin-top: 20px;
-}
 
-.arrival-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-.arrival-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
-
-.arrival-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-.arrival-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-/* ================================
-   MOBILE RESPONSIVENESS
-================================ */
-
-/* Tablet */
+/* ============================================
+   RESPONSIVE
+============================================ */
 @media (max-width: 992px) {
-  .soft-hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 5%;
+  .hero-content h1 {
+    font-size: 42px;
   }
 
-  .soft-left {
-    width: 100%;
-    padding-right: 0;
-  }
-
-  .soft-right {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .soft-hero-product {
-    width: 300px;
+  .hero-content p {
+    font-size: 16px;
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
-  .soft-title {
-    font-size: 40px;
+  .hero-content h1 {
+    font-size: 34px;
   }
 
-  .soft-desc {
+  .hero-btn {
     width: 100%;
   }
 
-  .soft-btn {
-    width: 100%;
-  }
-
-  .category-grid,
+  .arrival-grid,
   .soft-product-grid,
-  .arrival-grid {
+  .category-grid {
     grid-template-columns: 1fr;
   }
 
-  .category-card img,
-  .arrival-card img {
-    height: 130px;
+  .arrival-card img,
+  .soft-card img {
+    height: 150px;
   }
 }
