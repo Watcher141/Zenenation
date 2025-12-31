@@ -4,9 +4,9 @@ import { products } from "../data/products";
 import CompanyLogo from "../components/CompanyLogo";
 
 const bannerImages = [
-  "/images/B1.jpeg",
+  "/images/B22.jpg",
   "/images/B12.png",
-  "/images/B3.jpeg",
+  "/images/B33.png",
 ];
 
 const Home = () => {
