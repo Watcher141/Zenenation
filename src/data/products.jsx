@@ -603,34 +603,4 @@ export const products = [
       }
     ]
   },
-
-  {
-    id: "p13",
-    category: "Posters",
-    name: "Our special collection",
-    price: "₹119",
-    images: [
-      "/images/placeholder.png"
-    ],
-    description:
-      "Original Hot Wheels die-cast toy car, perfect for collectors and kids.",
-    isNew: false,
-    isFeatured: false,
-    popularityScore: 67
-  },
-
-  {
-    id: "p14",
-    category: "Mug",
-    name: "Custom Mugs",
-    price: "₹119",
-    images: [
-      "/images/placeholder.png"
-    ],
-    description:
-      "Original Hot Wheels die-cast toy car, perfect for collectors and kids.",
-    isNew: false,
-    isFeatured: false,
-    popularityScore: 67
-  },
 ];
