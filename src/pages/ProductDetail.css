@@ -1,17 +1,17 @@
 .pd-wrapper {
   padding: 50px 6%;
   font-family: "Poppins", sans-serif;
-  background: #f9fafb;
+  background: radial-gradient(circle at top, #28292c, #24262f);
 }
 
 /* MAIN CARD */
 .pd-container {
   display: flex;
   gap: 50px;
-  background: #fff;
+  background: radial-gradient(circle at top, #28292c, #24262f);
   padding: 40px;
   border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.45);
   margin-bottom: 80px;
 }
 
@@ -25,7 +25,7 @@
   height: 380px;
   object-fit: contain;
   border-radius: 16px;
-  background: linear-gradient(145deg, #f2f2f2, #ffffff);
+  background: linear-gradient(145deg, #404040, #383852);
   padding: 10px;
   transition: transform 0.3s ease;
 }
@@ -47,7 +47,7 @@
   border-radius: 14px;
   object-fit: contain;
   cursor: pointer;
-  background: #f3f4f6;
+  background: linear-gradient(145deg, #404040, #383852);
   padding: 6px;
   opacity: 0.6;
   transition: all 0.25s ease;
@@ -61,8 +61,8 @@
 
 .pd-thumb-img.active-thumb {
   opacity: 1;
-  border-color: #111;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  border-color: #ffffff;
+  box-shadow: 0 8px 18px rgba(98, 28, 160, 0.18);
   transform: scale(1.08);
 }
 
@@ -75,19 +75,23 @@
   font-size: 2.3rem;
   font-weight: 700;
   margin-bottom: 12px;
+  color: whitesmoke;
 }
 
 .pd-price {
-  font-size: 1.6rem;
-  color: #111;
+  font-size: 1.8rem;
+  color: #125fdb; 
   font-weight: 600;
   margin-bottom: 20px;
   transition: all 0.25s ease;
+  font-family: "Century Gothic", "Poppins", "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.3px;
+  margin-top: 6px;
 }
 
 .pd-desc {
   font-size: 1rem;
-  color: #555;
+  color: #bfbbf4;
   margin-bottom: 30px;
   line-height: 1.7rem;
 }
@@ -98,10 +102,10 @@
 }
 
 .pd-variant-title {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #111;
+  color: #bfbbf4;
 }
 
 .pd-variant-options {
@@ -116,25 +120,25 @@
   gap: 10px;
   padding: 8px 14px;
   border-radius: 30px;
-  border: 2px solid #e5e7eb;
-  background: #fff;
+  border: 2px solid #2e3c57;
+  background: radial-gradient(circle at top, #28292c, #24262f);
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.25s ease;
-  color: #111;
+  color: #ffffff;
 }
 
 .pd-variant-btn:hover {
-  border-color: #111;
+  border-color: #8788c3;
   transform: translateY(-1px);
 }
 
 .pd-variant-btn.active-variant {
-  background: #111;
-  color: #fff;
-  border-color: #111;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+  box-shadow: 0 6px 18px rgba(75, 61, 133, 0.25);
 }
 
 .pd-variant-img {
@@ -142,7 +146,7 @@
   height: 34px;
   object-fit: contain;
   border-radius: 8px;
-  background: #f3f4f6;
+  background: #cfd6e3;
   padding: 4px;
 }
 
@@ -184,17 +188,19 @@
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(225, 48, 108, 0.36);
 }
 
 .pd-instagram-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(225, 48, 108, 0.4);
+  box-shadow: 0 14px 30px rgba(225, 48, 108, 0.4);
 }
 
 /* RECOMMENDED */
 .pd-related h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
+  color: whitesmoke;
 }
 
 .pd-related-grid {
@@ -204,13 +210,14 @@
 }
 
 .pd-related-card {
-  background: #fff;
+  background: radial-gradient(circle at top, #28292c, #24262f);
   padding: 18px;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   transition: 0.3s;
   cursor: pointer;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.85);
 }
 
 .pd-related-card img {
@@ -223,15 +230,21 @@
 .pd-related-card h3 {
   font-size: 1rem;
   margin-bottom: 6px;
+  color: whitesmoke;
 }
 
 .pd-related-card p {
-  font-size: 0.9rem;
-  color: #555;
+  font-family: "Century Gothic", "Poppins", "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;              /* bold */
+  color: #3b82f6;                /* blue */
+  letter-spacing: 0.3px;
+  margin-top: 6px;
 }
 
 .pd-related-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(81, 10, 147, 0.6);
 }
 
 .pd-related-link {
