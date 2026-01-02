@@ -4,11 +4,13 @@
 .cat-container {
   padding: 50px 8%;
   min-height: 90vh;
+  background: radial-gradient(circle at top, #28292c, #24262f);
 }
 
 .cat-title {
   font-size: 36px;
   font-weight: 800;
+  color: #ffffff;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -23,18 +25,20 @@
 }
 
 .cat-card {
-  background: #ffffff;
+  background: radial-gradient(circle at top, #28292c, #24262f);
   text-align: center;
+  color: white;
   border-radius: 16px;
   padding: 15px;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.85);
 }
 
 .cat-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+  box-shadow: 0 18px 45px rgba(56, 189, 248, 0.25);
 }
 
 .cat-card img {
@@ -49,14 +53,19 @@
 }
 
 .cat-card p {
-  color: #777;
+  font-family: "Century Gothic", "Poppins", "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;              /* bold */
+  color: #3b82f6;                /* blue */
+  letter-spacing: 0.3px;
+  margin-top: 6px;
 }
 
 /* EMPTY STATE */
 .cat-empty {
   text-align: center;
   font-size: 18px;
-  color: #666;
+  color: #ffffff;
 }
 
 /* =====================================

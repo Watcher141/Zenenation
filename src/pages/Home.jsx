@@ -4,8 +4,9 @@ import { products } from "../data/products";
 import CompanyLogo from "../components/CompanyLogo";
 
 const bannerImages = [
-  "/images/B22.jpg",
+  "/images/B41.jpg",
   "/images/B12.png",
+  "/images/B42.jpg",
   "/images/B33.png",
 ];
 
