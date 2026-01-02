@@ -84,7 +84,7 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #fffdfd;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
