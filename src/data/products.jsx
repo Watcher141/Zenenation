@@ -452,7 +452,7 @@ export const products = [
         variantId: "p7-v3",
         label: "The Thriller Of The Hundred Battles - Naraka Bladepoint",
         price: "₹199",
-        image: "/images/butterfly4.jpg",
+        image: "/images/Butterfly9.png",
         description:
           "The Thriller Of The Hundred Battles is a Premium Naraka Bladepoint-inspired alloy butterfly knife trainer featuring a vibrant, multi-color skin finish—perfect for safe trick practice, cosplay, and gaming setups."
       },
@@ -460,7 +460,7 @@ export const products = [
         variantId: "p7-v4",
         label: "Cobra Vanguard - Delta Force",
         price: "₹199",
-        image: "/images/butterfly5.jpg",
+        image: "/images/Butterfly8.png",
         description:
           "Master the flick with this premium Delta Force-inspired Cobra Vanguard Butterfly Knife Trainer, the ultimate addition to your gaming arsenal."
       },
@@ -468,7 +468,7 @@ export const products = [
         variantId: "p7-v5",
         label: "Battle Machine - Arena Breakout",
         price: "₹199",
-        image: "/images/butterfly6.png",
+        image: "/images/Butterfly7.png",
         description:
           "Level up your skills with the Battle Machine Trainer, a safe, unsharpened balisong featuring a radical blue and toxic-green cyber-splatter design."
       }
