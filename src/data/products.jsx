@@ -434,39 +434,39 @@ export const products = [
     variants: [
       {
         variantId: "p7-v1",
-        label: "Rose Gold",
+        label: "Riptide Striker",
         price: "₹199",
         image: "/images/butterfly2.jpg",
         description:
-          "Gold Blade is a premium butterfly-style metal knife featuring exquisite engraved detailing and a polished, upscale finish. Designed as a statement collectible, it is perfect for display in refined collections."
+          "Riptide Striker is a premium butterfly-style metal knife featuring exquisite engraved detailing and a polished, upscale finish. Designed as a statement collectible, it is perfect for display in refined collections."
       },
       {
         variantId: "p7-v2",
-        label: "Cyber Mecha Green",
+        label: "RGX Firefly - Valorant",
         price: "₹199",
         image: "/images/butterfly3.jpg",
         description:
-          "Cyber Mecha Green is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
+          "RGX Firefly is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
       },
       {
         variantId: "p7-v3",
-        label: "Galactic Blue",
+        label: "The Thriller Of The Hundred Battles - Naraka Bladepoint",
         price: "₹199",
         image: "/images/butterfly4.jpg",
         description:
-          "Galactic Blue is a Premium Valorant-inspired alloy butterfly knife trainer featuring a vibrant, multi-color skin finish—perfect for safe trick practice, cosplay, and gaming setups."
+          "The Thriller Of The Hundred Battles is a Premium Naraka Bladepoint-inspired alloy butterfly knife trainer featuring a vibrant, multi-color skin finish—perfect for safe trick practice, cosplay, and gaming setups."
       },
       {
         variantId: "p7-v4",
-        label: "Royal Gold",
+        label: "Cobra Vanguard - Delta Force",
         price: "₹199",
         image: "/images/butterfly5.jpg",
         description:
-          "Master the flick with this premium Valorant-inspired Royal Gold Butterfly Knife Trainer, the ultimate addition to your gaming arsenal."
+          "Master the flick with this premium Delta Force-inspired Cobra Vanguard Butterfly Knife Trainer, the ultimate addition to your gaming arsenal."
       },
       {
         variantId: "p7-v5",
-        label: "Radical Blue",
+        label: "Battle Machine - Arena Breakout",
         price: "₹199",
         image: "/images/butterfly6.png",
         description:
@@ -492,7 +492,7 @@ export const products = [
     variants: [
       {
         variantId: "p8-v1",
-        label: "Velocity Karambit",
+        label: "Velocity Orange - Valorant",
         price: "₹289",
         image: "/images/Karambit2.png",
         description:
