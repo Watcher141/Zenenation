@@ -17,7 +17,7 @@ export const products = [
     ],
     description:
       "Add superhero style to your keys with this adorable Spider-Man cartoon keychain. Made from high-quality soft PVC, lightweight, colorful, and perfect for Marvel fans.",
-    isNew: true,
+    isNew: false,
     isFeatured: true,
     popularityScore: 78,
 
@@ -136,7 +136,7 @@ export const products = [
     ],
     description:
       "Premium Iron Man Arc Reactor spinner keychain crafted from high-quality metal with a polished finish.",
-    isNew: true,
+    isNew: false,
     isFeatured: true,
     popularityScore: 85,
 
@@ -339,6 +339,14 @@ export const products = [
         image: "/images/HP_PW.jpg",
         description:
           "Capture the magic with this vintage-style Golden Snitch pocket watch necklace, featuring detailed wings and the iconic 'I open at the close' engraving."
+      },
+      {
+        variantId: "p5-v3",
+        label: "Pattern Pocket Watch",
+        price: "₹269",
+        image: "/images/HP_PW.jpg",
+        description:
+          "An elegant, vintage-style bronze pocket watch featuring an intricately engraved floral case and a classic hunter-case design."
       }
     ]
   },
@@ -421,7 +429,7 @@ export const products = [
     id: "p7",
     category: "armory",
     name: "Luxury Metal Butterfly Knife",
-    price: "₹199",
+    price: "₹249",
     images: [
       "/images/butterflyall.png"
     ],
@@ -435,7 +443,7 @@ export const products = [
       {
         variantId: "p7-v1",
         label: "Riptide Striker",
-        price: "₹199",
+        price: "₹249",
         image: "/images/butterfly2.jpg",
         description:
           "Riptide Striker is a premium butterfly-style metal knife featuring exquisite engraved detailing and a polished, upscale finish. Designed as a statement collectible, it is perfect for display in refined collections."
@@ -443,7 +451,7 @@ export const products = [
       {
         variantId: "p7-v2",
         label: "RGX Firefly - Valorant",
-        price: "₹199",
+        price: "₹249",
         image: "/images/butterfly3.jpg",
         description:
           "RGX Firefly is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
@@ -451,7 +459,7 @@ export const products = [
       {
         variantId: "p7-v3",
         label: "The Thriller Of The Hundred Battles - Naraka Bladepoint",
-        price: "₹199",
+        price: "₹249",
         image: "/images/Butterfly9.png",
         description:
           "The Thriller Of The Hundred Battles is a Premium Naraka Bladepoint-inspired alloy butterfly knife trainer featuring a vibrant, multi-color skin finish—perfect for safe trick practice, cosplay, and gaming setups."
@@ -459,7 +467,7 @@ export const products = [
       {
         variantId: "p7-v4",
         label: "Cobra Vanguard - Delta Force",
-        price: "₹199",
+        price: "₹249",
         image: "/images/Butterfly8.png",
         description:
           "Master the flick with this premium Delta Force-inspired Cobra Vanguard Butterfly Knife Trainer, the ultimate addition to your gaming arsenal."
@@ -467,7 +475,7 @@ export const products = [
       {
         variantId: "p7-v5",
         label: "Battle Machine - Arena Breakout",
-        price: "₹199",
+        price: "₹249",
         image: "/images/Butterfly7.png",
         description:
           "Level up your skills with the Battle Machine Trainer, a safe, unsharpened balisong featuring a radical blue and toxic-green cyber-splatter design."
@@ -479,7 +487,7 @@ export const products = [
     id: "p8",
     category: "armory",
     name: "Primeum Metal Karambit Knife",
-    price: "₹289",
+    price: "₹299",
     images: [
       "/images/Karambit1.png"
     ],
@@ -493,10 +501,18 @@ export const products = [
       {
         variantId: "p8-v1",
         label: "Velocity Orange - Valorant",
-        price: "₹289",
+        price: "₹299",
         image: "/images/Karambit2.png",
         description:
           "Sleek Valorant-inspired karambit featuring a curved precision blade and futuristic grip design, perfect for collectors, gamers, and premium display or cosplay use."
+      },
+      {
+        variantId: "p8-v2",
+        label: "Damascus Blue",
+        price: "₹299",
+        image: "/images/Karambit2.png",
+        description:
+          "A striking karambit knife featuring a curved hawkbill blade and an ergonomic handle, both finished in a vibrant, blue-themed topographic 'Damascus' pattern."
       }
     ]
   },
@@ -552,7 +568,7 @@ export const products = [
     ],
     description:
       "Premium customized mug printed with your chosen image or design.",
-    isNew: true,
+    isNew: false,
     isFeatured: true,
     popularityScore: 80,
     hasVariants: true,
@@ -588,7 +604,7 @@ export const products = [
     ],
     description:
       "Heat-sensitive magic mug that reveals your design when hot liquid is poured.",
-    isNew: true,
+    isNew: false,
     isFeatured: true,
     popularityScore: 88,
     hasVariants: true,
@@ -603,4 +619,83 @@ export const products = [
       }
     ]
   },
+
+  {
+    id: "p13",
+    category: "armory",
+    name: "Medium Katana",
+    price: "₹499",
+    images: [
+      "/images/KatanaAll3.png"
+    ],
+    description:
+      "31cm length Medium katana sword keychain inspired by Japanese anime swords with detailed blade and sheath.",
+    isNew: true,
+    isFeatured: true,
+    popularityScore: 92,
+    hasVariants: true,
+    variants: [
+      {
+        variantId: "p13-v1",
+        label: "Shusui",
+        price: "₹499",
+        image: "/images/katana.jpg",
+        description:
+          "A stunning 31cm replica of the legendary Zoro's Shusui katana, featuring its signature black-and-red serrated blade pattern and a matching scabbard adorned with circular red emblems."
+      },
+      {
+        variantId: "p13-v2",
+        label: "Yubashiri ",
+        price: "₹499",
+        image: "/images/Katana3.jpg",
+        description:
+          "A refined 31cm replica of the legendary Zoro's Yubashiri katana, featuring a sleek all-black design with elegant gold accents on the hilt, crossguard, and matching scabbard."
+      },
+      {
+        variantId: "p13-v3",
+        label: "Enma",
+        price: "₹499",
+        image: "/images/Katana2.jpg",
+        description:
+          "A 31cm decorative metal replica of the legendary Enma katana from One Piece, featuring its signature purple hilt, golden flower motifs, and a matching scabbard with a keychain attachment."
+      }
+    ]
+  },
+
+  {
+    id: "p14",
+    category: "armory",
+    name: "Kunai",
+    price: "₹299",
+    images: [
+      "/images/KatanaAll3.png"
+    ],
+    description:
+      "An authentic Naruto-inspired replica kunai featuring a sleek matte black finish, a signature red-wrapped grip, and the Hidden Leaf Village insignia for a professional collector's look.",
+    isNew: true,
+    isFeatured: true,
+    popularityScore: 92,
+    hasVariants: true,
+    variants: [
+      {
+        variantId: "p14-v1",
+        label: "Minato Kunai",
+        price: "₹299",
+        image: "/images/katana.jpg",
+        description:
+          "A sleek, matte black replica of Minato Namikaze's iconic Flying Raijin kunai, featuring a triple-pronged blade design and a handle detailed with signature red kanji."
+      },
+      {
+        variantId: "p14-v2",
+        label: "Shinobi Kunai",
+        price: "₹299",
+        image: "/images/Katana3.jpg",
+        description:
+          "A classic matte black shinobi kunai replica featuring a red-wrapped textured grip and the iconic Hidden Leaf village symbol etched into the blade."
+      }
+
+    ]
+  },
+
+  
 ];
