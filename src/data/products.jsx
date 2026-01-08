@@ -312,7 +312,7 @@ export const products = [
     id: "p5",
     category: "pocketwatch",
     name: "Pocket Watch Keychain",
-    price: "₹269",
+    price: "₹289",
     images: [
       "/images/ALL_PW.jpg"
     ],
@@ -327,7 +327,7 @@ export const products = [
       {
         variantId: "p5-v1",
         label: "Akatsuki Pocket Watch Keychain",
-        price: "₹269",
+        price: "₹289",
         image: "/images/AK_PW.jpg",
         description:
           "Elevate your anime collection with this premium silver pocket watch keychain featuring the iconic Akatsuki Red Cloud design and precision quartz movement."
@@ -335,15 +335,15 @@ export const products = [
       {
         variantId: "p5-v2",
         label: "Harry Potter Snitch Pocket Watch Locket",
-        price: "₹269",
+        price: "₹289",
         image: "/images/HP_PW.jpg",
         description:
           "Capture the magic with this vintage-style Golden Snitch pocket watch necklace, featuring detailed wings and the iconic 'I open at the close' engraving."
       },
       {
         variantId: "p5-v3",
-        label: "Pattern Pocket Watch",
-        price: "₹269",
+        label: "Floral Pattern Pocket Watch",
+        price: "₹289",
         image: "/images/HP_PW.jpg",
         description:
           "An elegant, vintage-style bronze pocket watch featuring an intricately engraved floral case and a classic hunter-case design."
@@ -505,15 +505,15 @@ export const products = [
         image: "/images/Karambit2.png",
         description:
           "Sleek Valorant-inspired karambit featuring a curved precision blade and futuristic grip design, perfect for collectors, gamers, and premium display or cosplay use."
-      },
-      {
+      }
+      /*{
         variantId: "p8-v2",
         label: "Damascus Blue",
         price: "₹299",
         image: "/images/Karambit2.png",
         description:
           "A striking karambit knife featuring a curved hawkbill blade and an ergonomic handle, both finished in a vibrant, blue-themed topographic 'Damascus' pattern."
-      }
+      }*/
     ]
   },
 
@@ -623,13 +623,13 @@ export const products = [
   {
     id: "p13",
     category: "armory",
-    name: "Medium Katana",
+    name: "Premium Anime Katana",
     price: "₹499",
     images: [
-      "/images/KatanaAll3.png"
+      "/images/PeKAll.jpg"
     ],
     description:
-      "31cm length Medium katana sword keychain inspired by Japanese anime swords with detailed blade and sheath.",
+      "31cm length Medium katana sword keychain inspired by Japanese anime swords with detailed blade and sheath without stand.",
     isNew: true,
     isFeatured: true,
     popularityScore: 92,
@@ -639,7 +639,7 @@ export const products = [
         variantId: "p13-v1",
         label: "Shusui",
         price: "₹499",
-        image: "/images/katana.jpg",
+        image: "/images/PeK1.jpg",
         description:
           "A stunning 31cm replica of the legendary Zoro's Shusui katana, featuring its signature black-and-red serrated blade pattern and a matching scabbard adorned with circular red emblems."
       },
@@ -647,7 +647,7 @@ export const products = [
         variantId: "p13-v2",
         label: "Yubashiri ",
         price: "₹499",
-        image: "/images/Katana3.jpg",
+        image: "/images/PeK2.jpg",
         description:
           "A refined 31cm replica of the legendary Zoro's Yubashiri katana, featuring a sleek all-black design with elegant gold accents on the hilt, crossguard, and matching scabbard."
       },
@@ -655,7 +655,7 @@ export const products = [
         variantId: "p13-v3",
         label: "Enma",
         price: "₹499",
-        image: "/images/Katana2.jpg",
+        image: "/images/PeK3.jpg",
         description:
           "A 31cm decorative metal replica of the legendary Enma katana from One Piece, featuring its signature purple hilt, golden flower motifs, and a matching scabbard with a keychain attachment."
       }
