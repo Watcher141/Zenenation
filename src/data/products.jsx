@@ -487,7 +487,7 @@ export const products = [
     id: "p8",
     category: "armory",
     name: "Primeum Metal Karambit Knife",
-    price: "₹299",
+    price: "₹349",
     images: [
       "/images/Karambit1.png"
     ],
@@ -501,19 +501,19 @@ export const products = [
       {
         variantId: "p8-v1",
         label: "Velocity Orange - Valorant",
-        price: "₹299",
+        price: "₹349",
         image: "/images/Karambit2.png",
         description:
           "Sleek Valorant-inspired karambit featuring a curved precision blade and futuristic grip design, perfect for collectors, gamers, and premium display or cosplay use."
       },
-      /*{
+      {
         variantId: "p8-v2",
         label: "Damascus Blue",
         price: "₹349",
         image: "/images/DBK.jpg",
         description:
           "A striking karambit knife featuring a curved hawkbill blade and an ergonomic handle, both finished in a vibrant, blue-themed topographic 'Damascus' pattern."
-      }*/
+      }
     ]
   },
 
@@ -662,7 +662,7 @@ export const products = [
     ]
   },
 
-  /*{
+  {
     id: "p14",
     category: "armory",
     name: "Kunai",
@@ -695,7 +695,7 @@ export const products = [
       }
 
     ]
-  },*/
+  },
 
   
 ];
