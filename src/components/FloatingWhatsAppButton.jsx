@@ -3,10 +3,8 @@ import './FloatingWhatsAppButton.css'; // Optional: if you prefer separate CSS f
 
 const FloatingWhatsAppButton = () => {
   // Replace with your actual WhatsApp number (in international format, no + or spaces)
-  const phoneNumber = '918697302404'; // Example: +91 98765 43210
-  const message = 'Hello! I need help.'; // Optional pre-filled message
 
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  const whatsappUrl = 'https://whatsapp.com/channel/0029Vb7t8HGGpLHWBLrfAU0d';
   return (
     <a
       href={whatsappUrl}
