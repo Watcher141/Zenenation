@@ -1,6 +1,7 @@
 import React from "react";
 import "./PrivacyPolicy.css";
 import { motion } from "framer-motion";
+import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
 
 const PrivacyPolicy = () => {
   return (
@@ -41,6 +42,7 @@ const PrivacyPolicy = () => {
           <p>If you have questions regarding this policy, contact us at <strong>zenenationstore@gmail.com</strong></p>
         </footer>
       </motion.div>
+      <FloatingWhatsAppButton />
     </div>
   );
 };

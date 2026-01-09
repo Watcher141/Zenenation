@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products";
 import "./ProductDetail.css";
 import { useEffect, useState } from "react";
+import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -228,6 +229,7 @@ Please confirm availability.`;
           ))}
         </div>
       </div>
+      <FloatingWhatsAppButton />
     </div>
   );
 };

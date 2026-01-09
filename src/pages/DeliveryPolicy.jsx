@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "./DeliveryPolicy.css";
+import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
 
 const DeliveryPolicy = () => {
   // Scroll to top on route change
@@ -75,7 +76,7 @@ const DeliveryPolicy = () => {
             </li>
             <li>
               Customers must provide a <strong>clear unboxing video </strong>
-               showing the product and packaging.
+              showing the product and packaging.
             </li>
             <li>
               The unboxing video must be recorded from the moment the package is
@@ -97,6 +98,7 @@ const DeliveryPolicy = () => {
           </p>
         </section>
       </motion.div>
+      <FloatingWhatsAppButton />
     </div>
   );
 };

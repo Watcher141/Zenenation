@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Home.css";
 import { products } from "../data/products";
 import CompanyLogo from "../components/CompanyLogo";
+import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
 
 const bannerImages = [
   "/images/B41.jpg",
@@ -165,8 +166,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <FloatingWhatsAppButton />
 
     </div>
+
   );
 };
 

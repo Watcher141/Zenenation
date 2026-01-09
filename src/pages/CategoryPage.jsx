@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../data/products";
 import "./CategoryPage.css";
+import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
 
 const readableNames = {
     keychain: "Keychains",
@@ -48,6 +49,7 @@ const CategoryPage = () => {
                     ))}
                 </div>
             )}
+            <FloatingWhatsAppButton />
 
         </div>
     );

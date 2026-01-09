@@ -65,10 +65,18 @@ const Footer = () => {
                 <div>
                   <h3 className="links-title">Company</h3>
                   <ul className="links-list">
-                    <li><Link to="/about" className="link">About Us</Link></li>
-                    <li><Link to="/terms" className="link">Terms of Use</Link></li>
-                    <li><Link to="/privacy-policy" className="link">Privacy Policy</Link></li>
-                    <li><Link to="/delivery-policy" className="link">Delivery Policy</Link></li>
+                    <li>
+                      <Link
+                        to="/about"
+                        className="link"
+                        onClick={scrollToTop}
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li><Link to="/terms" className="link" onClick={scrollToTop}>Terms of Use</Link></li>
+                    <li><Link to="/privacy-policy" className="link" onClick={scrollToTop}>Privacy Policy</Link></li>
+                    <li><Link to="/delivery-policy" className="link" onClick={scrollToTop}>Delivery Policy</Link></li>
                   </ul>
                 </div>
 
