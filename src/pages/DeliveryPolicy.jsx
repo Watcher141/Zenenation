@@ -4,10 +4,6 @@ import "./DeliveryPolicy.css";
 import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
 
 const DeliveryPolicy = () => {
-  // Scroll to top on route change
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="policy-page">
