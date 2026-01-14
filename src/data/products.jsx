@@ -504,7 +504,7 @@ export const products = [
       },
       {
         variantId: "p7-v3",
-        label: "The Thriller Of The Hundred Battles - Naraka Bladepoint",
+        label: "Hundred Battles - Naraka Bladepoint",
         price: 249,        // selling price (number, not string)
         mrp: 319,         // original price,
         image: "/images/Butterfly9.png",
