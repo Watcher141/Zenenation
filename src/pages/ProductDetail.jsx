@@ -1,33 +1,33 @@
 import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products";
 import "./ProductDetail.css";
-import { useEffect, useState } from "react";
-import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
+import { useEffect, useMemo, useState } from "react";
+import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const product = products.find((p) => p.id === id);
+  const product = useMemo(
+    () => products.find((p) => p.id === id),
+    [id]
+  );
 
   const [activeImg, setActiveImg] = useState("");
   const [selectedVariant, setSelectedVariant] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [imageTransition, setImageTransition] = useState(false);
 
   /* ===============================
-     BASE / VARIANT HANDLING
+     INITIAL LOAD
   =============================== */
-
-  const selectBase = () => {
-    setSelectedVariant(null);
-    setActiveImg(product.images?.[0] || "");
-  };
-
-  const selectVariant = (variant) => {
-    setSelectedVariant(variant);
-    setActiveImg(variant.image);
-  };
-
   useEffect(() => {
     if (!product) return;
-    selectBase();
+
+    setLoading(true);
+    setSelectedVariant(null);
+    setActiveImg(product.images?.[0] || "");
+
+    const timer = setTimeout(() => setLoading(false), 300);
+    return () => clearTimeout(timer);
   }, [product]);
 
   if (!product) {
@@ -35,25 +35,54 @@ const ProductDetail = () => {
   }
 
   /* ===============================
-     WHATSAPP MESSAGE BUILDER
+     VARIANT HANDLING (ANIMATED)
   =============================== */
+  const selectVariant = (variant) => {
+    if (selectedVariant?.variantId === variant.variantId) return;
 
-  const getWhatsAppMessage = () => {
-    const price = selectedVariant
+    setImageTransition(true);
+    setSelectedVariant(variant);
+
+    setTimeout(() => {
+      setActiveImg(variant.image);
+      setImageTransition(false);
+    }, 120);
+  };
+
+  const selectBase = () => {
+    if (!selectedVariant) return;
+
+    setImageTransition(true);
+    setSelectedVariant(null);
+
+    setTimeout(() => {
+      setActiveImg(product.images?.[0] || "");
+      setImageTransition(false);
+    }, 120);
+  };
+
+  /* ===============================
+     PRICE CALCULATION
+  =============================== */
+  const pricing = useMemo(() => {
+    const sellingPrice = selectedVariant
       ? selectedVariant.price
-      : product.basePrice;
+      : product.price;
 
-    const variantName = selectedVariant
-      ? selectedVariant.label
-      : "Base Product";
+    const mrp = selectedVariant?.mrp || product.mrp;
 
-    const variantId = selectedVariant
-      ? selectedVariant.variantId
-      : "N/A";
+    const discount =
+      mrp && mrp > sellingPrice
+        ? Math.round(((mrp - sellingPrice) / mrp) * 100)
+        : null;
 
-    const image =
-      selectedVariant?.image || product.images?.[0] || "";
+    return { sellingPrice, mrp, discount };
+  }, [product, selectedVariant]);
 
+  /* ===============================
+     WHATSAPP MESSAGE
+  =============================== */
+  const getWhatsAppMessage = () => {
     return `Hello ZeneNation 👋
 
 🛍 *I want to buy this product*
@@ -61,73 +90,62 @@ const ProductDetail = () => {
 📦 Product Name: ${product.name}
 🆔 Product ID: ${product.id}
 
-🎨 Variant: ${variantName}
-🆔 Variant ID: ${variantId}
+🎨 Variant: ${selectedVariant?.label || "Base Product"}
+🆔 Variant ID: ${selectedVariant?.variantId || "N/A"}
 
-💰 Price: ${price}
+💰 Price: ₹${pricing.sellingPrice}
 
 🖼 Product Image:
-${image}
+${activeImg}
 
 Please confirm availability.`;
   };
 
-  /* ===============================
-     WHATSAPP REDIRECT
-  =============================== */
-
-  const whatsappNumber = "918697302404"; // country code, no +
-
   const openWhatsApp = () => {
     const message = encodeURIComponent(getWhatsAppMessage());
     window.open(
-      `https://wa.me/${whatsappNumber}?text=${message}`,
+      `https://wa.me/918697302404?text=${message}`,
       "_blank"
     );
   };
-
-  /* ===============================
-     INSTAGRAM REDIRECT
-  =============================== */
-
-  const instagramUsername = "zenenation.in";
 
   const openInstagram = () => {
-    window.open(
-      `https://www.instagram.com/${instagramUsername}/`,
-      "_blank"
-    );
+    window.open("https://www.instagram.com/zenenation.in/", "_blank");
   };
 
   /* ===============================
-     RECOMMENDED PRODUCTS
+     RECOMMENDED
   =============================== */
-
-  const recommended = products
-    .filter((p) => p.id !== product.id)
-    .slice(0, 3);
+  const recommended = useMemo(
+    () => products.filter((p) => p.id !== product.id).slice(0, 3),
+    [product.id]
+  );
 
   return (
     <div className="pd-wrapper">
       <div className="pd-container">
         {/* IMAGE GALLERY */}
         <div className="pd-gallery">
-          <img
-            src={activeImg || "/images/placeholder.png"}
-            className="pd-main-img"
-            alt={product.name}
-            onError={(e) =>
-              (e.target.src = "/images/placeholder.png")
-            }
-          />
+          {loading ? (
+            <div className="skeleton skeleton-img" />
+          ) : (
+            <img
+              src={activeImg}
+              className={`pd-main-img ${imageTransition ? "fade" : ""
+                }`}
+              alt={product.name}
+              onError={(e) =>
+                (e.currentTarget.src = "/images/placeholder.png")
+              }
+            />
+          )}
 
           <div className="pd-thumbs">
             <img
               src={product.images?.[0]}
               alt="Base"
-              className={`pd-thumb-img ${
-                !selectedVariant ? "active-thumb" : ""
-              }`}
+              className={`pd-thumb-img ${!selectedVariant ? "active-thumb" : ""
+                }`}
               onClick={selectBase}
             />
 
@@ -137,32 +155,54 @@ Please confirm availability.`;
                   key={variant.variantId}
                   src={variant.image}
                   alt={variant.label}
-                  className={`pd-thumb-img ${
-                    activeImg === variant.image
+                  className={`pd-thumb-img ${activeImg === variant.image
                       ? "active-thumb"
                       : ""
-                  }`}
+                    }`}
                   onClick={() => selectVariant(variant)}
                 />
               ))}
           </div>
         </div>
 
-        {/* PRODUCT INFO */}
+        {/* INFO */}
         <div className="pd-info">
-          <h1 className="pd-title">{product.name}</h1>
+          {loading ? (
+            <>
+              <div className="skeleton skeleton-title" />
+              <div className="skeleton skeleton-price" />
+              <div className="skeleton skeleton-text" />
+            </>
+          ) : (
+            <>
+              <h1 className="pd-title">{product.name}</h1>
 
-          <p className="pd-price">
-            {selectedVariant
-              ? selectedVariant.price
-              : product.basePrice}
-          </p>
+              <div className="pd-price-box">
+                <div className="pd-price-top">
+                  {pricing.discount && (
+                    <span className="pd-discount">
+                      -{pricing.discount}%
+                    </span>
+                  )}
+                  <span className="pd-selling-price">
+                    ₹{pricing.sellingPrice.toLocaleString()}
+                  </span>
+                </div>
 
-          <p className="pd-desc">
-            {selectedVariant
-              ? selectedVariant.description
-              : product.description}
-          </p>
+                {pricing.mrp && pricing.mrp > pricing.sellingPrice && (
+                  <div className="pd-mrp">
+                    M.R.P.:{" "}
+                    <span>₹{pricing.mrp.toLocaleString()}</span>
+                  </div>
+                )}
+              </div>
+
+              <p className="pd-desc">
+                {selectedVariant?.description ||
+                  product.description}
+              </p>
+            </>
+          )}
 
           {product.hasVariants && (
             <div className="pd-variants">
@@ -171,13 +211,18 @@ Please confirm availability.`;
                 {product.variants.map((variant) => (
                   <button
                     key={variant.variantId}
-                    className={`pd-variant-btn ${
-                      selectedVariant?.variantId ===
-                      variant.variantId
+                    className={`pd-variant-btn ${selectedVariant?.variantId ===
+                        variant.variantId
                         ? "active-variant"
                         : ""
-                    }`}
-                    onClick={() => selectVariant(variant)}
+                      }`}
+                    onClick={() => {
+                      selectVariant(variant);
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      });
+                    }}
                   >
                     <img
                       src={variant.image}
@@ -191,7 +236,6 @@ Please confirm availability.`;
             </div>
           )}
 
-          {/* CTA BUTTONS */}
           <div className="pd-cta-group">
             <button
               className="pd-whatsapp-btn"
@@ -219,23 +263,23 @@ Please confirm availability.`;
               key={item.id}
               to={`/product/${item.id}`}
               className="pd-related-link"
+              onClick={() =>
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }
             >
               <div className="pd-related-card">
                 <img src={item.images?.[0]} alt={item.name} />
                 <h3>{item.name}</h3>
-                <p>{item.price}</p>
+                <p>₹{item.price.toLocaleString()}</p>
               </div>
             </Link>
           ))}
         </div>
       </div>
+
       <FloatingWhatsAppButton />
     </div>
   );
 };
 
 export default ProductDetail;
-
-
-
-

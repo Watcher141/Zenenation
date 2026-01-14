@@ -1,10 +1,15 @@
+/* ===============================
+   WRAPPER
+================================ */
 .pd-wrapper {
   padding: 50px 6%;
   font-family: "Poppins", sans-serif;
   background: radial-gradient(circle at top, #28292c, #24262f);
 }
 
-/* MAIN CARD */
+/* ===============================
+   MAIN CONTAINER
+================================ */
 .pd-container {
   display: flex;
   gap: 50px;
@@ -15,7 +20,9 @@
   margin-bottom: 80px;
 }
 
-/* IMAGE SIDE */
+/* ===============================
+   IMAGE GALLERY
+================================ */
 .pd-gallery {
   width: 50%;
 }
@@ -27,7 +34,12 @@
   border-radius: 16px;
   background: linear-gradient(145deg, #404040, #383852);
   padding: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.pd-main-img.fade {
+  opacity: 0;
+  transform: scale(0.98);
 }
 
 .pd-main-img:hover {
@@ -62,11 +74,12 @@
 .pd-thumb-img.active-thumb {
   opacity: 1;
   border-color: #ffffff;
-  box-shadow: 0 8px 18px rgba(98, 28, 160, 0.18);
   transform: scale(1.08);
 }
 
-/* INFO SIDE */
+/* ===============================
+   INFO SECTION
+================================ */
 .pd-info {
   width: 50%;
 }
@@ -74,31 +87,65 @@
 .pd-title {
   font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: whitesmoke;
 }
 
-.pd-price {
-  font-size: 1.8rem;
-  color: #125fdb; 
-  font-weight: 600;
-  margin-bottom: 20px;
-  transition: all 0.25s ease;
-  font-family: "Century Gothic", "Poppins", "Segoe UI", Arial, sans-serif;
-  letter-spacing: 0.3px;
-  margin-top: 6px;
+/* ===============================
+   PRICE
+================================ */
+.pd-price-box {
+  margin: 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
+.pd-price-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pd-discount {
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.15);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.pd-selling-price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.pd-mrp {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.pd-mrp span {
+  text-decoration: line-through;
+}
+
+/* ===============================
+   DESCRIPTION
+================================ */
 .pd-desc {
   font-size: 1rem;
   color: #bfbbf4;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   line-height: 1.7rem;
 }
 
-/* VARIANTS */
+/* ===============================
+   VARIANTS
+================================ */
 .pd-variants {
-  margin: 25px 0 30px;
+  margin: 22px 0 30px;
 }
 
 .pd-variant-title {
@@ -125,19 +172,20 @@
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .pd-variant-btn:hover {
-  border-color: #8788c3;
   transform: translateY(-1px);
+  border-color: #8788c3;
 }
 
 .pd-variant-btn.active-variant {
-  background: #fff;
+  background: #ffffff;
   color: #111;
-  border-color: #fff;
+  border-color: #ffffff;
   box-shadow: 0 6px 18px rgba(75, 61, 133, 0.25);
 }
 
@@ -150,7 +198,9 @@
   padding: 4px;
 }
 
-/* CTA BUTTON GROUP */
+/* ===============================
+   CTA BUTTONS
+================================ */
 .pd-cta-group {
   display: flex;
   gap: 18px;
@@ -158,45 +208,36 @@
   margin-top: 20px;
 }
 
-/* WHATSAPP BUTTON */
-.pd-whatsapp-btn {
-  background: linear-gradient(135deg, #25d366, #1ebe5d);
-  color: #ffffff;
+.pd-whatsapp-btn,
+.pd-instagram-btn {
   padding: 16px 40px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #ffffff;
+}
+
+.pd-whatsapp-btn {
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
 }
 
-.pd-whatsapp-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5);
-}
-
-/* INSTAGRAM BUTTON */
 .pd-instagram-btn {
   background: linear-gradient(135deg, #e1306c, #c13584);
-  color: white;
-  padding: 16px 40px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
   box-shadow: 0 10px 25px rgba(225, 48, 108, 0.36);
 }
 
+.pd-whatsapp-btn:hover,
 .pd-instagram-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(225, 48, 108, 0.4);
 }
 
-/* RECOMMENDED */
+/* ===============================
+   RECOMMENDED
+================================ */
 .pd-related h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
@@ -214,10 +255,9 @@
   padding: 18px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  transition: 0.3s;
-  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .pd-related-card img {
@@ -234,16 +274,13 @@
 }
 
 .pd-related-card p {
-  font-family: "Century Gothic", "Poppins", "Segoe UI", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 600;              /* bold */
-  color: #3b82f6;                /* blue */
-  letter-spacing: 0.3px;
-  margin-top: 6px;
+  font-weight: 600;
+  color: #3b82f6;
 }
 
 .pd-related-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(81, 10, 147, 0.6);
 }
 
@@ -252,14 +289,61 @@
   color: inherit;
 }
 
-/* NOT FOUND */
+/* ===============================
+   SKELETON LOADER
+================================ */
+.skeleton {
+  background: linear-gradient(90deg,
+      #2a2a3a 25%,
+      #3a3a4f 37%,
+      #2a2a3a 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite ease;
+  border-radius: 12px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 380px;
+}
+
+.skeleton-title {
+  height: 28px;
+  width: 70%;
+}
+
+.skeleton-price {
+  height: 22px;
+  width: 40%;
+}
+
+.skeleton-text {
+  height: 14px;
+  width: 100%;
+}
+
+/* ===============================
+   NOT FOUND
+================================ */
 .pd-not-found {
   text-align: center;
   margin-top: 60px;
   font-size: 1.6rem;
 }
 
-/* RESPONSIVE */
+/* ===============================
+   RESPONSIVE
+================================ */
 @media (max-width: 900px) {
   .pd-container {
     flex-direction: column;
@@ -276,6 +360,18 @@
 }
 
 @media (max-width: 600px) {
+  .pd-title {
+    font-size: 1.9rem;
+  }
+
+  .pd-related-card img {
+    height: 120px;
+  }
+
+  .pd-related-card p {
+    font-size: 18px;
+  }
+
   .pd-cta-group {
     flex-direction: column;
   }
@@ -283,6 +379,5 @@
   .pd-whatsapp-btn,
   .pd-instagram-btn {
     width: 100%;
-    text-align: center;
   }
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Home.css";
 import { products } from "../data/products";
 import CompanyLogo from "../components/CompanyLogo";
-import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
+import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
 
 const bannerImages = [
   "/images/B41.jpg",
@@ -12,35 +12,52 @@ const bannerImages = [
 ];
 
 const Home = () => {
-  // 🔥 Automatically choose New Arrivals & Featured
   const newArrivals = products.filter((p) => p.isNew);
   const featuredItems = products.filter((p) => p.isFeatured);
 
-  // 🔁 Banner slider state
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % bannerImages.length);
     }, 4000);
-
     return () => clearInterval(timer);
   }, []);
 
+  const renderPrice = (item) => {
+    const hasDiscount = item.mrp && item.mrp > item.price;
+    const discount = hasDiscount
+      ? Math.round(((item.mrp - item.price) / item.mrp) * 100)
+      : null;
+
+    return (
+      <div className="home-price-box">
+        <span className="home-price">
+          ₹{item.price.toLocaleString()}
+        </span>
+
+        {hasDiscount && (
+          <span className="home-discount">
+            -{discount}%
+          </span>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="soft-container">
-
       {/* ================= HERO SLIDER ================= */}
       <section className="hero-slider">
         {bannerImages.map((img, index) => (
           <div
             key={index}
-            className={`hero-slide ${index === currentSlide ? "active" : ""}`}
+            className={`hero-slide ${index === currentSlide ? "active" : ""
+              }`}
             style={{ backgroundImage: `url(${img})` }}
           />
         ))}
 
-        {/* HERO CONTENT (CENTER BOTTOM) */}
         <div className="hero-content">
           <h1>
             Anime & Game <span>Collectibles</span>
@@ -53,7 +70,6 @@ const Home = () => {
           </a>
         </div>
 
-        {/* DOT INDICATORS */}
         <div className="hero-dots">
           {bannerImages.map((_, i) => (
             <span
@@ -91,7 +107,9 @@ const Home = () => {
                   alt={item.name}
                 />
                 <h3>{item.name}</h3>
-                <p>{item.price}</p>
+
+                {/* PRICE */}
+                {renderPrice(item)}
               </div>
             ))
           ) : (
@@ -100,7 +118,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= FEATURED PRODUCTS ================= */}
+      {/* ================= FEATURED ================= */}
       <section className="soft-products" id="products">
         <h2 className="section-title">Featured Items</h2>
 
@@ -121,7 +139,9 @@ const Home = () => {
                   alt={item.name}
                 />
                 <h3>{item.name}</h3>
-                <p>{item.price}</p>
+
+                {/* PRICE */}
+                {renderPrice(item)}
               </div>
             ))
           ) : (
@@ -130,7 +150,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= CATEGORY SECTION ================= */}
+      {/* ================= CATEGORY ================= */}
       <section className="category-section">
         <h2 className="section-title">Shop by Category</h2>
 
@@ -166,10 +186,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <FloatingWhatsAppButton />
-
     </div>
-
   );
 };
 

@@ -1,12 +1,12 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../data/products";
 import "./CategoryPage.css";
-import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
+import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
 
 const readableNames = {
     keychain: "Keychains",
     mascot: "Mascots",
-    armory: "Armory"
+    armory: "Armory",
 };
 
 const CategoryPage = () => {
@@ -14,12 +14,11 @@ const CategoryPage = () => {
     const navigate = useNavigate();
 
     const categoryProducts = products.filter(
-        (item) => item.category === category
+        (product) => product.category === category
     );
 
     return (
         <div className="cat-container">
-
             <h1 className="cat-title" data-aos="fade-up">
                 {readableNames[category] || "Products"}
             </h1>
@@ -37,20 +36,24 @@ const CategoryPage = () => {
                             onClick={() => navigate(`/product/${product.id}`)}
                         >
                             <img
-                                src={product.images[0]}
+                                src={product.images?.[0]}
                                 alt={product.name}
                                 onError={(e) => {
-                                    e.target.src = "/images/placeholder.png";
+                                    e.currentTarget.src = "/images/placeholder.png";
                                 }}
                             />
                             <h3>{product.name}</h3>
-                            <p>{product.price}</p>
+
+                            {/* PRICE — matches your screenshot */}
+                            <p className="category-price">
+                                ₹{product.price.toLocaleString()}
+                            </p>
                         </div>
                     ))}
                 </div>
             )}
-            <FloatingWhatsAppButton />
 
+            <FloatingWhatsAppButton />
         </div>
     );
 };
