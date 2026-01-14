@@ -3,6 +3,7 @@ import "./Home.css";
 import { products } from "../data/products";
 import CompanyLogo from "../components/CompanyLogo";
 import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
+import FloatingTrackButton from '../components/FloatingTrackButton';
 import { Helmet } from "react-helmet-async";
 
 
@@ -198,7 +199,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-
+    
+        <FloatingTrackButton />
         <FloatingWhatsAppButton />
       </div>
     </>

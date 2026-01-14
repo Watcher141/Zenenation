@@ -136,13 +136,9 @@
   margin-top: 6px;
 }
 
-.home-price {
-  font-size: 18px;
-  font-weight: 600;
-  color: #3b82f6;
-}
-
+/* Show discount first */
 .home-discount {
+  order: 1;
   font-size: 13px;
   color: #ff4d4d;
   background: rgba(255, 77, 77, 0.15);
@@ -150,6 +146,15 @@
   border-radius: 6px;
   font-weight: 600;
 }
+
+/* Show price after */
+.home-price {
+  order: 2;
+  font-size: 25px;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
 
 
 /* ============================================

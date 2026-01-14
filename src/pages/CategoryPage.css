@@ -52,14 +52,37 @@
   font-size: 18px;
 }
 
-.cat-card p {
+/* ===============================
+   CATEGORY PRICE STYLE
+================================ */
+
+.cat-price-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Red discount badge */
+.cat-discount {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.15);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* Blue price */
+.cat-price {
   font-family: "Century Gothic", "Poppins", "Segoe UI", Arial, sans-serif;
   font-size: 20px;
-  font-weight: 600;              /* bold */
-  color: #3b82f6;                /* blue */
+  font-weight: 700;
+  color: #3b82f6;
   letter-spacing: 0.3px;
-  margin-top: 6px;
 }
+
 
 /* EMPTY STATE */
 .cat-empty {

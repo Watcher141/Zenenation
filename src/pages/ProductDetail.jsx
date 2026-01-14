@@ -3,6 +3,7 @@ import { products } from "../data/products";
 import "./ProductDetail.css";
 import { useEffect, useMemo, useState } from "react";
 import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
+import FloatingTrackButton from '../components/FloatingTrackButton';
 import { Helmet } from "react-helmet-async";
 
 const ProductDetail = () => {
@@ -264,28 +265,48 @@ Please confirm availability.`;
         </div>
 
         {/* RECOMMENDED */}
-        <div className="pd-related">
-          <h2>Recommended for You</h2>
-          <div className="pd-related-grid">
-            {recommended.map((item) => (
-              <Link
-                key={item.id}
-                to={`/product/${item.id}`}
-                className="pd-related-link"
-                onClick={() =>
-                  window.scrollTo({ top: 0, behavior: "smooth" })
-                }
-              >
-                <div className="pd-related-card">
-                  <img src={item.images?.[0]} alt={item.name} />
-                  <h3>{item.name}</h3>
-                  <p>₹{item.price.toLocaleString()}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
+<div className="pd-related">
+  <h2>Recommended for You</h2>
+  <div className="pd-related-grid">
+    {recommended.map((item) => {
 
+      const discount =
+        item.mrp && item.mrp > item.price
+          ? Math.round(((item.mrp - item.price) / item.mrp) * 100)
+          : null;
+
+      return (
+        <Link
+          key={item.id}
+          to={`/product/${item.id}`}
+          className="pd-related-link"
+          onClick={() =>
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }
+        >
+          <div className="pd-related-card">
+            <img src={item.images?.[0]} alt={item.name} />
+            <h3>{item.name}</h3>
+
+            <div className="pd-related-price-box">
+              {discount && (
+                <span className="pd-related-discount">
+                  -{discount}%
+                </span>
+              )}
+              <span className="pd-related-price">
+                ₹{item.price.toLocaleString()}
+              </span>
+            </div>
+          </div>
+        </Link>
+      );
+    })}
+  </div>
+</div>
+
+
+        <FloatingTrackButton />
         <FloatingWhatsAppButton />
       </div>
     </>

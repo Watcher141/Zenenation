@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../data/products";
 import "./CategoryPage.css";
 import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
+import FloatingTrackButton from '../components/FloatingTrackButton';
 import { Helmet } from "react-helmet-async";
 
 const readableNames = {
@@ -53,15 +54,24 @@ const CategoryPage = () => {
                             />
                             <h3>{product.name}</h3>
 
-                            {/* PRICE — matches your screenshot */}
-                            <p className="category-price">
-                                ₹{product.price.toLocaleString()}
-                            </p>
+                            {/* PRICE */}
+                            <div className="cat-price-box">
+                             {product.mrp && product.mrp > product.price && (
+                              <span className="cat-discount">
+                                -{Math.round(((product.mrp - product.price) / product.mrp) * 100)}%
+                              </span>
+                              )}
+                              <span className="cat-price">
+                                  ₹{product.price.toLocaleString()}
+                              </span>
+                            </div>
+
                         </div>
                     ))}
                 </div>
             )}
 
+            <FloatingTrackButton />
             <FloatingWhatsAppButton />
         </div>
         </>

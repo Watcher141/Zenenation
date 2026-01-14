@@ -122,7 +122,7 @@
 .pd-selling-price {
   font-size: 26px;
   font-weight: 700;
-  color: #ffffff;
+  color: #3b82f6;
 }
 
 .pd-mrp {
@@ -292,11 +292,35 @@
   overflow: hidden;
 }
 
-.pd-related-card p {
-  font-size: 20px;
+/* ===============================
+   RECOMMENDED PRICE STYLE
+================================ */
+
+.pd-related-price-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Red discount badge */
+.pd-related-discount {
+  font-size: 13px;
   font-weight: 600;
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.15);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* Blue price */
+.pd-related-price {
+  font-size: 20px;
+  font-weight: 700;
   color: #3b82f6;
 }
+
 
 .pd-related-card:hover {
   transform: translateY(-4px);

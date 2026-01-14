@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Terms.css";
 import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
+import FloatingTrackButton from '../components/FloatingTrackButton';
 
 const Terms = () => {
 
@@ -95,6 +96,7 @@ const Terms = () => {
           </button>
         </div>
       </motion.div>
+      <FloatingTrackButton />
       <FloatingWhatsAppButton />
     </div>
   );

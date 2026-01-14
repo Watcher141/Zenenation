@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "./DeliveryPolicy.css";
 import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
+import FloatingTrackButton from '../components/FloatingTrackButton';
 
 const DeliveryPolicy = () => {
 
@@ -94,6 +95,7 @@ const DeliveryPolicy = () => {
           </p>
         </section>
       </motion.div>
+      <FloatingTrackButton />
       <FloatingWhatsAppButton />
     </div>
   );

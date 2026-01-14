@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../components/About.css";
 import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
+import FloatingTrackButton from '../components/FloatingTrackButton';
 const teamMembers = [
   {
     name: "Tamal Mukherjee",
@@ -132,6 +133,7 @@ const About = () => {
           </motion.div>
         </section>
       </main>
+      <FloatingTrackButton />
       <FloatingWhatsAppButton />
     </div>
   );

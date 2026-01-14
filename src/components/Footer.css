@@ -309,43 +309,28 @@
 /* Scroll To Top Button */
 .scroll-top-btn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #4a2c2a;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
+    bottom: 110px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #4a2c2a;
+    /* WhatsApp green */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .scroll-top-btn:hover {
-  transform: translateY(-3px);
-  background: #5c3836;
+  transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    background-color: #5c3836;
+    /* Darker green on hover */
 }
 
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .scroll-top-btn {
-    width: 42px;
-    height: 42px;
-    bottom: 20px;
-    right: 20px;
-    font-size: 16px;
-  }
-}
 
-@media (max-width: 480px) {
-  .scroll-top-btn {
-    bottom: 16px;
-    right: 16px;
-  }
-}
