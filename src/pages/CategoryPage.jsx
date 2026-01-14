@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../data/products";
 import "./CategoryPage.css";
 import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
+import { Helmet } from "react-helmet-async";
 
 const readableNames = {
     keychain: "Keychains",
@@ -18,6 +19,14 @@ const CategoryPage = () => {
     );
 
     return (
+        <>
+        <Helmet>
+              <title>Zenenation | Anime Collectibles, Keychains & Merch</title>
+              <meta
+                name="description"
+                content="Buy premium anime keychains, collectibles, mini armory items & custom anime merch at Zenenation."
+              /> 
+            </Helmet>
         <div className="cat-container">
             <h1 className="cat-title" data-aos="fade-up">
                 {readableNames[category] || "Products"}
@@ -55,6 +64,7 @@ const CategoryPage = () => {
 
             <FloatingWhatsAppButton />
         </div>
+        </>
     );
 };
 
