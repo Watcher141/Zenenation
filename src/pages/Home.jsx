@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet-async";
 const bannerImages = [
   "/images/B41.jpg",
   "/images/B12.png",
-  "/images/B42.jpg",
+  "/images/B43.jpg",
   "/images/B33.png",
 ];
 

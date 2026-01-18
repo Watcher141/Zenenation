@@ -3,7 +3,7 @@ import slack from "/images/L1.png";
 import amazon from "/images/L2.png";
 import woocommerce from "/images/L3.png";
 import meundies from "/images/L4.png";
-import sitepoint from "/images/L5.png";
+import sitepoint from "/images/PWBanner.png";
 import "./CompanyLogo.css";
 
 const CompanyLogo = () => {
