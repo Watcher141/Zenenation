@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 
 const readableNames = {
     keychain: "Keychains",
-    mascot: "Mascots",
+    mascot: "Figures & Mascots",
     armory: "Armory",
 };
 
