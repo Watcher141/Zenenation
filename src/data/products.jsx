@@ -753,8 +753,8 @@ export const products = [
     id: "p15",
     category: "mascot",
     name: "Naruto Figures",
-    price: 199,        // selling price (number, not string)
-    mrp: 249,         // original price,
+    price: 222,        // selling price (number, not string)
+    mrp: 279,         // original price,
     images: [
       "/images/Labubu3.jpg"
     ],
@@ -768,8 +768,8 @@ export const products = [
       {
         variantId: "p15-v1",
         label: "Naruto Handsign",
-        price: 199,        // selling price (number, not string)
-        mrp: 249,         // original price,
+        price: 222,        // selling price (number, not string)
+        mrp: 279,         // original price,
         image: "/images/N1.jpeg",
         description:
           "A high-quality PVC figure featuring Naruto Uzumaki in his signature Shadow Clone hand seal, perfect for any fan looking to bring the Will of Fire to their collection."
@@ -777,8 +777,8 @@ export const products = [
       {
         variantId: "p15-v2",
         label: "Naruto Cape",
-        price: 199,        // selling price (number, not string)
-        mrp: 249,         // original price,
+        price: 222,        // selling price (number, not string)
+        mrp: 279,         // original price,
         image: "/images/N2.jpeg",
         description:
           "An action-ready PVC collectible showcasing Naruto in a classic combat pose, complete with his signature headband and vibrant orange-and-red jumpsuit."
@@ -786,8 +786,8 @@ export const products = [
       {
         variantId: "p15-v3",
         label: "Naruto Kunai",
-        price: 199,        // selling price (number, not string)
-        mrp: 249,         // original price,
+        price: 222,        // selling price (number, not string)
+        mrp: 279,         // original price,
         image: "/images/N3.jpeg",
         description:
           "This detailed figure showcases Naruto armed and ready for a skirmish, wielding dual kunai with a confident smirk."
@@ -795,8 +795,8 @@ export const products = [
       {
         variantId: "p15-v4",
         label: "Naruto Shippuden",
-        price: 199,        // selling price (number, not string)
-        mrp: 249,         // original price,
+        price: 222,        // selling price (number, not string)
+        mrp: 279,         // original price,
         image: "/images/N4.jpeg",
         description:
           "Featuring his iconic orange and black jumpsuit, this figure depicts Naruto in a focused hand seal pose, ready to unleash his next big move."
@@ -804,8 +804,8 @@ export const products = [
       {
         variantId: "p15-v5",
         label: "Naruto Shinobi",
-        price: 199,        // selling price (number, not string)
-        mrp: 249,         // original price,
+        price: 222,        // selling price (number, not string)
+        mrp: 279,         // original price,
         image: "/images/N5.jpeg",
         description:
           "A clean, standing-pose figure of Naruto featuring the red armband of the Allied Shinobi Forces, perfect for displaying the hero's journey."
@@ -813,8 +813,8 @@ export const products = [
       {
         variantId: "p15-v6",
         label: "Naruto Kurama Chakra Mode",
-        price: 199,        // selling price (number, not string)
-        mrp: 249,         // original price,
+        price: 222,        // selling price (number, not string)
+        mrp: 279,         // original price,
         image: "/images/N6.jpeg",
         description:
           "Radiating power in his glowing yellow form, this figure captures Naruto in his ultimate Kurama-linked state for a standout display piece."
