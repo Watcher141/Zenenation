@@ -184,7 +184,7 @@ const Home = () => {
                 (window.location.href = "/category/mascot")
               }
             >
-              <img src="/images/Labubu3.jpg" alt="Mascots" />
+              <img src="/images/NALL.jpeg" alt="Mascots" />
               <h3>Figures & Mascot</h3>
             </div>
 

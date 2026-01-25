@@ -749,14 +749,14 @@ export const products = [
     ]
   },
 
-  /*{
+  {
     id: "p15",
     category: "mascot",
     name: "Naruto Figures",
     price: 222,        // selling price (number, not string)
     mrp: 279,         // original price,
     images: [
-      "/images/Labubu3.jpg"
+      "/images/NALL.jpeg"
     ],
     description:
       "Naruto merchandise for fans and for gift purposes.",
@@ -820,7 +820,7 @@ export const products = [
           "Radiating power in his glowing yellow form, this figure captures Naruto in his ultimate Kurama-linked state for a standout display piece."
       }
     ]
-  },*/
+  },
 
 
 ];
