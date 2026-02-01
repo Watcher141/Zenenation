@@ -11,7 +11,7 @@ export const products = [
     id: "p1",
     category: "keychain",
     name: "Spider Man Keychain",
-    price: 69,        // selling price (number, not string)
+    price: 79,        // selling price (number, not string)
     mrp: 99,         // original price
     images: [
       "/images/SpidereMan1.jpg"
@@ -27,7 +27,7 @@ export const products = [
       {
         variantId: "p1-v1",
         label: "Classic Red Suit",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price
         image: "/images/spidyvar1.png",
         description:
@@ -36,7 +36,7 @@ export const products = [
       {
         variantId: "p1-v2",
         label: "Miles Suit",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/spidyvar2.png",
         description:
@@ -45,7 +45,7 @@ export const products = [
       {
         variantId: "p1-v3",
         label: "Chill Spidy",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/spidyvar3.png",
         description:
@@ -54,7 +54,7 @@ export const products = [
       {
         variantId: "p1-v4",
         label: "Cool Spidy",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/spidyvar4.png",
         description:
@@ -69,7 +69,7 @@ export const products = [
     id: "p2",
     category: "keychain",
     name: "Demon Slayer Keychain",
-    price: 69,        // selling price (number, not string)
+    price: 79,        // selling price (number, not string)
     mrp: 99,         // original price,
     images: [
       "/images/DemonSlayer.jpeg"
@@ -84,7 +84,7 @@ export const products = [
       {
         variantId: "p2-v1",
         label: "Tanjiro Kamado",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/Tanjiro.png",
         description:
@@ -93,7 +93,7 @@ export const products = [
       {
         variantId: "p2-v2",
         label: "Gyu Tomioka",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/Gyu.png",
         description:
@@ -102,7 +102,7 @@ export const products = [
       {
         variantId: "p2-v3",
         label: "Zenitsu Agatsuma",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/Zenitsu.png",
         description:
@@ -111,7 +111,7 @@ export const products = [
       {
         variantId: "p2-v4",
         label: "Inosuke Hashibira",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/Inosuke.png",
         description:
@@ -120,7 +120,7 @@ export const products = [
       {
         variantId: "p2-v5",
         label: "Nezuko Kamado",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/Nezuko.png",
         description:
@@ -129,7 +129,7 @@ export const products = [
       {
         variantId: "p2-v6",
         label: "Shinobu Kocho",
-        price: 69,        // selling price (number, not string)
+        price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
         image: "/images/Shinobu.png",
         description:
@@ -142,8 +142,8 @@ export const products = [
     id: "p3",
     category: "keychain",
     name: "Metal Keychain",
-    price: 79,        // selling price (number, not string)
-    mrp: 99,         // original price,
+    price: 89,        // selling price (number, not string)
+    mrp: 119,         // original price,
     images: [
       "/images/metalkeychaain.png"
     ],
@@ -158,8 +158,8 @@ export const products = [
       {
         variantId: "p3-v1",
         label: "Iron Man",
-        price: 79,        // selling price (number, not string)
-        mrp: 99,         // original price,
+        price: 89,        // selling price (number, not string)
+        mrp: 119,         // original price,
         image: "/images/Ironman.png",
         description:
           "Classic red Iron Man keychain with vibrant colors and iconic suit design."
@@ -167,8 +167,8 @@ export const products = [
       {
         variantId: "p3-v2",
         label: "Hand Blaster",
-        price: 79,        // selling price (number, not string)
-        mrp: 99,         // original price,
+        price: 89,        // selling price (number, not string)
+        mrp: 119,         // original price,
         image: "/images/IronmanHand.png",
         description:
           "A bold Avengers-inspired metal keychain featuring the iconic powered hand design. Perfect for adding superhero energy to your keys, bag, or everyday carry"
@@ -176,8 +176,8 @@ export const products = [
       {
         variantId: "p3-v3",
         label: "CR7",
-        price: 79,        // selling price (number, not string)
-        mrp: 99,         // original price,
+        price: 89,        // selling price (number, not string)
+        mrp: 119,         // original price,
         image: "/images/CR7.png",
         description:
           "A cool football jersey–style keychain with a bold number 7 design. Perfect for CR7 fans to show off their love for the game on keys, bags, or backpacks"
@@ -185,8 +185,8 @@ export const products = [
       {
         variantId: "p3-v4",
         label: "Joker",
-        price: 79,        // selling price (number, not string)
-        mrp: 99,         // original price,
+        price: 89,        // selling price (number, not string)
+        mrp: 119,         // original price,
         image: "/images/joker.png",
         description:
           "A bold Joker-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -194,8 +194,8 @@ export const products = [
       {
         variantId: "p3-v5",
         label: "Deadpool",
-        price: 79,        // selling price (number, not string)
-        mrp: 99,         // original price,
+        price: 89,        // selling price (number, not string)
+        mrp: 119,         // original price,
         image: "/images/Deadpool.png",
         description:
           "A bold Deadpool-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -203,8 +203,8 @@ export const products = [
       {
         variantId: "p3-v6",
         label: "Black Panther",
-        price: 79,        // selling price (number, not string)
-        mrp: 99,         // original price,
+        price: 89,        // selling price (number, not string)
+        mrp: 119,         // original price,
         image: "/images/Blackpanter.png",
         description:
           "A bold Black Panther-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -216,8 +216,8 @@ export const products = [
     id: "p4",
     category: "keychain",
     name: "Face Changing Keychain",
-    price: 79,        // selling price (number, not string)
-    mrp: 109,         // original price,
+    price: 99,        // selling price (number, not string)
+    mrp: 139,         // original price,
     images: [
       "/images/fcall.png"
     ],
@@ -232,8 +232,8 @@ export const products = [
       {
         variantId: "p4-v1",
         label: "Lavender Cat",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_LC.jpg",
         description:
           "A vibrant lavender hoodie-themed face-changing keychain featuring a playful mood swing mechanism."
@@ -241,8 +241,8 @@ export const products = [
       {
         variantId: "p4-v2",
         label: "Doraemon",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_DM.jpg",
         description:
           "Doraemon-inspired face-changing keychain wearing a blue hoodie that cycles through different iconic expressions."
@@ -250,8 +250,8 @@ export const products = [
       {
         variantId: "p4-v3",
         label: "Capybara",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_CB.jpg",
         description:
           "This orange capybara face-changing keychain features a hooded design that swaps between different adorable expressions."
@@ -259,8 +259,8 @@ export const products = [
       {
         variantId: "p4-v4",
         label: "Spider-Man",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_SM.jpg",
         description:
           "This Spider-Man inspired red face-changing keychain features a hooded superhero design that rotates through various iconic web-slinger expressions."
@@ -268,8 +268,8 @@ export const products = [
       {
         variantId: "p4-v5",
         label: "Gojo Satoru",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_GS.jpg",
         description:
           "This anime-inspired Gojo Satoru face-changing keychain features a dark blue hoodie design that rotates through different iconic expressions."
@@ -277,8 +277,8 @@ export const products = [
       {
         variantId: "p4-v6",
         label: "Lotso Bear",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_LB.jpg",
         description:
           "This Lotso-inspired pink bear face-changing keychain features a cozy hoodie design that cycles through various grumpy and sweet expressions."
@@ -286,8 +286,8 @@ export const products = [
       {
         variantId: "p4-v7",
         label: "Shin-chan",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_SC.jpg",
         description:
           "This Shin-chan inspired yellow face-changing keychain features a hooded design that cycles through various funny expressions."
@@ -295,8 +295,8 @@ export const products = [
       {
         variantId: "p4-v8",
         label: "Hello Kitty",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_HK.jpg",
         description:
           "This My Melody-inspired pink face-changing keychain features a cute hooded design that cycles through various sweet and winking expressions."
@@ -304,8 +304,8 @@ export const products = [
       {
         variantId: "p4-v9",
         label: "Green Liz",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_GL.jpg",
         description:
           "This lime green hoodie-themed face-changing keychain features a playful winking character that swaps between different expressions."
@@ -313,8 +313,8 @@ export const products = [
       {
         variantId: "p4-v10",
         label: "Squid Game",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_SG.jpg",
         description:
           "This Squid Game-inspired red face-changing keychain features a hooded guard design that cycles through iconic mask symbols."
@@ -322,8 +322,8 @@ export const products = [
       {
         variantId: "p4-v11",
         label: "Tanjiro Kamado",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_TK.jpg",
         description:
           "This Demon Slayer-inspired teal face-changing keychain features Tanjiro in a hooded design that cycles through various determined and fierce expressions."
@@ -331,8 +331,8 @@ export const products = [
       {
         variantId: "p4-v12",
         label: "Captain America",
-        price: 79,        // selling price (number, not string)
-        mrp: 109,         // original price,
+        price: 99,        // selling price (number, not string)
+        mrp: 139,         // original price,
         image: "/images/FC_CA.jpg",
         description:
           "This Captain America-inspired blue face-changing keychain features a hooded superhero design that cycles through various determined and heroic expressions."
@@ -443,8 +443,8 @@ export const products = [
       {
         variantId: "p6-v5",
         label: "Nichirin Blade",
-        price: 119,        // selling price (number, not string)
-        mrp: 179,         // original price,
+        price: 139,        // selling price (number, not string)
+        mrp: 199,         // original price,
         image: "/images/Katana5.jpg",
         description:
           "Zenetsu's Nichirin blade inspired Elegant white mini katana keychain with a polished Steel blade, gold-accented fittings, and matching plastic sheath—perfect for collectors and stylish everyday carry."
@@ -558,8 +558,8 @@ export const products = [
     id: "p9",
     category: "mascot",
     name: "Labubu Doll",
-    price: 199,        // selling price (number, not string)
-    mrp: 249,         // original price,
+    price: 249,        // selling price (number, not string)
+    mrp: 349,         // original price,
     images: [
       "/images/Labubu3.jpg"
     ],
@@ -573,8 +573,8 @@ export const products = [
       {
         variantId: "p9-v1",
         label: "Mistry Labubu",
-        price: 199,        // selling price (number, not string)
-        mrp: 249,         // original price,
+        price: 249,        // selling price (number, not string)
+        mrp: 349,         // original price,
         image: "/images/labubu.jpg",
         description:
           "Adorable Labubu collectable doll with soft body, long ears, and premium craftsmanship."
