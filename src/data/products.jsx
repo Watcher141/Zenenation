@@ -344,8 +344,8 @@ export const products = [
     id: "p5",
     category: "pocketwatch",
     name: "Pocket Watch Keychain",
-    price: 289,        // selling price (number, not string)
-    mrp: 349,         // original price,
+    price: 299,        // selling price (number, not string)
+    mrp: 359,         // original price,
     images: [
       "/images/ALL_PW.jpg"
     ],
@@ -360,8 +360,8 @@ export const products = [
       {
         variantId: "p5-v1",
         label: "Akatsuki Pocket Watch Keychain",
-        price: 289,        // selling price (number, not string)
-        mrp: 349,         // original price,
+        price: 299,        // selling price (number, not string)
+        mrp: 359,         // original price,
         image: "/images/AK_PW.jpg",
         description:
           "Elevate your anime collection with this premium silver pocket watch keychain featuring the iconic Akatsuki Red Cloud design and precision quartz movement."
@@ -369,8 +369,8 @@ export const products = [
       {
         variantId: "p5-v2",
         label: "Harry Potter Snitch Pocket Watch Locket",
-        price: 289,        // selling price (number, not string)
-        mrp: 349,         // original price,
+        price: 299,        // selling price (number, not string)
+        mrp: 359,         // original price,
         image: "/images/HP_PW.jpg",
         description:
           "Capture the magic with this vintage-style Golden Snitch pocket watch necklace, featuring detailed wings and the iconic 'I open at the close' engraving."
@@ -378,8 +378,8 @@ export const products = [
       {
         variantId: "p5-v3",
         label: "Floral Pattern Pocket Watch",
-        price: 289,        // selling price (number, not string)
-        mrp: 349,         // original price,
+        price: 299,        // selling price (number, not string)
+        mrp: 359,         // original price,
         image: "/images/PWFP.jpg",
         description:
           "An elegant, vintage-style bronze pocket watch featuring an intricately engraved floral case and a classic hunter-case design."
@@ -392,14 +392,14 @@ export const products = [
     id: "p6",
     category: "armory",
     name: "Mini Katana",
-    price: 139,        // selling price (number, not string)
+    price: "Out of Stock!",        // selling price (number, not string)
     mrp: 199,         // original price,
     images: [
       "/images/KatanaAll3.png"
     ],
     description:
       "Mini katana sword keychain inspired by Japanese anime swords with detailed blade and sheath.",
-    isNew: true,
+    isNew: false,
     isFeatured: true,
     popularityScore: 72,
     hasVariants: true,
@@ -407,7 +407,7 @@ export const products = [
       {
         variantId: "p6-v1",
         label: "Shusui",
-        price: 139,        // selling price (number, not string)
+        price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
         image: "/images/katana.jpg",
         description:
@@ -416,7 +416,7 @@ export const products = [
       {
         variantId: "p6-v2",
         label: "Yubashiri ",
-        price: 139,        // selling price (number, not string)
+        price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
         image: "/images/Katana3.jpg",
         description:
@@ -425,7 +425,7 @@ export const products = [
       {
         variantId: "p6-v3",
         label: "Wado Ichimonji ",
-        price: 139,        // selling price (number, not string)
+        price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
         image: "/images/Katana2.jpg",
         description:
@@ -434,7 +434,7 @@ export const products = [
       {
         variantId: "p6-v4",
         label: "Haramaki Blade",
-        price: 139,        // selling price (number, not string)
+        price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
         image: "/images/Katana4.jpg",
         description:
@@ -443,7 +443,7 @@ export const products = [
       {
         variantId: "p6-v5",
         label: "Nichirin Blade",
-        price: 139,        // selling price (number, not string)
+        price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
         image: "/images/Katana5.jpg",
         description:
@@ -457,8 +457,8 @@ export const products = [
     id: "p7",
     category: "armory",
     name: "Luxury Metal Butterfly Knife",
-    price: 249,        // selling price (number, not string)
-    mrp: 319,         // original price,
+    price: 299,        // selling price (number, not string)
+    mrp: 359,         // original price,
     images: [
       "/images/butterflyall.png"
     ],
@@ -472,8 +472,8 @@ export const products = [
       {
         variantId: "p7-v1",
         label: "Riptide Striker",
-        price: 249,        // selling price (number, not string)
-        mrp: 319,         // original price,
+        price: 299,        // selling price (number, not string)
+        mrp: 359,         // original price,
         image: "/images/butterfly2.jpg",
         description:
           "Riptide Striker is a premium butterfly-style metal knife featuring exquisite engraved detailing and a polished, upscale finish. Designed as a statement collectible, it is perfect for display in refined collections."
@@ -481,8 +481,8 @@ export const products = [
       {
         variantId: "p7-v2",
         label: "RGX Firefly - Valorant",
-        price: 249,        // selling price (number, not string)
-        mrp: 319,         // original price,
+        price: 299,        // selling price (number, not string)
+        mrp: 359,         // original price,
         image: "/images/butterfly3.jpg",
         description:
           "RGX Firefly is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
@@ -490,8 +490,8 @@ export const products = [
       {
         variantId: "p7-v3",
         label: "Hundred Battles - Naraka Bladepoint",
-        price: 249,        // selling price (number, not string)
-        mrp: 319,         // original price,
+        price: 299,        // selling price (number, not string)
+        mrp: 359,         // original price,
         image: "/images/Butterfly9.png",
         description:
           "The Thriller Of The Hundred Battles is a Premium Naraka Bladepoint-inspired alloy butterfly knife trainer featuring a vibrant, multi-color skin finish—perfect for safe trick practice, cosplay, and gaming setups."
@@ -499,8 +499,8 @@ export const products = [
       {
         variantId: "p7-v4",
         label: "Cobra Vanguard - Delta Force",
-        price: 249,        // selling price (number, not string)
-        mrp: 319,         // original price,
+        price: 299,        // selling price (number, not string)
+        mrp: 359,         // original price,
         image: "/images/Butterfly8.png",
         description:
           "Master the flick with this premium Delta Force-inspired Cobra Vanguard Butterfly Knife Trainer, the ultimate addition to your gaming arsenal."
@@ -508,8 +508,8 @@ export const products = [
       {
         variantId: "p7-v5",
         label: "Battle Machine - Arena Breakout",
-        price: 249,        // selling price (number, not string)
-        mrp: 319,         // original price,
+        price: 299,        // selling price (number, not string)
+        mrp: 359,         // original price,
         image: "/images/Butterfly7.png",
         description:
           "Level up your skills with the Battle Machine Trainer, a safe, unsharpened balisong featuring a radical blue and toxic-green cyber-splatter design."
@@ -521,10 +521,10 @@ export const products = [
     id: "p8",
     category: "armory",
     name: "Primeum Metal Karambit Knife",
-    price: 349,        // selling price (number, not string)
-    mrp: 399,         // original price,
+    price: 399,        // selling price (number, not string)
+    mrp: 499,         // original price,
     images: [
-      "/images/Karambit1.png"
+      "/images/Karambit4.jpeg"
     ],
     description:
       "Modern & Primeum karambit-style knife with a curved blade and ergonomic ring handle, designed for collectors, gamers, and eye-catching display or cosplay use.",
@@ -536,8 +536,8 @@ export const products = [
       {
         variantId: "p8-v1",
         label: "Velocity Orange - Valorant",
-        price: 349,        // selling price (number, not string)
-        mrp: 399,         // original price,
+        price: "Out of Stock!",        // selling price (number, not string)
+        mrp: 499,         // original price,
         image: "/images/Karambit2.png",
         description:
           "Sleek Valorant-inspired karambit featuring a curved precision blade and futuristic grip design, perfect for collectors, gamers, and premium display or cosplay use."
@@ -545,11 +545,20 @@ export const products = [
       {
         variantId: "p8-v2",
         label: "Damascus Blue",
-        price: 349,        // selling price (number, not string)
-        mrp: 399,         // original price,
+        price: 399,        // selling price (number, not string)
+        mrp: 499,         // original price,
         image: "/images/DBK.jpg",
         description:
           "A striking karambit knife featuring a curved hawkbill blade and an ergonomic handle, both finished in a vibrant, blue-themed topographic 'Damascus' pattern."
+      },
+      {
+        variantId: "p8-v3",
+        label: "Shadow Fang",
+        price: 399,        // selling price (number, not string)
+        mrp: 499,         // original price,
+        image: "/images/Karambit3.jpeg",
+        description:
+          "A sleek, frost-blue accented karambit featuring an ornate, ergonomic hilt designed for both precision display and a striking tactical aesthetic."
       }
     ]
   },
@@ -669,8 +678,8 @@ export const products = [
     id: "p13",
     category: "armory",
     name: "Premium Anime Katana",
-    price: 449,        // selling price (number, not string)
-    mrp: 549,         // original price,
+    price: 499,        // selling price (number, not string)
+    mrp: 599,         // original price,
     images: [
       "/images/PeKAll.jpg"
     ],
@@ -684,8 +693,8 @@ export const products = [
       {
         variantId: "p13-v1",
         label: "Shusui",
-        price: 449,        // selling price (number, not string)
-        mrp: 549,         // original price,
+        price: 499,        // selling price (number, not string)
+        mrp: 599,         // original price,
         image: "/images/PeK1.jpg",
         description:
           "A stunning 31cm replica of the legendary Zoro's Shusui katana, featuring its signature black-and-red serrated blade pattern and a matching scabbard adorned with circular red emblems."
@@ -693,8 +702,8 @@ export const products = [
       {
         variantId: "p13-v2",
         label: "Yubashiri ",
-        price: 449,        // selling price (number, not string)
-        mrp: 549,         // original price,
+        price: 499,        // selling price (number, not string)
+        mrp: 599,         // original price,
         image: "/images/PeK2.jpg",
         description:
           "A refined 31cm replica of the legendary Zoro's Yubashiri katana, featuring a sleek all-black design with elegant gold accents on the hilt, crossguard, and matching scabbard."
@@ -715,8 +724,8 @@ export const products = [
     id: "p14",
     category: "armory",
     name: "Kunai",
-    price: 299,        // selling price (number, not string)
-    mrp: 359,         // original price,
+    price: 349,        // selling price (number, not string)
+    mrp: 399,         // original price,
     images: [
       "/images/KunaiAll.jpg"
     ],
@@ -730,8 +739,8 @@ export const products = [
       {
         variantId: "p14-v1",
         label: "Minato Kunai",
-        price: 299,        // selling price (number, not string)
-        mrp: 359,         // original price,
+        price: 349,        // selling price (number, not string)
+        mrp: 399,         // original price,
         image: "/images/Kunai1.jpg",
         description:
           "A sleek, matte black replica of Minato Namikaze's iconic Flying Raijin kunai, featuring a triple-pronged blade design and a handle detailed with signature red kanji."
@@ -739,8 +748,8 @@ export const products = [
       {
         variantId: "p14-v2",
         label: "Shinobi Kunai",
-        price: 299,        // selling price (number, not string)
-        mrp: 359,         // original price,
+        price: 349,        // selling price (number, not string)
+        mrp: 399,         // original price,
         image: "/images/Kunai2.jpg",
         description:
           "A classic matte black shinobi kunai replica featuring a red-wrapped textured grip and the iconic Hidden Leaf village symbol etched into the blade."
