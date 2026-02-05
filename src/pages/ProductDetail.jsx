@@ -241,8 +241,9 @@ Please confirm availability.`;
               )}
 
               <p className="pd-delivery-note">
-                🚚 Free Delivery{" "}
-                {paymentMode === "COD" && pricing.isCodEligible && "(COD +₹100)"}
+                {paymentMode === "COD" && pricing.isCodEligible
+                 ? "💰 COD = Prepaid + ₹100 "
+                 : "🚚 Free Delivery"}
               </p>
             </div>
 
