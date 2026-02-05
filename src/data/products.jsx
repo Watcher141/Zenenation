@@ -6,6 +6,8 @@ const readableNames = {
   poster: "Posters",
 };
 
+const COD_CHARGE = 100;
+
 export const products = [
   {
     id: "p1",
@@ -13,6 +15,7 @@ export const products = [
     name: "Spider Man Keychain",
     price: 79,        // selling price (number, not string)
     mrp: 99,         // original price
+    codCharge: null,
     images: [
       "/images/SpidereMan1.jpg"
     ],
@@ -29,6 +32,7 @@ export const products = [
         label: "Classic Red Suit",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price
+        codCharge: null,
         image: "/images/spidyvar1.png",
         description:
           "Classic red Spider-Man keychain with vibrant colors and iconic suit design."
@@ -38,6 +42,7 @@ export const products = [
         label: "Miles Suit",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/spidyvar2.png",
         description:
           "Miles Morales suit Spider-Man keychain with a sleek, darker look for collectors."
@@ -47,6 +52,7 @@ export const products = [
         label: "Chill Spidy",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/spidyvar3.png",
         description:
           "Chill Spider-Man keychain with a sleek,look for collectors."
@@ -56,6 +62,7 @@ export const products = [
         label: "Cool Spidy",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/spidyvar4.png",
         description:
           "Cool Spidy with headset to boot keychain with a sleek,look for collectors."
@@ -71,6 +78,7 @@ export const products = [
     name: "Demon Slayer Keychain",
     price: 79,        // selling price (number, not string)
     mrp: 99,         // original price,
+    codCharge: null,
     images: [
       "/images/DemonSlayer.jpeg"
     ],
@@ -86,6 +94,7 @@ export const products = [
         label: "Tanjiro Kamado",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/Tanjiro.png",
         description:
           "A cute Demon Slayer–inspired chibi Tanjiro keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -95,6 +104,7 @@ export const products = [
         label: "Gyu Tomioka",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/Gyu.png",
         description:
           "A cute Demon Slayer–inspired chibi Gyu keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -104,6 +114,7 @@ export const products = [
         label: "Zenitsu Agatsuma",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/Zenitsu.png",
         description:
           "A cute Demon Slayer–inspired chibi Zenitsu keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -113,6 +124,7 @@ export const products = [
         label: "Inosuke Hashibira",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/Inosuke.png",
         description:
           "A cute Demon Slayer–inspired chibi Inosuke keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -122,6 +134,7 @@ export const products = [
         label: "Nezuko Kamado",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/Nezuko.png",
         description:
           "A cute Demon Slayer–inspired chibi Nezuko keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -131,6 +144,7 @@ export const products = [
         label: "Shinobu Kocho",
         price: 79,        // selling price (number, not string)
         mrp: 99,         // original price,
+        codCharge: null,
         image: "/images/Shinobu.png",
         description:
           "A cute Demon Slayer–inspired chibi Shinobu keychain with bold colors and a matching silicone strap. Perfect for adding anime vibes to your keys, bag, or collection"
@@ -144,6 +158,7 @@ export const products = [
     name: "Metal Keychain",
     price: 89,        // selling price (number, not string)
     mrp: 119,         // original price,
+    codCharge: null,
     images: [
       "/images/metalkeychaain.png"
     ],
@@ -160,6 +175,7 @@ export const products = [
         label: "Iron Man",
         price: 89,        // selling price (number, not string)
         mrp: 119,         // original price,
+        codCharge: null,
         image: "/images/Ironman.png",
         description:
           "Classic red Iron Man keychain with vibrant colors and iconic suit design."
@@ -169,6 +185,7 @@ export const products = [
         label: "Hand Blaster",
         price: 89,        // selling price (number, not string)
         mrp: 119,         // original price,
+        codCharge: null,
         image: "/images/IronmanHand.png",
         description:
           "A bold Avengers-inspired metal keychain featuring the iconic powered hand design. Perfect for adding superhero energy to your keys, bag, or everyday carry"
@@ -178,6 +195,7 @@ export const products = [
         label: "CR7",
         price: 89,        // selling price (number, not string)
         mrp: 119,         // original price,
+        codCharge: null,
         image: "/images/CR7.png",
         description:
           "A cool football jersey–style keychain with a bold number 7 design. Perfect for CR7 fans to show off their love for the game on keys, bags, or backpacks"
@@ -187,6 +205,7 @@ export const products = [
         label: "Joker",
         price: 89,        // selling price (number, not string)
         mrp: 119,         // original price,
+        codCharge: null,
         image: "/images/joker.png",
         description:
           "A bold Joker-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -196,6 +215,7 @@ export const products = [
         label: "Deadpool",
         price: 89,        // selling price (number, not string)
         mrp: 119,         // original price,
+        codCharge: null,
         image: "/images/Deadpool.png",
         description:
           "A bold Deadpool-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -205,6 +225,7 @@ export const products = [
         label: "Black Panther",
         price: 89,        // selling price (number, not string)
         mrp: 119,         // original price,
+        codCharge: null,
         image: "/images/Blackpanter.png",
         description:
           "A bold Black Panther-themed metal keychain with iconic artwork and attitude. Perfect for adding a little chaos and character to your keys or bag."
@@ -218,6 +239,7 @@ export const products = [
     name: "Face Changing Keychain",
     price: 99,        // selling price (number, not string)
     mrp: 139,         // original price,
+    codCharge: null,
     images: [
       "/images/fcall.png"
     ],
@@ -234,6 +256,7 @@ export const products = [
         label: "Lavender Cat",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_LC.jpg",
         description:
           "A vibrant lavender hoodie-themed face-changing keychain featuring a playful mood swing mechanism."
@@ -243,6 +266,7 @@ export const products = [
         label: "Doraemon",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_DM.jpg",
         description:
           "Doraemon-inspired face-changing keychain wearing a blue hoodie that cycles through different iconic expressions."
@@ -252,6 +276,7 @@ export const products = [
         label: "Capybara",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_CB.jpg",
         description:
           "This orange capybara face-changing keychain features a hooded design that swaps between different adorable expressions."
@@ -261,6 +286,7 @@ export const products = [
         label: "Spider-Man",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_SM.jpg",
         description:
           "This Spider-Man inspired red face-changing keychain features a hooded superhero design that rotates through various iconic web-slinger expressions."
@@ -270,6 +296,7 @@ export const products = [
         label: "Gojo Satoru",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_GS.jpg",
         description:
           "This anime-inspired Gojo Satoru face-changing keychain features a dark blue hoodie design that rotates through different iconic expressions."
@@ -279,6 +306,7 @@ export const products = [
         label: "Lotso Bear",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_LB.jpg",
         description:
           "This Lotso-inspired pink bear face-changing keychain features a cozy hoodie design that cycles through various grumpy and sweet expressions."
@@ -288,6 +316,7 @@ export const products = [
         label: "Shin-chan",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_SC.jpg",
         description:
           "This Shin-chan inspired yellow face-changing keychain features a hooded design that cycles through various funny expressions."
@@ -297,6 +326,7 @@ export const products = [
         label: "Hello Kitty",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_HK.jpg",
         description:
           "This My Melody-inspired pink face-changing keychain features a cute hooded design that cycles through various sweet and winking expressions."
@@ -306,6 +336,7 @@ export const products = [
         label: "Green Liz",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_GL.jpg",
         description:
           "This lime green hoodie-themed face-changing keychain features a playful winking character that swaps between different expressions."
@@ -315,6 +346,7 @@ export const products = [
         label: "Squid Game",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_SG.jpg",
         description:
           "This Squid Game-inspired red face-changing keychain features a hooded guard design that cycles through iconic mask symbols."
@@ -324,6 +356,7 @@ export const products = [
         label: "Tanjiro Kamado",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_TK.jpg",
         description:
           "This Demon Slayer-inspired teal face-changing keychain features Tanjiro in a hooded design that cycles through various determined and fierce expressions."
@@ -333,6 +366,7 @@ export const products = [
         label: "Captain America",
         price: 99,        // selling price (number, not string)
         mrp: 139,         // original price,
+        codCharge: null,
         image: "/images/FC_CA.jpg",
         description:
           "This Captain America-inspired blue face-changing keychain features a hooded superhero design that cycles through various determined and heroic expressions."
@@ -346,6 +380,7 @@ export const products = [
     name: "Pocket Watch Keychain",
     price: 299,        // selling price (number, not string)
     mrp: 359,         // original price,
+    codCharge: 100,
     images: [
       "/images/ALL_PW.jpg"
     ],
@@ -362,6 +397,7 @@ export const products = [
         label: "Akatsuki Pocket Watch Keychain",
         price: 299,        // selling price (number, not string)
         mrp: 359,         // original price,
+        codCharge: 100,
         image: "/images/AK_PW.jpg",
         description:
           "Elevate your anime collection with this premium silver pocket watch keychain featuring the iconic Akatsuki Red Cloud design and precision quartz movement."
@@ -371,6 +407,7 @@ export const products = [
         label: "Harry Potter Snitch Pocket Watch Locket",
         price: 299,        // selling price (number, not string)
         mrp: 359,         // original price,
+        codCharge: 100,
         image: "/images/HP_PW.jpg",
         description:
           "Capture the magic with this vintage-style Golden Snitch pocket watch necklace, featuring detailed wings and the iconic 'I open at the close' engraving."
@@ -380,6 +417,7 @@ export const products = [
         label: "Floral Pattern Pocket Watch",
         price: 299,        // selling price (number, not string)
         mrp: 359,         // original price,
+        codCharge: 100,
         image: "/images/PWFP.jpg",
         description:
           "An elegant, vintage-style bronze pocket watch featuring an intricately engraved floral case and a classic hunter-case design."
@@ -394,6 +432,7 @@ export const products = [
     name: "Mini Katana",
     price: "Out of Stock!",        // selling price (number, not string)
     mrp: 199,         // original price,
+    codCharge: null,
     images: [
       "/images/KatanaAll3.png"
     ],
@@ -409,6 +448,7 @@ export const products = [
         label: "Shusui",
         price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
+        codCharge: null,
         image: "/images/katana.jpg",
         description:
           "Zoro's Shusui inspired Mini katana keychain featuring a sleek stainless steel blade, detailed handle wrap, and decorative sheath—perfect as a collectible or stylish everyday accessory."
@@ -418,6 +458,7 @@ export const products = [
         label: "Yubashiri ",
         price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
+        codCharge: null,
         image: "/images/Katana3.jpg",
         description:
           "Zoro's Yubashiri inspired Premium mini katana keychain with a polished steel blade, elegant black-and-gold detailing, and durable sheath—an eye-catching collectible and everyday carry accessory."
@@ -427,6 +468,7 @@ export const products = [
         label: "Wado Ichimonji ",
         price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
+        codCharge: null,
         image: "/images/Katana2.jpg",
         description:
           "Zoro's Wado Ichimonji inspired Elegant white mini katana keychain with a polished steel blade, gold-accented fittings, and matching sheath—perfect for collectors and stylish everyday carry."
@@ -436,6 +478,7 @@ export const products = [
         label: "Haramaki Blade",
         price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
+        codCharge: null,
         image: "/images/Katana4.jpg",
         description:
           "Zoro's Haramaki blade inspired mini-katana, Sharpen your style with this emerald green miniature katana keychain, featuring a realistic metal blade, gold accents, and a sleek matching scabbard."
@@ -445,6 +488,7 @@ export const products = [
         label: "Nichirin Blade",
         price: "Out of Stock!",        // selling price (number, not string)
         mrp: 199,         // original price,
+        codCharge: null,
         image: "/images/Katana5.jpg",
         description:
           "Zenetsu's Nichirin blade inspired Elegant white mini katana keychain with a polished Steel blade, gold-accented fittings, and matching plastic sheath—perfect for collectors and stylish everyday carry."
@@ -459,6 +503,7 @@ export const products = [
     name: "Luxury Metal Butterfly Knife",
     price: 299,        // selling price (number, not string)
     mrp: 359,         // original price,
+    codCharge: 100,
     images: [
       "/images/butterflyall.png"
     ],
@@ -474,6 +519,7 @@ export const products = [
         label: "Riptide Striker",
         price: 299,        // selling price (number, not string)
         mrp: 359,         // original price,
+        codCharge: 100,
         image: "/images/butterfly2.jpg",
         description:
           "Riptide Striker is a premium butterfly-style metal knife featuring exquisite engraved detailing and a polished, upscale finish. Designed as a statement collectible, it is perfect for display in refined collections."
@@ -483,6 +529,7 @@ export const products = [
         label: "RGX Firefly - Valorant",
         price: 299,        // selling price (number, not string)
         mrp: 359,         // original price,
+        codCharge: 100,
         image: "/images/butterfly3.jpg",
         description:
           "RGX Firefly is a futuristic butterfly-style metal knife featuring sharp geometric detailing, bold green and gold accents, and a sleek matte finish. Designed as a statement collectible, it’s ideal for display in modern and tech-inspired collections."
@@ -492,6 +539,7 @@ export const products = [
         label: "Hundred Battles - Naraka Bladepoint",
         price: 299,        // selling price (number, not string)
         mrp: 359,         // original price,
+        codCharge: 100,
         image: "/images/Butterfly9.png",
         description:
           "The Thriller Of The Hundred Battles is a Premium Naraka Bladepoint-inspired alloy butterfly knife trainer featuring a vibrant, multi-color skin finish—perfect for safe trick practice, cosplay, and gaming setups."
@@ -501,6 +549,7 @@ export const products = [
         label: "Cobra Vanguard - Delta Force",
         price: 299,        // selling price (number, not string)
         mrp: 359,         // original price,
+        codCharge: 100,
         image: "/images/Butterfly8.png",
         description:
           "Master the flick with this premium Delta Force-inspired Cobra Vanguard Butterfly Knife Trainer, the ultimate addition to your gaming arsenal."
@@ -510,6 +559,7 @@ export const products = [
         label: "Battle Machine - Arena Breakout",
         price: 299,        // selling price (number, not string)
         mrp: 359,         // original price,
+        codCharge: 100,
         image: "/images/Butterfly7.png",
         description:
           "Level up your skills with the Battle Machine Trainer, a safe, unsharpened balisong featuring a radical blue and toxic-green cyber-splatter design."
@@ -523,6 +573,7 @@ export const products = [
     name: "Primeum Metal Karambit Knife",
     price: 399,        // selling price (number, not string)
     mrp: 499,         // original price,
+    codCharge: 100,
     images: [
       "/images/Karambit4.jpeg"
     ],
@@ -538,6 +589,7 @@ export const products = [
         label: "Velocity Orange - Valorant",
         price: "Out of Stock!",        // selling price (number, not string)
         mrp: 499,         // original price,
+        codCharge: 100,
         image: "/images/Karambit2.png",
         description:
           "Sleek Valorant-inspired karambit featuring a curved precision blade and futuristic grip design, perfect for collectors, gamers, and premium display or cosplay use."
@@ -547,6 +599,7 @@ export const products = [
         label: "Damascus Blue",
         price: 399,        // selling price (number, not string)
         mrp: 499,         // original price,
+        codCharge: 100,
         image: "/images/DBK.jpg",
         description:
           "A striking karambit knife featuring a curved hawkbill blade and an ergonomic handle, both finished in a vibrant, blue-themed topographic 'Damascus' pattern."
@@ -556,6 +609,7 @@ export const products = [
         label: "Shadow Fang",
         price: 399,        // selling price (number, not string)
         mrp: 499,         // original price,
+        codCharge: 100,
         image: "/images/Karambit3.jpeg",
         description:
           "A sleek, frost-blue accented karambit featuring an ornate, ergonomic hilt designed for both precision display and a striking tactical aesthetic."
@@ -567,8 +621,9 @@ export const products = [
     id: "p9",
     category: "mascot",
     name: "Labubu Doll",
-    price: 249,        // selling price (number, not string)
+    price: 259,        // selling price (number, not string)
     mrp: 349,         // original price,
+    codCharge: 100,
     images: [
       "/images/Labubu3.jpg"
     ],
@@ -582,8 +637,9 @@ export const products = [
       {
         variantId: "p9-v1",
         label: "Mistry Labubu",
-        price: 249,        // selling price (number, not string)
+        price: 259,        // selling price (number, not string)
         mrp: 349,         // original price,
+        codCharge: 100,
         image: "/images/labubu.jpg",
         description:
           "Adorable Labubu collectable doll with soft body, long ears, and premium craftsmanship."
@@ -597,6 +653,7 @@ export const products = [
     name: "Custom Poster",
     price: 99,        // selling price (number, not string)
     mrp: 149,         // original price,
+    codCharge: null,
     images: [
       "/images/placeholder.png"
     ],
@@ -613,6 +670,7 @@ export const products = [
     name: "Custom Mug",
     price: 289,        // selling price (number, not string)
     mrp: 349,         // original price,
+    codCharge: 100,
     images: [
       "/images/Custom_Mug.png"
     ],
@@ -628,6 +686,7 @@ export const products = [
         label: "Customization Steps",
         price: 289,        // selling price (number, not string)
         mrp: 349,         // original price,
+        codCharge: 100,
         image: "/images/Customization_steps.png",
         description:
           "Follow the Steps for Customization."
@@ -638,6 +697,7 @@ export const products = [
         label: "After Customization",
         price: 289,        // selling price (number, not string)
         mrp: 349,         // original price,
+        codCharge: 100,
         image: "/images/Custom_Mug2.png",
         description:
           "After Costomization The Mug will look like this."
@@ -652,6 +712,7 @@ export const products = [
     name: "Magic Mug",
     price: 489,        // selling price (number, not string)
     mrp: 559,         // original price,
+    codCharge: 100,
     images: [
       "/images/Magic_mug.png"
     ],
@@ -667,6 +728,7 @@ export const products = [
         label: "Customization Steps",
         price: 489,        // selling price (number, not string)
         mrp: 559,         // original price,
+        codCharge: 100,
         image: "/images/Customization_steps.png",
         description:
           "Follow the Steps for Customization."
@@ -680,6 +742,7 @@ export const products = [
     name: "Premium Anime Katana",
     price: 499,        // selling price (number, not string)
     mrp: 599,         // original price,
+    codCharge: 100,
     images: [
       "/images/PeKAll.jpg"
     ],
@@ -695,6 +758,7 @@ export const products = [
         label: "Shusui",
         price: 499,        // selling price (number, not string)
         mrp: 599,         // original price,
+        codCharge: 100,
         image: "/images/PeK1.jpg",
         description:
           "A stunning 31cm replica of the legendary Zoro's Shusui katana, featuring its signature black-and-red serrated blade pattern and a matching scabbard adorned with circular red emblems."
@@ -704,6 +768,7 @@ export const products = [
         label: "Yubashiri ",
         price: 499,        // selling price (number, not string)
         mrp: 599,         // original price,
+        codCharge: 100,
         image: "/images/PeK2.jpg",
         description:
           "A refined 31cm replica of the legendary Zoro's Yubashiri katana, featuring a sleek all-black design with elegant gold accents on the hilt, crossguard, and matching scabbard."
@@ -713,6 +778,7 @@ export const products = [
         label: "Enma",
         price: 449,        // selling price (number, not string)
         mrp: 549,         // original price,
+        codCharge: 100,
         image: "/images/PeK3.jpg",
         description:
           "A 31cm decorative metal replica of the legendary Enma katana from One Piece, featuring its signature purple hilt, golden flower motifs, and a matching scabbard with a keychain attachment."
@@ -726,6 +792,7 @@ export const products = [
     name: "Kunai",
     price: 349,        // selling price (number, not string)
     mrp: 399,         // original price,
+    codCharge: 100,
     images: [
       "/images/KunaiAll.jpg"
     ],
@@ -741,6 +808,7 @@ export const products = [
         label: "Minato Kunai",
         price: 349,        // selling price (number, not string)
         mrp: 399,         // original price,
+        codCharge: 100,
         image: "/images/Kunai1.jpg",
         description:
           "A sleek, matte black replica of Minato Namikaze's iconic Flying Raijin kunai, featuring a triple-pronged blade design and a handle detailed with signature red kanji."
@@ -750,6 +818,7 @@ export const products = [
         label: "Shinobi Kunai",
         price: 349,        // selling price (number, not string)
         mrp: 399,         // original price,
+        codCharge: 100,
         image: "/images/Kunai2.jpg",
         description:
           "A classic matte black shinobi kunai replica featuring a red-wrapped textured grip and the iconic Hidden Leaf village symbol etched into the blade."
@@ -764,6 +833,7 @@ export const products = [
     name: "Naruto Figures",
     price: 222,        // selling price (number, not string)
     mrp: 279,         // original price,
+    codCharge: null,
     images: [
       "/images/NALL.jpeg"
     ],
@@ -779,6 +849,7 @@ export const products = [
         label: "Naruto Handsign",
         price: 222,        // selling price (number, not string)
         mrp: 279,         // original price,
+        codCharge: null,
         image: "/images/N1.jpeg",
         description:
           "A high-quality PVC figure featuring Naruto Uzumaki in his signature Shadow Clone hand seal, perfect for any fan looking to bring the Will of Fire to their collection."
@@ -788,6 +859,7 @@ export const products = [
         label: "Naruto Cape",
         price: 222,        // selling price (number, not string)
         mrp: 279,         // original price,
+        codCharge: null,
         image: "/images/N2.jpeg",
         description:
           "An action-ready PVC collectible showcasing Naruto in a classic combat pose, complete with his signature headband and vibrant orange-and-red jumpsuit."
@@ -797,6 +869,7 @@ export const products = [
         label: "Naruto Kunai",
         price: 222,        // selling price (number, not string)
         mrp: 279,         // original price,
+        codCharge: null,
         image: "/images/N3.jpeg",
         description:
           "This detailed figure showcases Naruto armed and ready for a skirmish, wielding dual kunai with a confident smirk."
@@ -806,6 +879,7 @@ export const products = [
         label: "Naruto Shippuden",
         price: 222,        // selling price (number, not string)
         mrp: 279,         // original price,
+        codCharge: null,
         image: "/images/N4.jpeg",
         description:
           "Featuring his iconic orange and black jumpsuit, this figure depicts Naruto in a focused hand seal pose, ready to unleash his next big move."
@@ -815,6 +889,7 @@ export const products = [
         label: "Naruto Shinobi",
         price: 222,        // selling price (number, not string)
         mrp: 279,         // original price,
+        codCharge: null,
         image: "/images/N5.jpeg",
         description:
           "A clean, standing-pose figure of Naruto featuring the red armband of the Allied Shinobi Forces, perfect for displaying the hero's journey."
@@ -824,6 +899,7 @@ export const products = [
         label: "Naruto Kurama Chakra Mode",
         price: 222,        // selling price (number, not string)
         mrp: 279,         // original price,
+        codCharge: null,
         image: "/images/N6.jpeg",
         description:
           "Radiating power in his glowing yellow form, this figure captures Naruto in his ultimate Kurama-linked state for a standout display piece."

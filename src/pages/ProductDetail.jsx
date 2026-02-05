@@ -3,8 +3,10 @@ import { products } from "../data/products";
 import "./ProductDetail.css";
 import { useEffect, useMemo, useState } from "react";
 import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
-import FloatingTrackButton from '../components/FloatingTrackButton';
+import FloatingTrackButton from "../components/FloatingTrackButton";
 import { Helmet } from "react-helmet-async";
+
+const COD_EXTRA = 100;
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -15,6 +17,7 @@ const ProductDetail = () => {
 
   const [activeImg, setActiveImg] = useState("");
   const [selectedVariant, setSelectedVariant] = useState(null);
+  const [paymentMode, setPaymentMode] = useState("PREPAID");
   const [loading, setLoading] = useState(true);
   const [imageTransition, setImageTransition] = useState(false);
 
@@ -26,6 +29,7 @@ const ProductDetail = () => {
 
     setLoading(true);
     setSelectedVariant(null);
+    setPaymentMode("PREPAID");
     setActiveImg(product.images?.[0] || "");
 
     const timer = setTimeout(() => setLoading(false), 300);
@@ -37,7 +41,7 @@ const ProductDetail = () => {
   }
 
   /* ===============================
-     VARIANT HANDLING (ANIMATED)
+     VARIANT HANDLING
   =============================== */
   const selectVariant = (variant) => {
     if (selectedVariant?.variantId === variant.variantId) return;
@@ -64,22 +68,37 @@ const ProductDetail = () => {
   };
 
   /* ===============================
-     PRICE CALCULATION
+     PRICE + PAYMENT LOGIC
   =============================== */
   const pricing = useMemo(() => {
-    const sellingPrice = selectedVariant
-      ? selectedVariant.price
-      : product.price;
+    const basePrice =
+      selectedVariant?.price ?? product.price;
+
+    const isNumeric = typeof basePrice === "number";
+
+    const isCodEligible =
+      isNumeric && basePrice > 249;
+
+    const finalPrice =
+      paymentMode === "COD" && isCodEligible
+        ? basePrice + COD_EXTRA
+        : basePrice;
 
     const mrp = selectedVariant?.mrp || product.mrp;
 
     const discount =
-      mrp && mrp > sellingPrice
-        ? Math.round(((mrp - sellingPrice) / mrp) * 100)
+      isNumeric && mrp && mrp > basePrice
+        ? Math.round(((mrp - basePrice) / mrp) * 100)
         : null;
 
-    return { sellingPrice, mrp, discount };
-  }, [product, selectedVariant]);
+    return {
+      basePrice,
+      finalPrice,
+      mrp,
+      discount,
+      isCodEligible,
+    };
+  }, [product, selectedVariant, paymentMode]);
 
   /* ===============================
      WHATSAPP MESSAGE
@@ -89,15 +108,15 @@ const ProductDetail = () => {
 
 🛍 *I want to buy this product*
 
-📦 Product Name: ${product.name}
+📦 Product: ${product.name}
 🆔 Product ID: ${product.id}
 
 🎨 Variant: ${selectedVariant?.label || "Base Product"}
-🆔 Variant ID: ${selectedVariant?.variantId || "N/A"}
+💳 Payment Mode: ${paymentMode}
+💰 Price: ₹${pricing.finalPrice}
+🚚 Delivery: Free
 
-💰 Price: ₹${pricing.sellingPrice}
-
-🖼 Product Image:
+🖼 Image:
 ${activeImg}
 
 Please confirm availability.`;
@@ -132,8 +151,10 @@ Please confirm availability.`;
           content="Buy premium anime keychains, collectibles, mini armory items & custom anime merch at Zenenation."
         />
       </Helmet>
+
       <div className="pd-wrapper">
         <div className="pd-container">
+
           {/* IMAGE GALLERY */}
           <div className="pd-gallery">
             {loading ? (
@@ -141,8 +162,7 @@ Please confirm availability.`;
             ) : (
               <img
                 src={activeImg}
-                className={`pd-main-img ${imageTransition ? "fade" : ""
-                  }`}
+                className={`pd-main-img ${imageTransition ? "fade" : ""}`}
                 alt={product.name}
                 onError={(e) =>
                   (e.currentTarget.src = "/images/placeholder.png")
@@ -154,8 +174,9 @@ Please confirm availability.`;
               <img
                 src={product.images?.[0]}
                 alt="Base"
-                className={`pd-thumb-img ${!selectedVariant ? "active-thumb" : ""
-                  }`}
+                className={`pd-thumb-img ${
+                  !selectedVariant ? "active-thumb" : ""
+                }`}
                 onClick={selectBase}
               />
 
@@ -165,10 +186,9 @@ Please confirm availability.`;
                     key={variant.variantId}
                     src={variant.image}
                     alt={variant.label}
-                    className={`pd-thumb-img ${activeImg === variant.image
-                      ? "active-thumb"
-                      : ""
-                      }`}
+                    className={`pd-thumb-img ${
+                      activeImg === variant.image ? "active-thumb" : ""
+                    }`}
                     onClick={() => selectVariant(variant)}
                   />
                 ))}
@@ -177,42 +197,58 @@ Please confirm availability.`;
 
           {/* INFO */}
           <div className="pd-info">
-            {loading ? (
-              <>
-                <div className="skeleton skeleton-title" />
-                <div className="skeleton skeleton-price" />
-                <div className="skeleton skeleton-text" />
-              </>
-            ) : (
-              <>
-                <h1 className="pd-title">{product.name}</h1>
+            <h1 className="pd-title">{product.name}</h1>
 
-                <div className="pd-price-box">
-                  <div className="pd-price-top">
-                    {pricing.discount && (
-                      <span className="pd-discount">
-                        -{pricing.discount}%
-                      </span>
-                    )}
-                    <span className="pd-selling-price">
-                      ₹{pricing.sellingPrice.toLocaleString()}
-                    </span>
-                  </div>
+            <div className="pd-price-box">
+              <div className="pd-price-top">
+                {pricing.discount && (
+                  <span className="pd-discount">
+                    -{pricing.discount}%
+                  </span>
+                )}
 
-                  {pricing.mrp && pricing.mrp > pricing.sellingPrice && (
-                    <div className="pd-mrp">
-                      M.R.P.:{" "}
-                      <span>₹{pricing.mrp.toLocaleString()}</span>
-                    </div>
+                <span className="pd-selling-price">
+                  ₹{pricing.finalPrice}
+                </span>
+
+                <div className="pd-paymode-inline">
+                  <button
+                    className={`pd-pay-btn ${
+                      paymentMode === "PREPAID" ? "active" : ""
+                    }`}
+                    onClick={() => setPaymentMode("PREPAID")}
+                  >
+                    Prepaid
+                  </button>
+
+                  {pricing.isCodEligible && (
+                    <button
+                      className={`pd-pay-btn ${
+                        paymentMode === "COD" ? "active" : ""
+                      }`}
+                      onClick={() => setPaymentMode("COD")}
+                    >
+                      COD
+                    </button>
                   )}
                 </div>
+              </div>
 
-                <p className="pd-desc">
-                  {selectedVariant?.description ||
-                    product.description}
-                </p>
-              </>
-            )}
+              {pricing.mrp && pricing.mrp > pricing.basePrice && (
+                <div className="pd-mrp">
+                  M.R.P.: <span>₹{pricing.mrp}</span>
+                </div>
+              )}
+
+              <p className="pd-delivery-note">
+                🚚 Free Delivery{" "}
+                {paymentMode === "COD" && pricing.isCodEligible && "(COD +₹100)"}
+              </p>
+            </div>
+
+            <p className="pd-desc">
+              {selectedVariant?.description || product.description}
+            </p>
 
             {product.hasVariants && (
               <div className="pd-variants">
@@ -221,17 +257,14 @@ Please confirm availability.`;
                   {product.variants.map((variant) => (
                     <button
                       key={variant.variantId}
-                      className={`pd-variant-btn ${selectedVariant?.variantId ===
-                        variant.variantId
-                        ? "active-variant"
-                        : ""
-                        }`}
+                      className={`pd-variant-btn ${
+                        selectedVariant?.variantId === variant.variantId
+                          ? "active-variant"
+                          : ""
+                      }`}
                       onClick={() => {
                         selectVariant(variant);
-                        window.scrollTo({
-                          top: 0,
-                          behavior: "smooth",
-                        });
+                        window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
                     >
                       <img
@@ -247,17 +280,11 @@ Please confirm availability.`;
             )}
 
             <div className="pd-cta-group">
-              <button
-                className="pd-whatsapp-btn"
-                onClick={openWhatsApp}
-              >
+              <button className="pd-whatsapp-btn" onClick={openWhatsApp}>
                 Message on WhatsApp
               </button>
 
-              <button
-                className="pd-instagram-btn"
-                onClick={openInstagram}
-              >
+              <button className="pd-instagram-btn" onClick={openInstagram}>
                 Message on Instagram
               </button>
             </div>
@@ -265,46 +292,44 @@ Please confirm availability.`;
         </div>
 
         {/* RECOMMENDED */}
-<div className="pd-related">
-  <h2>Recommended for You</h2>
-  <div className="pd-related-grid">
-    {recommended.map((item) => {
+        <div className="pd-related">
+          <h2>Recommended for You</h2>
+          <div className="pd-related-grid">
+            {recommended.map((item) => {
+              const discount =
+                item.mrp && item.mrp > item.price
+                  ? Math.round(((item.mrp - item.price) / item.mrp) * 100)
+                  : null;
 
-      const discount =
-        item.mrp && item.mrp > item.price
-          ? Math.round(((item.mrp - item.price) / item.mrp) * 100)
-          : null;
+              return (
+                <Link
+                  key={item.id}
+                  to={`/product/${item.id}`}
+                  className="pd-related-link"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                >
+                  <div className="pd-related-card">
+                    <img src={item.images?.[0]} alt={item.name} />
+                    <h3>{item.name}</h3>
 
-      return (
-        <Link
-          key={item.id}
-          to={`/product/${item.id}`}
-          className="pd-related-link"
-          onClick={() =>
-            window.scrollTo({ top: 0, behavior: "smooth" })
-          }
-        >
-          <div className="pd-related-card">
-            <img src={item.images?.[0]} alt={item.name} />
-            <h3>{item.name}</h3>
-
-            <div className="pd-related-price-box">
-              {discount && (
-                <span className="pd-related-discount">
-                  -{discount}%
-                </span>
-              )}
-              <span className="pd-related-price">
-                ₹{item.price.toLocaleString()}
-              </span>
-            </div>
+                    <div className="pd-related-price-box">
+                      {discount && (
+                        <span className="pd-related-discount">
+                          -{discount}%
+                        </span>
+                      )}
+                      <span className="pd-related-price">
+                        ₹{item.price}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
-        </Link>
-      );
-    })}
-  </div>
-</div>
-
+        </div>
 
         <FloatingTrackButton />
         <FloatingWhatsAppButton />
