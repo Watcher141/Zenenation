@@ -114,7 +114,6 @@ const ProductDetail = () => {
 🎨 Variant: ${selectedVariant?.label || "Base Product"}
 💳 Payment Mode: ${paymentMode}
 💰 Price: ₹${pricing.finalPrice}
-🚚 Delivery: Free
 
 🖼 Image:
 ${activeImg}
