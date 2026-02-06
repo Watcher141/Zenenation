@@ -240,11 +240,9 @@ Please confirm availability.`;
               )}
 
               <p className="pd-delivery-note">
-                 {typeof pricing.basePrice === "number" && pricing.basePrice <= 249
-                  ? "💸 Will Include Delivery Charges"
-                  : paymentMode === "COD" && pricing.isCodEligible
-                  ? "💰 COD = Prepaid + ₹100 "
-                  : "🚚 Free Delivery"}
+                {paymentMode === "COD" && pricing.isCodEligible
+                 ? "💰 COD = Prepaid + ₹100 "
+                 : "🚚 Free Delivery"}
               </p>
             </div>
 
