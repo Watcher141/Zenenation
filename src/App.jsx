@@ -8,11 +8,13 @@ import About from "./components/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import DeliveryPolicy from "./pages/DeliveryPolicy";
+import TopAnnouncementBar from "./components/TopAnnouncementBar";
 
 
 function App() {
   return (
     <BrowserRouter>
+      
       <Navbar />
 
       <Routes>

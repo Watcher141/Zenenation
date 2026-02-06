@@ -621,9 +621,9 @@ export const products = [
     id: "p9",
     category: "mascot",
     name: "Labubu Doll",
-    price: 259,        // selling price (number, not string)
+    price: 249,        // selling price (number, not string)
     mrp: 349,         // original price,
-    codCharge: 100,
+    codCharge: null,
     images: [
       "/images/Labubu3.jpg"
     ],
@@ -637,9 +637,9 @@ export const products = [
       {
         variantId: "p9-v1",
         label: "Mistry Labubu",
-        price: 259,        // selling price (number, not string)
+        price: 249,        // selling price (number, not string)
         mrp: 349,         // original price,
-        codCharge: 100,
+        codCharge: null,
         image: "/images/labubu.jpg",
         description:
           "Adorable Labubu collectable doll with soft body, long ears, and premium craftsmanship."
